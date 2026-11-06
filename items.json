@@ -94,6 +94,26 @@
       "name": "Archeum Shard",
       "image": "assets/crafting/raw-materials/magical/archeum-shard.webp",
       "location": "War Memorial Site"
+    },
+    "twisted-scale": {
+      "name": "Twisted Scale",
+      "location": "Source not yet verified",
+      "sourceType": "Acquisition to verify"
+    },
+    "lingering-soul-fragment": {
+      "name": "Lingering Soul Fragment",
+      "location": "Source not yet verified",
+      "sourceType": "Acquisition to verify"
+    },
+    "wolf-molar": {
+      "name": "Wolf Molar",
+      "location": "Source not yet verified",
+      "sourceType": "Acquisition to verify"
+    },
+    "crystalline-ore": {
+      "name": "Crystalline Ore",
+      "location": "Source not yet verified",
+      "sourceType": "Acquisition to verify"
     }
   },
   "recipes": {
@@ -107,7 +127,11 @@
         "iron-ore": 3,
         "sweetgrass-powder": 5,
         "shattered-blade": 5
-      }
+      },
+      "grade": "Uncommon",
+      "sourceUrl": "https://archeagedb.cc/item/standard-ingot/",
+      "slug": "standard-ingot",
+      "craftingLevel": 1
     },
     "standard-lumber": {
       "name": "Standard Lumber",
@@ -142,6 +166,48 @@
         "bone-chip": 15,
         "sweetgrass-powder": 5,
         "shattered-blade": 5
+      }
+    },
+    "fine-additive": {
+      "name": "Fine Additive",
+      "output": 1,
+      "station": "Wildcraft",
+      "costGold": null,
+      "grade": "Rare",
+      "sourceStatus": "Intermediate recipe inferred from ArcheAgeDB Superior Ingot expansion; verify independently",
+      "ingredients": {
+        "standard-additive": 18,
+        "standard-bonecraft": 9,
+        "lingering-soul-fragment": 3
+      }
+    },
+    "fine-ingot": {
+      "name": "Fine Ingot",
+      "output": 1,
+      "station": "Smelting",
+      "costGold": 300,
+      "grade": "Rare",
+      "craftingLevel": 1,
+      "sourceUrl": "https://archeagedb.cc/item/fine-ingot/",
+      "ingredients": {
+        "standard-ingot": 18,
+        "standard-additive": 9,
+        "twisted-scale": 3
+      }
+    },
+    "superior-ingot": {
+      "name": "Superior Ingot",
+      "output": 1,
+      "station": "Smelting",
+      "costGold": 1000,
+      "grade": "Epic",
+      "craftingLevel": 1,
+      "sourceUrl": "https://archeagedb.cc/item/superior-ingot/",
+      "ingredients": {
+        "fine-ingot": 9,
+        "fine-additive": 6,
+        "wolf-molar": 3,
+        "crystalline-ore": 10
       }
     }
   },
