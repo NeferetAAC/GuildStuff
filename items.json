@@ -14,7 +14,11 @@
     },
     "shattered-blade": {
       "name": "Shattered Blade",
-      "image": "assets/crafting/equipment/weapons/shattered-blade.webp"
+      "image": "assets/crafting/equipment/weapons/shattered-blade.webp",
+      "location": "Enemy drops: Pirates, Pillagers, Gnolls, Skeletons; also chests",
+      "sourceType": "Enemy drop / chest",
+      "sourceDetails": "Defeat enemies such as Pirate, Pillager, Gnoll Fighter or Skeleton Infantryman. Many enemies can drop Shattered Blades; drops are not guaranteed.",
+      "sourceUrl": "https://metaforge.app/archeage-chronicles/database/materials/shattered-blade"
     },
     "log": {
       "name": "Log",
@@ -23,7 +27,11 @@
     },
     "rag-scrap": {
       "name": "Rag Scrap",
-      "image": "assets/crafting/raw-materials/monster-drops/rag-scrap.webp"
+      "image": "assets/crafting/raw-materials/monster-drops/rag-scrap.webp",
+      "location": "Enemy drops: Pirates, Jeco, Gnolls, Skeletons; also treasure chests",
+      "sourceType": "Enemy drop / chest",
+      "sourceDetails": "Defeat humanoid or undead enemies. Examples include Pirate, Jeco, Gnoll Fighter and Skeleton Archer. Drops are not guaranteed.",
+      "sourceUrl": "https://metaforge.app/archeage-chronicles/database/materials/rag-scrap"
     },
     "wild-petal": {
       "name": "Wild Petal",
@@ -31,7 +39,11 @@
     },
     "bone-chip": {
       "name": "Bone Chip",
-      "image": "assets/crafting/raw-materials/bone/bone-chip.webp"
+      "image": "assets/crafting/raw-materials/bone/bone-chip.webp",
+      "location": "Butcher crocodiles, alligator turtles or wolves with a Hunting Knife",
+      "sourceType": "Hunting / butchering",
+      "sourceDetails": "Defeat wildlife, then use a Hunting Knife to butcher the body. Crocodiles and alligator turtles are common sources; some undead enemies can also drop Bone Chips.",
+      "sourceUrl": "https://metaforge.app/archeage-chronicles/database/materials/bone-chip"
     },
     "archeum-shard": {
       "name": "Archeum Shard",
