@@ -179,7 +179,8 @@
         "standard-additive": 18,
         "standard-bonecraft": 9,
         "lingering-soul-fragment": 3
-      }
+      },
+      "image": "assets/crafting/refined-materials/fine-additive.webp"
     },
     "fine-ingot": {
       "name": "Fine Ingot",
@@ -193,7 +194,8 @@
         "standard-ingot": 18,
         "standard-additive": 9,
         "twisted-scale": 3
-      }
+      },
+      "image": "assets/crafting/refined-materials/fine-ingot.webp"
     },
     "superior-ingot": {
       "name": "Superior Ingot",
@@ -208,7 +210,8 @@
         "fine-additive": 6,
         "wolf-molar": 3,
         "crystalline-ore": 10
-      }
+      },
+      "image": "assets/crafting/refined-materials/superior-ingot.webp"
     }
   },
   "tools": [
