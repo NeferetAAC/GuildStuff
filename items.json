@@ -98,22 +98,26 @@
     "twisted-scale": {
       "name": "Twisted Scale",
       "location": "Source not yet verified",
-      "sourceType": "Acquisition to verify"
+      "sourceType": "Acquisition to verify",
+      "image": "assets/crafting/raw-materials/monster-drops/twisted-scale.webp"
     },
     "lingering-soul-fragment": {
       "name": "Lingering Soul Fragment",
       "location": "Source not yet verified",
-      "sourceType": "Acquisition to verify"
+      "sourceType": "Acquisition to verify",
+      "image": "assets/crafting/raw-materials/magical/lingering-soul-fragment.webp"
     },
     "wolf-molar": {
       "name": "Wolf Molar",
       "location": "Source not yet verified",
-      "sourceType": "Acquisition to verify"
+      "sourceType": "Acquisition to verify",
+      "image": "assets/crafting/raw-materials/monster-drops/wolf-molar.webp"
     },
     "crystalline-ore": {
       "name": "Crystalline Ore",
       "location": "Source not yet verified",
-      "sourceType": "Acquisition to verify"
+      "sourceType": "Acquisition to verify",
+      "image": "assets/crafting/raw-materials/ores/crystalline-ore.webp"
     }
   },
   "recipes": {
