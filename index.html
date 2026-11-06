@@ -88,6 +88,7 @@ document.querySelector("#minus").onclick=()=>{q.value=Math.max(1,(+q.value||1)-1
 document.querySelector("#plus").onclick=()=>{q.value=(+q.value||1)+1;render()};
 fetch("items.json").then(r=>{if(!r.ok)throw Error("Unable to load items.json");return r.json()}).then(data=>{db=data;initializeCrafting()}).catch(e=>{document.querySelector("#toolcards").textContent="Crafting database could not be loaded. Please refresh the page.";console.error(e)});
 const missionFarms={
+"Raw Meat":[["Wayfaring Camp (Buffalos)","wayfaring_camp_raw_meat.webp"]],
 "Roseberry":[["Above Seaglass Harbour","above_seaglass_harbour_roseberry.webp"],["Below Seaglass Harbour","below_seaglass_harbour_roseberry.webp"]],
 "Wild Fiber":[["Above Seaglass Harbour","above_seaglass_harbour_wild_fiber.webp"],["War Memorial Site","war_memorial_site_wild_fiber.webp"]],
 "Iron Ore":[["Seaglass Tower","seaglass_tower_iron_ore.webp"],["War Memorial Site","war_memorial_site_iron_ore.webp"]],
