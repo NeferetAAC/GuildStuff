@@ -15,10 +15,25 @@
     "shattered-blade": {
       "name": "Shattered Blade",
       "image": "assets/crafting/equipment/weapons/shattered-blade.webp",
-      "location": "Enemy drops: Pirates, Pillagers, Gnolls, Skeletons; also chests",
-      "sourceType": "Enemy drop / chest",
-      "sourceDetails": "Defeat enemies such as Pirate, Pillager, Gnoll Fighter or Skeleton Infantryman. Many enemies can drop Shattered Blades; drops are not guaranteed.",
-      "sourceUrl": "https://metaforge.app/archeage-chronicles/database/materials/shattered-blade"
+      "location": "Enemy drops: Jeco / Pirates (early); Corpse Warblade at Phlegthon Lake",
+      "sourceType": "Enemy drops",
+      "sourceDetails": "Jeco and Pirates are documented drop sources; Corpse Warblade at Phlegthon Lake has a documented 35% Shattered Blade drop. These are source-confirmed options, not tested highest-yield routes.",
+      "sourceUrl": "https://wikily.gg/archeage-chronicles/monsters/corpse-warblade",
+      "sourceStatus": "Documented drops; efficiency untested",
+      "primeLocations": [
+        {
+          "name": "Phlegthon Lake",
+          "method": "Corpse Warblade enemies",
+          "status": "35% listed drop rate",
+          "url": "https://wikily.gg/archeage-chronicles/monsters/corpse-warblade"
+        },
+        {
+          "name": "Jeco / Pirate encounters",
+          "method": "Enemy kills",
+          "status": "Documented drop sources",
+          "url": "https://wikily.gg/archeage-chronicles/items/shattered-blade"
+        }
+      ]
     },
     "log": {
       "name": "Log",
@@ -28,10 +43,25 @@
     "rag-scrap": {
       "name": "Rag Scrap",
       "image": "assets/crafting/raw-materials/monster-drops/rag-scrap.webp",
-      "location": "Enemy drops: Pirates, Jeco, Gnolls, Skeletons; also treasure chests",
-      "sourceType": "Enemy drop / chest",
-      "sourceDetails": "Defeat humanoid or undead enemies. Examples include Pirate, Jeco, Gnoll Fighter and Skeleton Archer. Drops are not guaranteed.",
-      "sourceUrl": "https://metaforge.app/archeage-chronicles/database/materials/rag-scrap"
+      "location": "Enemy drops: Jeco / Pirates (early); Corpse Warblade at Phlegthon Lake",
+      "sourceType": "Enemy drops",
+      "sourceDetails": "Jeco and Pirates are documented drop sources; Corpse Warblade at Phlegthon Lake has a documented 35% Rag Scrap drop. These are source-confirmed options, not tested highest-yield routes.",
+      "sourceUrl": "https://wikily.gg/archeage-chronicles/monsters/corpse-warblade",
+      "sourceStatus": "Documented drops; efficiency untested",
+      "primeLocations": [
+        {
+          "name": "Phlegthon Lake",
+          "method": "Corpse Warblade enemies",
+          "status": "35% listed drop rate",
+          "url": "https://wikily.gg/archeage-chronicles/monsters/corpse-warblade"
+        },
+        {
+          "name": "Jeco / Pirate encounters",
+          "method": "Enemy kills",
+          "status": "Documented drop sources",
+          "url": "https://wikily.gg/archeage-chronicles/items/rag-scrap"
+        }
+      ]
     },
     "wild-petal": {
       "name": "Wild Petal",
@@ -40,10 +70,25 @@
     "bone-chip": {
       "name": "Bone Chip",
       "image": "assets/crafting/raw-materials/bone/bone-chip.webp",
-      "location": "Butcher crocodiles or alligator turtles with a Hunting Knife; also some undead enemy drops",
+      "location": "Crocodiles / alligator turtles: butcher with Hunting Knife (Diamond Shores shoreline; Gylden Ruins)",
       "sourceType": "Hunting / butchering",
-      "sourceDetails": "Reliable hunting targets: crocodiles and alligator turtles. Defeat them and butcher with a Hunting Knife. Wolves yield Raw Pelt and Wolf Molar, not Bone Chip. Some undead enemies also have a chance to drop Bone Chips.",
-      "sourceUrl": "https://wikily.gg/archeage-chronicles/monsters/crocodile"
+      "sourceDetails": "Confirmed route: defeat crocodiles or alligator turtles along Diamond Shores, then butcher with a Hunting Knife. Crocodiles in Gylden Ruins are another documented source. Wolves are primarily documented for Raw Pelt; one database also lists Bone Chip for wolves, so wolf Bone Chip yield is disputed and not recommended as a primary route.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/quests/gathering-bone-fragments",
+      "sourceStatus": "Verified route; wolf yield disputed",
+      "primeLocations": [
+        {
+          "name": "Diamond Shores shoreline",
+          "method": "Crocodiles / alligator turtles; Hunting Knife",
+          "status": "Documented quest route",
+          "url": "https://raiddex.com/en/archeage-chronicles/quests/gathering-bone-fragments"
+        },
+        {
+          "name": "Gylden Ruins",
+          "method": "Crocodiles; Hunting Knife",
+          "status": "Documented spawn / loot",
+          "url": "https://raiddex.com/en/archeage-chronicles/npcs/crocodile"
+        }
+      ]
     },
     "archeum-shard": {
       "name": "Archeum Shard",
