@@ -170,7 +170,8 @@
         "bone-chip": 15,
         "sweetgrass-powder": 5,
         "shattered-blade": 5
-      }
+      },
+      "image": "assets/crafting/refined-materials/standard-bonecraft.webp"
     },
     "fine-additive": {
       "name": "Fine Additive",
