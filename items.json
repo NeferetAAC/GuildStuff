@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "notes": "Recipes transcribed from current GuildStuff calculators. Confirm batch yields and ingredient quantities against game before relying on totals.",
+  "notes": "Per-unit Standard material recipes verified against ArcheAgeDB. Recursive totals multiply component requirements exactly. Gathering locations are informational, not verified map pins.",
   "materials": {
     "iron-ore": {
       "name": "Iron Ore",
@@ -18,7 +18,7 @@
     },
     "log": {
       "name": "Log",
-      "image": "https://static.metaforge.app/archeage-chronicles/icons/UI_Item_Contents_CraftedItem_Wood_02.webp",
+      "image": "assets/crafting/raw-materials/wood/log.webp",
       "location": "Beech Trees, Gylden Ruins"
     },
     "rag-scrap": {
@@ -35,42 +35,56 @@
     },
     "archeum-shard": {
       "name": "Archeum Shard",
-      "image": "https://static.metaforge.app/archeage-chronicles/icons/UI_Item_Contents_CraftMaterial_Arceaum_01.webp",
+      "image": "assets/crafting/raw-materials/magical/archeum-shard.webp",
       "location": "War Memorial Site"
     }
   },
   "recipes": {
     "standard-ingot": {
       "name": "Standard Ingot",
-      "output": 15,
+      "output": 1,
+      "station": "Smelting",
+      "costGold": 100,
+      "image": "assets/crafting/refined-materials/standard-ingot.webp",
       "ingredients": {
-        "iron-ore": 45,
-        "sweetgrass-powder": 115,
-        "shattered-blade": 75
+        "iron-ore": 3,
+        "sweetgrass-powder": 5,
+        "shattered-blade": 5
       }
     },
     "standard-lumber": {
       "name": "Standard Lumber",
-      "output": 8,
+      "output": 1,
+      "station": "Wildcraft",
+      "costGold": 100,
+      "image": "assets/crafting/refined-materials/lumber.webp",
       "ingredients": {
-        "log": 24,
-        "rag-scrap": 40
+        "log": 3,
+        "sweetgrass-powder": 5,
+        "rag-scrap": 5
       }
     },
     "standard-additive": {
       "name": "Standard Additive",
-      "output": 8,
+      "output": 1,
+      "station": "Wildcraft",
+      "costGold": 100,
+      "image": "assets/crafting/refined-materials/standard-additive.webp",
       "ingredients": {
-        "wild-petal": 24,
-        "rag-scrap": 40
+        "wild-petal": 3,
+        "sweetgrass-powder": 5,
+        "rag-scrap": 5
       }
     },
     "standard-bonecraft": {
       "name": "Standard Bonecraft",
-      "output": 8,
+      "output": 1,
+      "station": "Refining",
+      "costGold": 100,
       "ingredients": {
-        "bone-chip": 120,
-        "shattered-blade": 40
+        "bone-chip": 15,
+        "sweetgrass-powder": 5,
+        "shattered-blade": 5
       }
     }
   },
@@ -87,7 +101,10 @@
         "standard-ingot": 15,
         "standard-lumber": 8,
         "archeum-shard": 3
-      }
+      },
+      "image": "assets/crafting/equipment/tools/expert-logging-axe.webp",
+      "craftingCostGold": 50,
+      "craftingStation": "Engineering"
     },
     {
       "name": "Expert Pickaxe",
@@ -101,7 +118,10 @@
         "standard-ingot": 15,
         "standard-lumber": 8,
         "archeum-shard": 3
-      }
+      },
+      "image": "assets/crafting/equipment/tools/expert-pickaxe.webp",
+      "craftingCostGold": 50,
+      "craftingStation": "Engineering"
     },
     {
       "name": "Expert Harvesting Sickle",
@@ -115,7 +135,10 @@
         "standard-ingot": 15,
         "standard-additive": 8,
         "archeum-shard": 3
-      }
+      },
+      "image": "assets/crafting/equipment/tools/Expert-Sickle.webp",
+      "craftingCostGold": 50,
+      "craftingStation": "Engineering"
     },
     {
       "name": "Expert Hunting Knife",
@@ -129,7 +152,10 @@
         "standard-ingot": 15,
         "standard-bonecraft": 8,
         "archeum-shard": 3
-      }
+      },
+      "image": "assets/crafting/equipment/tools/Expert-hunting-knife.webp",
+      "craftingCostGold": 50,
+      "craftingStation": "Engineering"
     }
   ]
 }
