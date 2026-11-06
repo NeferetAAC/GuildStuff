@@ -21,11 +21,11 @@ function render(){
  const item=selectedItem.item,n=Math.max(1,Math.floor(+q.value||1));q.value=n;
  document.querySelector("#toolname").textContent=item.name;
  document.querySelector("#toolimg").src=item.image||"";
- document.querySelector("#craft-meta").textContent=selectedItem.kind==="tools"?(item.craftingStation||"Engineering")+" · Level 1 · "+item.craftingCostGold+" Gold per tool":selectedItem.kind==="refined"?(item.station||"Crafting")+" · "+(item.costGold||0)+" Gold per craft":"Raw gathering material";
+ document.querySelector("#craft-meta").textContent=selectedItem.kind==="tools"?(item.craftingStation||"Engineering")+" · Level 1 · "+item.craftingCostGold+" Gold per tool":selectedItem.kind==="refined"?(item.station||"Crafting")+(item.grade?" · "+item.grade:"")+(item.costGold!=null?" · "+item.costGold+" Gold per craft":" · Cost to verify"):"Raw gathering material";
  document.querySelector("#quantity-label").textContent=selectedItem.kind==="tools"?"Tools to craft":selectedItem.kind==="refined"?"Materials to craft":"Quantity needed";
  document.querySelector("#recipe-title").textContent=selectedItem.kind==="raw"?"Material source":"Recipe · per item";
  const source=document.querySelector("#toolsource");
- if(selectedItem.kind==="tools"&&item.slug){source.hidden=false;source.href="https://archeagedb.cc/item/"+item.slug+"/"}else{source.hidden=true;source.removeAttribute("href")}
+ if(item.sourceUrl||selectedItem.kind==="tools"&&item.slug){source.hidden=false;source.href=item.sourceUrl||"https://archeagedb.cc/item/"+item.slug+"/"}else{source.hidden=true;source.removeAttribute("href")}
  const ingredients=item.ingredients||{};
  document.querySelector("#recipe-steps").innerHTML=selectedItem.kind==="raw"?'<div class="step"><strong>'+(item.location||"Location not yet recorded")+'</strong><span>'+(item.sourceType||"Gather / obtain")+'</span></div>'+(item.sourceDetails?'<p class="source-detail">'+item.sourceDetails+'</p>':"")+(item.sourceStatus?'<p class="source-status">'+item.sourceStatus+'</p>':"")+(item.primeLocations?.length?'<div class="source-routes"><strong>Documented farming locations</strong>'+item.primeLocations.map(loc=>'<div class="source-route"><a target="_blank" rel="noopener noreferrer" href="'+loc.url+'">'+loc.name+' ↗</a><small>'+loc.method+' · '+loc.status+'</small></div>').join("")+'</div>':"")+(item.sourceUrl?'<a class="map-link" target="_blank" rel="noopener noreferrer" href="'+item.sourceUrl+'">View drop sources ↗</a>':""):Object.entries(ingredients).map(([id,qty])=>'<div class="step"><strong>'+titleFor(id)+' ×'+qty+'</strong><span>×'+qty*n+' for '+n+' item(s)</span></div>').join("");
  const chain=document.querySelector("#craft-chain");
