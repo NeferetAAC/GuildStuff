@@ -1,3 +1,6 @@
+create extension if not exists pg_cron;
+create extension if not exists pg_net;
+
 create table public.discord_members (
   id uuid primary key default gen_random_uuid(),
   guild_id text not null,
@@ -29,3 +32,11 @@ revoke all on public.discord_characters from anon, authenticated;
 
 grant all on public.discord_members to service_role;
 grant all on public.discord_characters to service_role;
+
+create table public.discord_event_alerts (
+  alert_key text primary key,
+  created_at timestamptz not null default now()
+);
+alter table public.discord_event_alerts enable row level security;
+revoke all on public.discord_event_alerts from anon, authenticated;
+grant all on public.discord_event_alerts to service_role;
