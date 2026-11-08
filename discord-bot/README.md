@@ -6,7 +6,8 @@ A Discord slash-command app backed by the Tirwyn Supabase project. Supabase Edge
 
 - /add character name:<name> — add a character; this also registers you automatically.
 - /add details character:<character> class:<class> level:<level> playstyle:<PvE | PvP | PvX> — fill in a character’s details. All fields are needed the first time; afterward, supply only the field(s) you want to update.
-- /view member:<member> — view one member’s characters. Leave member blank to browse the server roster; page is optional.
+- /view member member:<member> — view one member’s characters.
+- /view roster page:<number> — browse the server roster.
 - /event event:<Crimson Rift | Burial Nightmare | Daily Reset> — show the daily schedule, set in GMT+8 and displayed in each viewer’s local time.
 
 Adding a character and editing details reply privately. Views and event schedules are visible to the server.
@@ -22,20 +23,9 @@ In the Discord Developer Portal:
 1. On General Information, copy the Public Key. In Supabase Edge Function Secrets, add it as DISCORD_PUBLIC_KEY.
 2. Make sure DISCORD_BOT_TOKEN and DISCORD_CLIENT_ID are also present in Supabase Edge Function Secrets. These let the function publish slash commands without your PC.
 3. Keep the app installed in the server with the `applications.commands` scope.
-4. To refresh global commands after a change, add a new query value such as `?setup=6` to the Interactions Endpoint URL and save. Discord’s verification ping triggers command registration. Global commands can take a little while to propagate.
+4. The first save makes Discord verify the endpoint and register commands. After that, Supabase Cron automatically syncs the commands once after each function deployment. Global commands can take a little while to propagate.
 
 The function validates Discord’s Ed25519 signatures before handling interactions. Supabase provides the server-side database key to the function. Do not put a Supabase secret key in Discord or in a public repository.
-
-## Scheduled event alerts
-
-Supabase Cron checks the daily GMT+8 schedule once per minute and posts in Discord channel <#1566846347724980235>:
-
-- Crimson Rift: 1 AM, 3 AM, 8 AM, 1 PM, 3 PM, 8 PM.
-- Burial Nightmare: 5 AM, 10 AM, 5 PM, 10 PM.
-- Each occurrence gets an @everyone warning 10 minutes before and a second ping at start (20 pings daily across both schedules). Discord timestamps show the event time in each member’s local timezone.
-- Daily Reset is not included in the automatic alerts.
-
-The bot needs View Channel, Send Messages, and Mention @everyone permission in the alert channel. The schedule runs on Supabase, so your PC can be off.
 
 ## Database
 
