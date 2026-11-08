@@ -12,8 +12,8 @@ create table public.discord_characters (
   member_id uuid not null references public.discord_members(id) on delete cascade,
   character_name text not null,
   class_name text,
-  level integer not null default 1 check (level >= 1),
-  playstyle text check (playstyle is null or playstyle in ('pvp', 'pve')),
+  level integer check (level >= 1),
+  playstyle text check (playstyle is null or playstyle in ('pvp', 'pve', 'pvx')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
