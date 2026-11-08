@@ -21,6 +21,15 @@ const supabase = supabaseUrl && supabaseKey
 const discordBotToken = Deno.env.get("DISCORD_BOT_TOKEN") ?? "";
 const discordApplicationId = Deno.env.get("DISCORD_CLIENT_ID") ?? "";
 const discordGuildId = Deno.env.get("DISCORD_GUILD_ID") ?? "";
+const alertChannelId = Deno.env.get("DISCORD_ALERT_CHANNEL_ID") ?? "1566846347724980235";
+let cronApiKey = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
+try {
+  const publishableKeys = JSON.parse(Deno.env.get("SUPABASE_PUBLISHABLE_KEYS") ?? "{}");
+  cronApiKey = publishableKeys.default ?? cronApiKey;
+} catch {
+  console.error("Could not read Supabase publishable keys for scheduled alerts.");
+}
+
 
 const commandDefinitions = [
   {
@@ -29,27 +38,17 @@ const commandDefinitions = [
   },
   {
     name: "add",
-    description: "Add a character or update one of your character levels.",
+    description: "Add a character or update its details.",
     options: [
-      {
-        type: 1,
-        name: "character",
-        description: "Add a character to your roster.",
-        options: [
-          { type: 3, name: "name", description: "Your in-game character name.", required: true, max_length: 40 },
-          { type: 3, name: "class", description: "Your character class.", required: true, max_length: 40 },
-          { type: 4, name: "level", description: "Starting character level (optional).", min_value: 1, max_value: 1000 },
-        ],
-      },
-      {
-        type: 1,
-        name: "level",
-        description: "Set the level for one of your registered characters.",
-        options: [
-          { type: 3, name: "character", description: "Choose one of your registered characters.", required: true, autocomplete: true },
-          { type: 4, name: "level", description: "Current character level.", required: true, min_value: 1, max_value: 1000 },
-        ],
-      },
+      { type: 1, name: "character", description: "Add a character name to your roster.", options: [
+        { type: 3, name: "name", description: "Your in-game character name.", required: true, max_length: 40 },
+      ] },
+      { type: 1, name: "details", description: "Set or update a character’s class, level, and playstyle.", options: [
+        { type: 3, name: "character", description: "Choose one of your registered characters.", required: true, autocomplete: true },
+        { type: 3, name: "class", description: "Choose your character class.", choices: [{ name: "Ranger", value: "Ranger" }, { name: "Berserker", value: "Berserker" }, { name: "Warrior", value: "Warrior" }, { name: "Mage", value: "Mage" }] },
+        { type: 4, name: "level", description: "Current character level (required the first time).", min_value: 1, max_value: 1000 },
+        { type: 3, name: "playstyle", description: "Choose PvP or PvE (required the first time).", choices: [{ name: "PvP", value: "pvp" }, { name: "PvE", value: "pve" }] },
+      ] },
     ],
   },
   {
@@ -224,7 +223,7 @@ async function ensureMember(guildId, user) {
 async function getCharacters(memberId) {
   const db = requireSupabase();
   const { data, error } = await db.from("discord_characters")
-    .select("id,character_name,class_name,level")
+    .select("id,character_name,class_name,level,playstyle")
     .eq("member_id", memberId)
     .order("character_name", { ascending: true });
   if (error) throw error;
@@ -235,7 +234,7 @@ async function handleAutocomplete(interaction) {
   const guildId = interaction.guild_id;
   const user = interaction.member?.user ?? interaction.user;
   const sub = getSubcommand(interaction.data.options);
-  if (!guildId || !user?.id || sub.name !== "level") return { type: 8, data: { choices: [] } };
+  if (!guildId || !user?.id || sub.name !== "details") return { type: 8, data: { choices: [] } };
   const member = await getMember(guildId, user.id);
   if (!member) return { type: 8, data: { choices: [] } };
   const characters = await getCharacters(member.id);
@@ -252,69 +251,90 @@ async function handleCommand(interaction) {
   const guildId = interaction.guild_id;
   const user = interaction.member?.user ?? interaction.user;
   if (!guildId) return interactionReply("Use this command in an ArcheAge Discord server.", true);
-
-  if (data.name === "register") {
-    await ensureMember(guildId, user);
-    return interactionReply("You’re registered. Add a character with /add character.", true);
-  }
-
   if (data.name === "add") {
     const sub = getSubcommand(data.options);
-    const member = await getMember(guildId, user.id);
-    if (!member) return interactionReply("Run /register first, then add your character.", true);
-
     if (sub.name === "character") {
+      const member = await ensureMember(guildId, user);
       const characterName = String(getOption(sub.options, "name")?.value ?? "").trim();
-      const className = String(getOption(sub.options, "class")?.value ?? "").trim();
-      const requestedLevel = getOption(sub.options, "level")?.value;
-      const newCharacter = {
+      const { error } = await requireSupabase().from("discord_characters").insert({
         member_id: member.id,
         character_name: characterName,
-        class_name: className,
-      };
-      if (requestedLevel !== undefined) newCharacter.level = Number(requestedLevel);
-      const { error } = await requireSupabase().from("discord_characters").insert(newCharacter);
-      if (error?.code === "23505") {
-        return interactionReply("You already added **" + escapeMarkdown(characterName) + "**. Use /add level to update its level.", true);
-      }
+      });
+      if (error?.code === "23505") return interactionReply("You already added **" + escapeMarkdown(characterName) + "**. Use /add details to update it.", true);
       if (error) throw error;
-      const startingLevel = requestedLevel === undefined ? 1 : Number(requestedLevel);
-      return interactionReply("Added **" + escapeMarkdown(characterName) + "** (" + escapeMarkdown(className) + "), level " + startingLevel + ". You can update it later with /add level.", true);
+      return interactionReply("Added **" + escapeMarkdown(characterName) + "**. Now use /add details to select it and set its class, level, and PvE/PvP/PvX playstyle.", true);
     }
 
-    if (sub.name === "level") {
+    if (sub.name === "details") {
+      const member = await getMember(guildId, user.id);
+      if (!member) return interactionReply("Start with /add character to add your first character.", true);
       const requestedName = String(getOption(sub.options, "character")?.value ?? "").trim();
       const characters = await getCharacters(member.id);
       const character = characters.find((item) => item.character_name.toLowerCase() === requestedName.toLowerCase());
       if (!character) return interactionReply("I couldn’t find that character in your roster.", true);
-      const level = Number(getOption(sub.options, "level")?.value);
+      const classOption = getOption(sub.options, "class");
+      const levelOption = getOption(sub.options, "level");
+      const playstyleOption = getOption(sub.options, "playstyle");
+      const className = classOption ? String(classOption.value).trim() : character.class_name;
+      const level = levelOption ? Number(levelOption.value) : character.level;
+      const playstyle = playstyleOption ? String(playstyleOption.value) : character.playstyle;
+      const needsInitialDetails = !character.class_name || character.level == null || !character.playstyle;
+      if (needsInitialDetails && (!classOption || !levelOption || !playstyleOption)) {
+        return interactionReply("For the first setup, choose a class, enter a level, and choose PvE, PvP, or PvX. You can update individual fields afterward.", true);
+      }
+      if (!className || !level || !playstyle) {
+        return interactionReply("Please provide a valid class, level, and PvE/PvP/PvX playstyle.", true);
+      }
       const { error } = await requireSupabase().from("discord_characters")
-        .update({ level, updated_at: new Date().toISOString() })
-        .eq("id", character.id);
+        .update({ class_name: className, level, playstyle, updated_at: new Date().toISOString() })
+        .eq("id", character.id)
+        .eq("member_id", member.id);
       if (error) throw error;
-      return interactionReply("Updated **" + escapeMarkdown(character.character_name) + "** to level " + level + ".", true);
+      return interactionReply("Updated **" + escapeMarkdown(character.character_name) + "** — " + escapeMarkdown(className) + ", level " + level + ", " + ({pvp:"PvP",pve:"PvE",pvx:"PvX"}[playstyle] ?? "PvX") + ".", true);
     }
   }
 
-  if (data.name === "profile") {
+  if (data.name === "view") {
     const targetId = String(getOption(data.options, "member")?.value ?? "");
-    const resolvedUser = interaction.data?.resolved?.users?.[targetId];
-    const member = await getMember(guildId, targetId);
-    if (!member) {
-      const label = resolvedUser?.username ?? "This member";
-      return interactionReply(label + " hasn’t registered in this server yet.");
+    if (targetId) {
+      const resolvedUser = interaction.data?.resolved?.users?.[targetId];
+      const member = await getMember(guildId, targetId);
+      if (!member) return interactionReply((resolvedUser?.username ?? "This member") + " hasn’t added a character yet.");
+      const characters = await getCharacters(member.id);
+      const rows = characters.length
+        ? characters.map((character) => "**" + escapeMarkdown(character.character_name) + "** — " + (character.class_name ? escapeMarkdown(character.class_name) + ", Lv. " + character.level + (character.playstyle ? ", " + ({pvp:"PvP",pve:"PvE",pvx:"PvX"}[character.playstyle] ?? "") : "") : "Details pending")).join("\n")
+        : "No characters have been added yet.";
+      return embedReply({ color: 0x39a86b, title: (resolvedUser?.username ?? member.discord_username ?? "Member") + "’s ArcheAge Profile", description: rows });
     }
-    const characters = await getCharacters(member.id);
-    const rows = characters.length
-      ? characters.map((character) => "**" + escapeMarkdown(character.character_name) + "** — " + escapeMarkdown(character.class_name) + ", Lv. " + character.level).join("\n")
-      : "No characters have been added yet.";
-    return embedReply({
-      color: 0x39a86b,
-      title: (resolvedUser?.username ?? member.discord_username ?? "Member") + "’s ArcheAge Profile",
-      description: rows,
-    });
-  }
 
+    const page = Number(getOption(data.options, "page")?.value ?? 1);
+    const first = (page - 1) * PAGE_SIZE;
+    const db = requireSupabase();
+    const { data: members, count, error } = await db.from("discord_members")
+      .select("id,discord_user_id,discord_username", { count: "exact" })
+      .eq("guild_id", guildId)
+      .order("discord_username", { ascending: true })
+      .range(first, first + PAGE_SIZE - 1);
+    if (error) throw error;
+    if (!members?.length) return interactionReply(page === 1 ? "No one has added a character yet." : "There are no more roster pages.");
+    const { data: characters, error: characterError } = await db.from("discord_characters")
+      .select("member_id,character_name,class_name,level,playstyle")
+      .in("member_id", members.map((member) => member.id))
+      .order("character_name", { ascending: true });
+    if (characterError) throw characterError;
+    const byMember = new Map(members.map((member) => [member.id, []]));
+    for (const character of characters ?? []) byMember.get(character.member_id)?.push(character);
+    const fields = members.map((member) => {
+      const rows = byMember.get(member.id) ?? [];
+      const value = rows.length
+        ? rows.map((character) => escapeMarkdown(character.character_name) + " — " + (character.class_name ? escapeMarkdown(character.class_name) + ", Lv. " + character.level + (character.playstyle ? ", " + ({pvp:"PvP",pve:"PvE",pvx:"PvX"}[character.playstyle] ?? "") : "") : "Details pending")).join("\n")
+        : "No characters added yet.";
+      return { name: String(member.discord_username ?? "Discord member").slice(0, 256), value: value.slice(0, 1024), inline: false };
+    });
+    const total = count ?? members.length;
+    const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    return embedReply({ color: 0x39a86b, title: "ArcheAge Roster", description: "Page " + page + " of " + pages + " · " + total + " member" + (total === 1 ? "" : "s"), fields });
+  }
 
 function singaporeDateKey() {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -357,55 +377,86 @@ function singaporeClockLabel(hour) {
     return interactionReply(message);
   }
 
-  const viewMembers = data.name === "view" && getSubcommand(data.options).name === "members";
-  if (data.name === "roster" || viewMembers) {
-    const commandOptions = viewMembers ? getSubcommand(data.options).options : data.options;
-    const page = Number(getOption(commandOptions, "page")?.value ?? 1);
-    const first = (page - 1) * PAGE_SIZE;
-    const db = requireSupabase();
-    const { data: members, count, error } = await db.from("discord_members")
-      .select("id,discord_user_id,discord_username", { count: "exact" })
-      .eq("guild_id", guildId)
-      .order("discord_username", { ascending: true })
-      .range(first, first + PAGE_SIZE - 1);
-    if (error) throw error;
-    if (!members?.length) {
-      return interactionReply(page === 1 ? "No one has registered in this server yet." : "There are no more roster pages.");
-    }
-    const { data: characters, error: characterError } = await db.from("discord_characters")
-      .select("member_id,character_name,class_name,level")
-      .in("member_id", members.map((member) => member.id))
-      .order("character_name", { ascending: true });
-    if (characterError) throw characterError;
-    const byMember = new Map(members.map((member) => [member.id, []]));
-    for (const character of characters ?? []) byMember.get(character.member_id)?.push(character);
-    const fields = members.map((member) => {
-      const rows = byMember.get(member.id) ?? [];
-      const value = rows.length
-        ? rows.map((character) => escapeMarkdown(character.character_name) + " — " + escapeMarkdown(character.class_name) + ", Lv. " + character.level).join("\n")
-        : "No characters added yet.";
-      return {
-        name: String(member.discord_username ?? "Discord member").slice(0, 256),
-        value: value.slice(0, 1024),
-        inline: false,
-      };
-    });
-    const total = count ?? members.length;
-    const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
-    return embedReply({
-      color: 0x39a86b,
-      title: viewMembers ? "ArcheAge Server Members" : "ArcheAge Server Roster",
-      description: "Page " + page + " of " + pages + " · " + total + " registered member" + (total === 1 ? "" : "s"),
-      fields,
-    });
-  }
+
 
   return interactionReply("I don’t recognize that command.", true);
+}
+
+async function runScheduledEventAlerts() {
+  if (!discordBotToken || !cronApiKey || !alertChannelId || !supabase) {
+    throw new Error("Scheduled alert configuration is incomplete.");
+  }
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Singapore",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const dateParts = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const dateKey = dateParts.year + "-" + dateParts.month + "-" + dateParts.day;
+  const currentMinute = Math.floor(Date.now() / 60000);
+  const schedules = [
+    { key: "crimson_rift", name: "Crimson Rift", hours: [1, 3, 8, 13, 15, 20] },
+    { key: "burial_nightmare", name: "Burial Nightmare", hours: [5, 10, 17, 22] },
+  ];
+  let sent = 0;
+  const db = supabase;
+
+  for (const schedule of schedules) {
+    for (const hour of schedule.hours) {
+      const startUnix = Math.floor(Date.parse(dateKey + "T" + String(hour).padStart(2, "0") + ":00:00+08:00") / 1000);
+      for (const minutesBefore of [10, 0]) {
+        const alertUnix = startUnix - minutesBefore * 60;
+        if (Math.floor(alertUnix / 60) !== currentMinute) continue;
+
+        const alertKey = dateKey + ":" + schedule.key + ":" + hour + ":" + minutesBefore;
+        const { error: claimError } = await db.from("discord_event_alerts").insert({ alert_key: alertKey });
+        if (claimError?.code === "23505") continue;
+        if (claimError) throw claimError;
+
+        const content = minutesBefore
+          ? "@everyone **" + schedule.name + "** starts in 10 minutes — <t:" + startUnix + ":t> (your local time)."
+          : "@everyone **" + schedule.name + " is starting now!** <t:" + startUnix + ":t>";
+        try {
+          const response = await fetch("https://discord.com/api/v10/channels/" + alertChannelId + "/messages", {
+            method: "POST",
+            headers: {
+              "Authorization": "Bot " + discordBotToken,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              content,
+              allowed_mentions: { parse: ["everyone"] },
+            }),
+          });
+          if (!response.ok) {
+            const detail = await response.text();
+            throw new Error("Discord returned HTTP " + response.status + ": " + detail.slice(0, 300));
+          }
+          sent += 1;
+        } catch (error) {
+          await db.from("discord_event_alerts").delete().eq("alert_key", alertKey);
+          console.error("Scheduled alert failed for " + alertKey + ":", error?.message ?? "unknown error");
+        }
+      }
+    }
+  }
+  return { sent };
 }
 
 Deno.serve(async (request) => {
   if (request.method !== "POST") return new Response("Discord interactions endpoint is ready.", { status: 200 });
   const body = await request.text();
+  const suppliedApiKey = request.headers.get("apikey") ?? "";
+  if (suppliedApiKey && cronApiKey && suppliedApiKey === cronApiKey
+      && request.headers.get("x-archeage-scheduled-alerts") === "1") {
+    try {
+      return jsonResponse(await runScheduledEventAlerts());
+    } catch (error) {
+      console.error("Scheduled event alerts failed:", error?.message ?? "unknown error");
+      return jsonResponse({ error: "Scheduled event alerts failed." }, 500);
+    }
+  }
   if (!await isValidDiscordRequest(request, body)) return new Response("Invalid Discord request signature.", { status: 401 });
 
   let interaction;
