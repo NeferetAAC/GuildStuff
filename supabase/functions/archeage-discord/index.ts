@@ -80,6 +80,23 @@ const commandDefinitions = [
       },
     ],
   },
+  {
+    name: "event",
+    description: "View event schedules in your local time.",
+    options: [
+      {
+        type: 3,
+        name: "event",
+        description: "Choose an event schedule.",
+        required: true,
+        choices: [
+          { name: "Crimson Rift", value: "crimson_rift" },
+          { name: "Burial Nightmare", value: "burial_nightmare" },
+          { name: "Daily Reset", value: "daily_reset" },
+        ],
+      },
+    ],
+  },
 ]; 
 
 async function registerCommands() {
@@ -296,6 +313,48 @@ async function handleCommand(interaction) {
       title: (resolvedUser?.username ?? member.discord_username ?? "Member") + "’s ArcheAge Profile",
       description: rows,
     });
+  }
+
+
+function singaporeDateKey() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Singapore",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+  const date = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return date.year + "-" + date.month + "-" + date.day;
+}
+
+function nextSingaporeOccurrence(hour) {
+  const time = String(hour).padStart(2, "0") + ":00:00";
+  let instant = Date.parse(singaporeDateKey() + "T" + time + "+08:00");
+  if (instant <= Date.now()) instant += 24 * 60 * 60 * 1000;
+  return Math.floor(instant / 1000);
+}
+
+function singaporeClockLabel(hour) {
+  const hour12 = hour % 12 || 12;
+  return hour12 + ":00 " + (hour < 12 ? "AM" : "PM") + " SGT";
+}
+
+  if (data.name === "event") {
+    const eventKey = String(getOption(data.options, "event")?.value ?? "");
+    const schedules = {
+      crimson_rift: { name: "Crimson Rift", hours: [1, 3, 8, 13, 15, 20] },
+      burial_nightmare: { name: "Burial Nightmare", hours: [5, 10, 17, 22] },
+      daily_reset: { name: "Daily Reset", hours: [5] },
+    };
+    const schedule = schedules[eventKey];
+    if (!schedule) return interactionReply("Choose a valid event schedule.", true);
+    const rows = schedule.hours.map((hour) =>
+      "• " + singaporeClockLabel(hour) + " → <t:" + nextSingaporeOccurrence(hour) + ":t>"
+    );
+    const message = "**" + schedule.name + " — daily schedule**\n"
+      + "Times are set in GMT+8 (Singapore). Discord shows each event in your local time.\n"
+      + rows.join("\n");
+    return interactionReply(message);
   }
 
   const viewMembers = data.name === "view" && getSubcommand(data.options).name === "members";
