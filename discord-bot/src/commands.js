@@ -6,7 +6,13 @@ export const commandDefinitions = [
       .addStringOption((option) => option.setName('name').setDescription('Your in-game character name.').setRequired(true).setMaxLength(40)))
     .addSubcommand((subcommand) => subcommand.setName('details').setDescription('Set or update class, level, and playstyle.')
       .addStringOption((option) => option.setName('character').setDescription('Choose one of your characters.').setRequired(true).setAutocomplete(true))
-      .addStringOption((option) => option.setName('class').setDescription('Your character class.').setMaxLength(40))
+      .addStringOption((option) => option.setName('class').setDescription('Choose your character class.')
+        .addChoices(
+          { name: 'Ranger', value: 'Ranger' },
+          { name: 'Berserker', value: 'Berserker' },
+          { name: 'Warrior', value: 'Warrior' },
+          { name: 'Mage', value: 'Mage' },
+        ))
       .addIntegerOption((option) => option.setName('level').setDescription('Your character level.').setMinValue(1).setMaxValue(1000))
       .addStringOption((option) => option.setName('playstyle').setDescription('PvE, PvP, or PvX.')
         .addChoices({ name: 'PvE', value: 'pve' }, { name: 'PvP', value: 'pvp' }, { name: 'PvX', value: 'pvx' }))),
