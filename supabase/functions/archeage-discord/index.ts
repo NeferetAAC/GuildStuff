@@ -33,50 +33,51 @@ try {
 
 const commandDefinitions = [
   {
-    name: "register",
-    description: "Register your Discord account for the ArcheAge roster.",
-  },
-  {
     name: "add",
     description: "Add a character or update its details.",
     options: [
-      { type: 1, name: "character", description: "Add a character name to your roster.", options: [
-        { type: 3, name: "name", description: "Your in-game character name.", required: true, max_length: 40 },
-      ] },
-      { type: 1, name: "details", description: "Set or update a character’s class, level, and playstyle.", options: [
-        { type: 3, name: "character", description: "Choose one of your registered characters.", required: true, autocomplete: true },
-        { type: 3, name: "class", description: "Choose your character class.", choices: [{ name: "Ranger", value: "Ranger" }, { name: "Berserker", value: "Berserker" }, { name: "Warrior", value: "Warrior" }, { name: "Mage", value: "Mage" }] },
-        { type: 4, name: "level", description: "Current character level (required the first time).", min_value: 1, max_value: 1000 },
-        { type: 3, name: "playstyle", description: "Choose PvP or PvE (required the first time).", choices: [{ name: "PvP", value: "pvp" }, { name: "PvE", value: "pve" }] },
-      ] },
-    ],
-  },
-  {
-    name: "profile",
-    description: "View a member’s registered ArcheAge characters.",
-    options: [
-      { type: 6, name: "member", description: "The Discord member to look up.", required: true },
-    ],
-  },
-  {
-    name: "roster",
-    description: "View registered ArcheAge characters in this server.",
-    options: [
-      { type: 4, name: "page", description: "Roster page number.", min_value: 1 },
+      {
+        type: 1,
+        name: "character",
+        description: "Add a character name to your roster.",
+        options: [
+          { type: 3, name: "name", description: "Your in-game character name.", required: true, max_length: 40 },
+        ],
+      },
+      {
+        type: 1,
+        name: "details",
+        description: "Set or update class, level, and playstyle.",
+        options: [
+          { type: 3, name: "character", description: "Choose one of your characters.", required: true, autocomplete: true },
+          {
+            type: 3, name: "class", description: "Choose your character class.",
+            choices: [
+              { name: "Ranger", value: "Ranger" },
+              { name: "Berserker", value: "Berserker" },
+              { name: "Warrior", value: "Warrior" },
+              { name: "Mage", value: "Mage" },
+            ],
+          },
+          { type: 4, name: "level", description: "Current character level.", min_value: 1, max_value: 1000 },
+          {
+            type: 3, name: "playstyle", description: "Choose PvE, PvP, or PvX.",
+            choices: [
+              { name: "PvE", value: "pve" },
+              { name: "PvP", value: "pvp" },
+              { name: "PvX", value: "pvx" },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
     name: "view",
-    description: "View server member characters and classes.",
+    description: "View the server roster or one member’s profile.",
     options: [
-      {
-        type: 1,
-        name: "members",
-        description: "List registered members, characters, classes, and levels.",
-        options: [
-          { type: 4, name: "page", description: "Roster page number.", min_value: 1 },
-        ],
-      },
+      { type: 6, name: "member", description: "Choose a member; leave blank to see the roster." },
+      { type: 4, name: "page", description: "Roster page when viewing all members.", min_value: 1 },
     ],
   },
   {
