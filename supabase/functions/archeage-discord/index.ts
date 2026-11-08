@@ -65,7 +65,21 @@ const commandDefinitions = [
       { type: 4, name: "page", description: "Roster page number.", min_value: 1 },
     ],
   },
-];
+  {
+    name: "view",
+    description: "View server member characters and classes.",
+    options: [
+      {
+        type: 1,
+        name: "members",
+        description: "List registered members, characters, classes, and levels.",
+        options: [
+          { type: 4, name: "page", description: "Roster page number.", min_value: 1 },
+        ],
+      },
+    ],
+  },
+]; 
 
 async function registerCommands() {
   if (!discordBotToken || !discordApplicationId) {
@@ -279,8 +293,10 @@ async function handleCommand(interaction) {
     });
   }
 
-  if (data.name === "roster") {
-    const page = Number(getOption(data.options, "page")?.value ?? 1);
+  const viewMembers = data.name === "view" && getSubcommand(data.options).name === "members";
+  if (data.name === "roster" || viewMembers) {
+    const commandOptions = viewMembers ? getSubcommand(data.options).options : data.options;
+    const page = Number(getOption(commandOptions, "page")?.value ?? 1);
     const first = (page - 1) * PAGE_SIZE;
     const db = requireSupabase();
     const { data: members, count, error } = await db.from("discord_members")
@@ -314,7 +330,7 @@ async function handleCommand(interaction) {
     const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
     return embedReply({
       color: 0x39a86b,
-      title: "ArcheAge Server Roster",
+      title: viewMembers ? "ArcheAge Server Members" : "ArcheAge Server Roster",
       description: "Page " + page + " of " + pages + " · " + total + " registered member" + (total === 1 ? "" : "s"),
       fields,
     });
