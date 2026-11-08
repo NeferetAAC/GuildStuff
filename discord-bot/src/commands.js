@@ -53,6 +53,17 @@ export const commandDefinitions = [
       .setName('page')
       .setDescription('Roster page number.')
       .setMinValue(1)),
-];
+
+  new SlashCommandBuilder()
+    .setName('view')
+    .setDescription('View server member characters and classes.')
+    .addSubcommand((subcommand) => subcommand
+      .setName('members')
+      .setDescription('List registered members, characters, classes, and levels.')
+      .addIntegerOption((option) => option
+        .setName('page')
+        .setDescription('Roster page number.')
+        .setMinValue(1))),
+]; 
 
 export const commandJson = commandDefinitions.map((command) => command.toJSON());
