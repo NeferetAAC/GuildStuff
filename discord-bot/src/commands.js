@@ -69,6 +69,19 @@ export const commandDefinitions = [
         .setName('page')
         .setDescription('Roster page number.')
         .setMinValue(1))),
+
+  new SlashCommandBuilder()
+    .setName('event')
+    .setDescription('View event schedules in your local time.')
+    .addStringOption((option) => option
+      .setName('event')
+      .setDescription('Choose an event schedule.')
+      .setRequired(true)
+      .addChoices(
+        { name: 'Crimson Rift', value: 'crimson_rift' },
+        { name: 'Burial Nightmare', value: 'burial_nightmare' },
+        { name: 'Daily Reset', value: 'daily_reset' },
+      )),
 ]; 
 
 export const commandJson = commandDefinitions.map((command) => command.toJSON());
