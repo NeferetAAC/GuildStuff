@@ -22,7 +22,12 @@ export const commandDefinitions = [
         .setName('class')
         .setDescription('Your character class.')
         .setRequired(true)
-        .setMaxLength(40)))
+        .setMaxLength(40))
+      .addIntegerOption((option) => option
+        .setName('level')
+        .setDescription('Starting character level (optional).')
+        .setMinValue(1)
+        .setMaxValue(1000)))
     .addSubcommand((subcommand) => subcommand
       .setName('level')
       .setDescription('Set the level for one of your registered characters.')
