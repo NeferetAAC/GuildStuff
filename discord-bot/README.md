@@ -9,6 +9,7 @@ A Discord slash-command app backed by the Tirwyn Supabase project. Supabase Edge
 - /add level character:<character> level:<level> — update one of your characters; the character field autocompletes.
 - /profile member:<member> — publicly view that member’s profile and characters.
 - /roster page:<number> — publicly browse registered members and characters in pages of 10.
+- /view members page:<number> — publicly list registered members with characters, classes, and levels.
 
 Registration and edits reply privately. Profile and roster replies are visible to the server.
 
@@ -22,7 +23,7 @@ In the Discord Developer Portal:
 
 1. On General Information, copy the Public Key. In Supabase Edge Function Secrets, add it as DISCORD_PUBLIC_KEY.
 2. Make sure DISCORD_BOT_TOKEN and DISCORD_CLIENT_ID are also present in Supabase Edge Function Secrets. These let the function publish the slash commands without your PC.
-3. Set the URL above as the Discord app’s Interactions Endpoint URL and save it. When Discord verifies the endpoint, the function publishes all five slash commands through Discord’s API.
+3. Set the URL above as the Discord app’s Interactions Endpoint URL and save it. When Discord verifies the endpoint, the function publishes all six slash commands through Discord’s API.
 4. Optionally add DISCORD_GUILD_ID to Supabase secrets to publish commands just for your server, so they appear quickly. Without it, commands are registered globally and can take time to propagate.
 5. Keep the app installed in the server. The Guild Install context should include applications.commands. Set Administrator there if you want the bot user to have it.
 
