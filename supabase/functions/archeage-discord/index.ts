@@ -20,7 +20,7 @@ const supabase = supabaseUrl && supabaseKey
 
 const discordBotToken = Deno.env.get("DISCORD_BOT_TOKEN") ?? "";
 const discordApplicationId = Deno.env.get("DISCORD_CLIENT_ID") ?? "";
-const discordGuildId = Deno.env.get("DISCORD_GUILD_ID") ?? "";
+const discordGuildIdForCleanup = "1444459076355494161";
 const alertChannelId = Deno.env.get("DISCORD_ALERT_CHANNEL_ID") ?? "1566846347724980235";
 let cronApiKey = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
 try {
@@ -103,23 +103,29 @@ async function registerCommands() {
   if (!discordBotToken || !discordApplicationId) {
     throw new Error("Missing DISCORD_BOT_TOKEN or DISCORD_CLIENT_ID in Supabase Edge Function secrets.");
   }
-  const route = "https://discord.com/api/v10/applications/" + discordApplicationId
-    + (discordGuildId ? "/guilds/" + discordGuildId : "")
-    + "/commands";
-  const response = await fetch(route, {
-    method: "PUT",
-    headers: {
-      "Authorization": "Bot " + discordBotToken,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(commandDefinitions),
-  });
-  if (!response.ok) {
-    const detail = await response.text();
-    throw new Error("Discord returned HTTP " + response.status + ": " + detail.slice(0, 500));
+  const headers = {
+    "Authorization": "Bot " + discordBotToken,
+    "Content-Type": "application/json",
+  };
+  const globalResponse = await fetch(
+    "https://discord.com/api/v10/applications/" + discordApplicationId + "/commands",
+    { method: "PUT", headers, body: JSON.stringify(commandDefinitions) },
+  );
+  if (!globalResponse.ok) {
+    const detail = await globalResponse.text();
+    throw new Error("Discord global command registration returned HTTP " + globalResponse.status + ": " + detail.slice(0, 500));
   }
-  console.log("Registered " + commandDefinitions.length + " slash commands"
-    + (discordGuildId ? " for the configured server." : " globally."));
+
+  const guildResponse = await fetch(
+    "https://discord.com/api/v10/applications/" + discordApplicationId
+      + "/guilds/" + discordGuildIdForCleanup + "/commands",
+    { method: "PUT", headers, body: "[]" },
+  );
+  if (!guildResponse.ok) {
+    const detail = await guildResponse.text();
+    throw new Error("Discord server command cleanup returned HTTP " + guildResponse.status + ": " + detail.slice(0, 500));
+  }
+  console.log("Registered " + commandDefinitions.length + " global commands and cleared server-only commands.");
 }
 
 const PAGE_SIZE = 10;
