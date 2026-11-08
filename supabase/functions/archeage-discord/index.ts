@@ -38,6 +38,7 @@ const commandDefinitions = [
         options: [
           { type: 3, name: "name", description: "Your in-game character name.", required: true, max_length: 40 },
           { type: 3, name: "class", description: "Your character class.", required: true, max_length: 40 },
+          { type: 4, name: "level", description: "Starting character level (optional).", min_value: 1, max_value: 1000 },
         ],
       },
       {
@@ -248,16 +249,20 @@ async function handleCommand(interaction) {
     if (sub.name === "character") {
       const characterName = String(getOption(sub.options, "name")?.value ?? "").trim();
       const className = String(getOption(sub.options, "class")?.value ?? "").trim();
-      const { error } = await requireSupabase().from("discord_characters").insert({
+      const requestedLevel = getOption(sub.options, "level")?.value;
+      const newCharacter = {
         member_id: member.id,
         character_name: characterName,
         class_name: className,
-      });
+      };
+      if (requestedLevel !== undefined) newCharacter.level = Number(requestedLevel);
+      const { error } = await requireSupabase().from("discord_characters").insert(newCharacter);
       if (error?.code === "23505") {
         return interactionReply("You already added **" + escapeMarkdown(characterName) + "**. Use /add level to update its level.", true);
       }
       if (error) throw error;
-      return interactionReply("Added **" + escapeMarkdown(characterName) + "** (" + escapeMarkdown(className) + "). Set its level with /add level.", true);
+      const startingLevel = requestedLevel === undefined ? 1 : Number(requestedLevel);
+      return interactionReply("Added **" + escapeMarkdown(characterName) + "** (" + escapeMarkdown(className) + "), level " + startingLevel + ". You can update it later with /add level.", true);
     }
 
     if (sub.name === "level") {
