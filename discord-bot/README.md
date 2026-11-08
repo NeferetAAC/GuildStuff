@@ -5,13 +5,13 @@ A Discord slash-command app backed by the Tirwyn Supabase project. Supabase Edge
 ## Commands
 
 - /register — register your Discord account in the current server.
-- /add character name:<name> class:<class> — add a character to your own roster.
+- /add character name:<name> class:<class> level:<level> — add a character; level is optional and defaults to 1.
 - /add level character:<character> level:<level> — update one of your characters; the character field autocompletes.
 - /profile member:<member> — publicly view that member’s profile and characters.
 - /roster page:<number> — publicly browse registered members and characters in pages of 10.
 - /view members page:<number> — publicly list registered members with characters, classes, and levels.
 
-Registration and edits reply privately. Profile and roster replies are visible to the server.
+Registration and edits reply privately. Profile, roster, and view members replies are visible to the server.
 
 ## Supabase Edge Function
 
