@@ -1,0 +1,17 @@
+{
+  "name": "archeage-discord-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "deploy:commands": "node --env-file=.env src/deploy-commands.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "discord.js": "14.27.0"
+  }
+}
