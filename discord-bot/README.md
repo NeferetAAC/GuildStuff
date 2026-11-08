@@ -26,6 +26,17 @@ In the Discord Developer Portal:
 
 The function validates Discord’s Ed25519 signatures before handling interactions. Supabase provides the server-side database key to the function. Do not put a Supabase secret key in Discord or in a public repository.
 
+## Scheduled event alerts
+
+Supabase Cron checks the daily GMT+8 schedule once per minute and posts in Discord channel <#1566846347724980235>:
+
+- Crimson Rift: 1 AM, 3 AM, 8 AM, 1 PM, 3 PM, 8 PM.
+- Burial Nightmare: 5 AM, 10 AM, 5 PM, 10 PM.
+- Each occurrence gets an @everyone warning 10 minutes before and a second ping at start (20 pings daily across both schedules). Discord timestamps show the event time in each member’s local timezone.
+- Daily Reset is not included in the automatic alerts.
+
+The bot needs View Channel, Send Messages, and Mention @everyone permission in the alert channel. The schedule runs on Supabase, so your PC can be off.
+
 ## Database
 
 The schema is in `discord-bot/supabase/schema.sql`. Character rows allow name-only creation, then class, level, and playstyle are filled in with `/add details`. Tables have RLS enabled and deny access to anon and authenticated roles; the Edge Function uses server-only Supabase credentials.
