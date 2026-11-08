@@ -50,54 +50,46 @@ const commandDefinitions = [
         description: "Set or update class, level, and playstyle.",
         options: [
           { type: 3, name: "character", description: "Choose one of your characters.", required: true, autocomplete: true },
-          {
-            type: 3, name: "class", description: "Choose your character class.",
-            choices: [
-              { name: "Ranger", value: "Ranger" },
-              { name: "Berserker", value: "Berserker" },
-              { name: "Warrior", value: "Warrior" },
-              { name: "Mage", value: "Mage" },
-            ],
-          },
+          { type: 3, name: "class", description: "Choose your character class.", choices: [
+            { name: "Ranger", value: "Ranger" },
+            { name: "Berserker", value: "Berserker" },
+            { name: "Warrior", value: "Warrior" },
+            { name: "Mage", value: "Mage" },
+          ] },
           { type: 4, name: "level", description: "Current character level.", min_value: 1, max_value: 1000 },
-          {
-            type: 3, name: "playstyle", description: "Choose PvE, PvP, or PvX.",
-            choices: [
-              { name: "PvE", value: "pve" },
-              { name: "PvP", value: "pvp" },
-              { name: "PvX", value: "pvx" },
-            ],
-          },
+          { type: 3, name: "playstyle", description: "Choose PvE, PvP, or PvX.", choices: [
+            { name: "PvE", value: "pve" },
+            { name: "PvP", value: "pvp" },
+            { name: "PvX", value: "pvx" },
+          ] },
         ],
       },
     ],
   },
   {
     name: "view",
-    description: "View the server roster or one member’s profile.",
+    description: "View a member’s profile or browse the roster.",
     options: [
-      { type: 6, name: "member", description: "Choose a member; leave blank to see the roster." },
-      { type: 4, name: "page", description: "Roster page when viewing all members.", min_value: 1 },
+      { type: 1, name: "member", description: "View a member’s characters.", options: [
+        { type: 6, name: "member", description: "Choose the member to view.", required: true },
+      ] },
+      { type: 1, name: "roster", description: "Browse all registered characters.", options: [
+        { type: 4, name: "page", description: "Roster page.", min_value: 1 },
+      ] },
     ],
   },
   {
     name: "event",
     description: "View event schedules in your local time.",
     options: [
-      {
-        type: 3,
-        name: "event",
-        description: "Choose an event schedule.",
-        required: true,
-        choices: [
-          { name: "Crimson Rift", value: "crimson_rift" },
-          { name: "Burial Nightmare", value: "burial_nightmare" },
-          { name: "Daily Reset", value: "daily_reset" },
-        ],
-      },
+      { type: 3, name: "event", description: "Choose an event schedule.", required: true, choices: [
+        { name: "Crimson Rift", value: "crimson_rift" },
+        { name: "Burial Nightmare", value: "burial_nightmare" },
+        { name: "Daily Reset", value: "daily_reset" },
+      ] },
     ],
   },
-]; 
+];
 
 async function registerCommands() {
   if (!discordBotToken || !discordApplicationId) {
@@ -302,8 +294,9 @@ async function handleCommand(interaction) {
   }
 
   if (data.name === "view") {
-    const targetId = String(getOption(data.options, "member")?.value ?? "");
-    if (targetId) {
+    const viewSub = getSubcommand(data.options);
+    if (viewSub.name === "member") {
+      const targetId = String(getOption(viewSub.options, "member")?.value ?? "");
       const resolvedUser = interaction.data?.resolved?.users?.[targetId];
       const member = await getMember(guildId, targetId);
       if (!member) return interactionReply((resolvedUser?.username ?? "This member") + " hasn’t added a character yet.");
@@ -313,34 +306,35 @@ async function handleCommand(interaction) {
         : "No characters have been added yet.";
       return embedReply({ color: 0x39a86b, title: (resolvedUser?.username ?? member.discord_username ?? "Member") + "’s ArcheAge Profile", description: rows });
     }
-
-    const page = Number(getOption(data.options, "page")?.value ?? 1);
-    const first = (page - 1) * PAGE_SIZE;
-    const db = requireSupabase();
-    const { data: members, count, error } = await db.from("discord_members")
-      .select("id,discord_user_id,discord_username", { count: "exact" })
-      .eq("guild_id", guildId)
-      .order("discord_username", { ascending: true })
-      .range(first, first + PAGE_SIZE - 1);
-    if (error) throw error;
-    if (!members?.length) return interactionReply(page === 1 ? "No one has added a character yet." : "There are no more roster pages.");
-    const { data: characters, error: characterError } = await db.from("discord_characters")
-      .select("member_id,character_name,class_name,level,playstyle")
-      .in("member_id", members.map((member) => member.id))
-      .order("character_name", { ascending: true });
-    if (characterError) throw characterError;
-    const byMember = new Map(members.map((member) => [member.id, []]));
-    for (const character of characters ?? []) byMember.get(character.member_id)?.push(character);
-    const fields = members.map((member) => {
-      const rows = byMember.get(member.id) ?? [];
-      const value = rows.length
-        ? rows.map((character) => escapeMarkdown(character.character_name) + " — " + (character.class_name ? escapeMarkdown(character.class_name) + ", Lv. " + character.level + (character.playstyle ? ", " + ({pvp:"PvP",pve:"PvE",pvx:"PvX"}[character.playstyle] ?? "") : "") : "Details pending")).join("\n")
-        : "No characters added yet.";
-      return { name: String(member.discord_username ?? "Discord member").slice(0, 256), value: value.slice(0, 1024), inline: false };
-    });
-    const total = count ?? members.length;
-    const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
-    return embedReply({ color: 0x39a86b, title: "ArcheAge Roster", description: "Page " + page + " of " + pages + " · " + total + " member" + (total === 1 ? "" : "s"), fields });
+    if (viewSub.name === "roster") {
+      const page = Number(getOption(viewSub.options, "page")?.value ?? 1);
+      const first = (page - 1) * PAGE_SIZE;
+      const db = requireSupabase();
+      const { data: members, count, error } = await db.from("discord_members")
+        .select("id,discord_user_id,discord_username", { count: "exact" })
+        .eq("guild_id", guildId)
+        .order("discord_username", { ascending: true })
+        .range(first, first + PAGE_SIZE - 1);
+      if (error) throw error;
+      if (!members?.length) return interactionReply(page === 1 ? "No one has added a character yet." : "There are no more roster pages.");
+      const { data: characters, error: characterError } = await db.from("discord_characters")
+        .select("member_id,character_name,class_name,level,playstyle")
+        .in("member_id", members.map((member) => member.id))
+        .order("character_name", { ascending: true });
+      if (characterError) throw characterError;
+      const byMember = new Map(members.map((member) => [member.id, []]));
+      for (const character of characters ?? []) byMember.get(character.member_id)?.push(character);
+      const fields = members.map((member) => {
+        const rows = byMember.get(member.id) ?? [];
+        const value = rows.length
+          ? rows.map((character) => escapeMarkdown(character.character_name) + " — " + (character.class_name ? escapeMarkdown(character.class_name) + ", Lv. " + character.level + (character.playstyle ? ", " + ({pvp:"PvP",pve:"PvE",pvx:"PvX"}[character.playstyle] ?? "") : "") : "Details pending")).join("\n")
+          : "No characters added yet.";
+        return { name: String(member.discord_username ?? "Discord member").slice(0, 256), value: value.slice(0, 1024), inline: false };
+      });
+      const total = count ?? members.length;
+      const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+      return embedReply({ color: 0x39a86b, title: "ArcheAge Roster", description: "Page " + page + " of " + pages + " · " + total + " member" + (total === 1 ? "" : "s"), fields });
+    }
   }
 
 function singaporeDateKey() {
@@ -389,10 +383,29 @@ function singaporeClockLabel(hour) {
   return interactionReply("I don’t recognize that command.", true);
 }
 
+async function syncCommandsForDeployment() {
+  const deploymentId = Deno.env.get("DENO_DEPLOYMENT_ID") ?? "";
+  if (!deploymentId) return;
+  const db = requireSupabase();
+  const { data, error } = await db.from("discord_command_sync")
+    .select("deployment_id")
+    .eq("id", 1)
+    .maybeSingle();
+  if (error) throw error;
+  if (data?.deployment_id === deploymentId) return;
+
+  await registerCommands();
+  const { error: saveError } = await db.from("discord_command_sync")
+    .upsert({ id: 1, deployment_id: deploymentId, synced_at: new Date().toISOString() }, { onConflict: "id" });
+  if (saveError) throw saveError;
+  console.log("Synced Discord commands for deployment " + deploymentId + ".");
+}
+
 async function runScheduledEventAlerts() {
   if (!discordBotToken || !cronApiKey || !alertChannelId || !supabase) {
     throw new Error("Scheduled alert configuration is incomplete.");
   }
+  await syncCommandsForDeployment();
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Singapore",
     year: "numeric",
