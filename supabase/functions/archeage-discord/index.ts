@@ -18,6 +18,78 @@ const supabase = supabaseUrl && supabaseKey
   ? createClient(supabaseUrl, supabaseKey, { auth: { autoRefreshToken: false, persistSession: false } })
   : null;
 
+const discordBotToken = Deno.env.get("DISCORD_BOT_TOKEN") ?? "";
+const discordApplicationId = Deno.env.get("DISCORD_CLIENT_ID") ?? "";
+const discordGuildId = Deno.env.get("DISCORD_GUILD_ID") ?? "";
+
+const commandDefinitions = [
+  {
+    name: "register",
+    description: "Register your Discord account for the ArcheAge roster.",
+  },
+  {
+    name: "add",
+    description: "Add a character or update one of your character levels.",
+    options: [
+      {
+        type: 1,
+        name: "character",
+        description: "Add a character to your roster.",
+        options: [
+          { type: 3, name: "name", description: "Your in-game character name.", required: true, max_length: 40 },
+          { type: 3, name: "class", description: "Your character class.", required: true, max_length: 40 },
+        ],
+      },
+      {
+        type: 1,
+        name: "level",
+        description: "Set the level for one of your registered characters.",
+        options: [
+          { type: 3, name: "character", description: "Choose one of your registered characters.", required: true, autocomplete: true },
+          { type: 4, name: "level", description: "Current character level.", required: true, min_value: 1, max_value: 1000 },
+        ],
+      },
+    ],
+  },
+  {
+    name: "profile",
+    description: "View a member’s registered ArcheAge characters.",
+    options: [
+      { type: 6, name: "member", description: "The Discord member to look up.", required: true },
+    ],
+  },
+  {
+    name: "roster",
+    description: "View registered ArcheAge characters in this server.",
+    options: [
+      { type: 4, name: "page", description: "Roster page number.", min_value: 1 },
+    ],
+  },
+];
+
+async function registerCommands() {
+  if (!discordBotToken || !discordApplicationId) {
+    throw new Error("Missing DISCORD_BOT_TOKEN or DISCORD_CLIENT_ID in Supabase Edge Function secrets.");
+  }
+  const route = "https://discord.com/api/v10/applications/" + discordApplicationId
+    + (discordGuildId ? "/guilds/" + discordGuildId : "")
+    + "/commands";
+  const response = await fetch(route, {
+    method: "PUT",
+    headers: {
+      "Authorization": "Bot " + discordBotToken,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(commandDefinitions),
+  });
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error("Discord returned HTTP " + response.status + ": " + detail.slice(0, 500));
+  }
+  console.log("Registered " + commandDefinitions.length + " slash commands"
+    + (discordGuildId ? " for the configured server." : " globally."));
+}
+
 const PAGE_SIZE = 10;
 const EPHEMERAL = 64;
 
@@ -263,7 +335,14 @@ Deno.serve(async (request) => {
     return new Response("Invalid JSON.", { status: 400 });
   }
 
-  if (interaction.type === 1) return jsonResponse({ type: 1 });
+  if (interaction.type === 1) {
+    try {
+      await registerCommands();
+    } catch (error) {
+      console.error("Slash-command registration failed:", error?.message ?? "unknown error");
+    }
+    return jsonResponse({ type: 1 });
+  }
   if (interaction.type === 4) {
     try {
       return jsonResponse(await handleAutocomplete(interaction));
