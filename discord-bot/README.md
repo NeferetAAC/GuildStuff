@@ -20,24 +20,16 @@ https://naywwmhjqihbyeqkumod.supabase.co/functions/v1/archeage-discord
 
 In the Discord Developer Portal:
 
-1. Open your application’s General Information page and copy its Public Key.
-2. In Supabase, open Project Settings → Edge Functions → Secrets and add DISCORD_PUBLIC_KEY with that value.
-3. Return to Discord General Information, paste the URL above into Interactions Endpoint URL, and save. Discord should validate it.
-4. Keep the app installed in the server. The Guild Install context should include applications.commands. If you want the bot user to have Administrator, configure that permission in the Guild Install settings and reinstall/authorize it in the server.
+1. On General Information, copy the Public Key. In Supabase Edge Function Secrets, add it as DISCORD_PUBLIC_KEY.
+2. Make sure DISCORD_BOT_TOKEN and DISCORD_CLIENT_ID are also present in Supabase Edge Function Secrets. These let the function publish the slash commands without your PC.
+3. Set the URL above as the Discord app’s Interactions Endpoint URL and save it. When Discord verifies the endpoint, the function publishes all five slash commands through Discord’s API.
+4. Optionally add DISCORD_GUILD_ID to Supabase secrets to publish commands just for your server, so they appear quickly. Without it, commands are registered globally and can take time to propagate.
+5. Keep the app installed in the server. The Guild Install context should include applications.commands. Set Administrator there if you want the bot user to have it.
 
-The function validates Discord’s Ed25519 signatures before processing requests. Supabase provides the server-side database key to the function; do not put a Supabase secret key in Discord or in a public repository.
+The function validates Discord’s Ed25519 signatures before handling interactions. Supabase provides the server-side database key to the function. Do not put a Supabase secret key in Discord or in a public repository.
 
-## Register slash commands once
+## Local fallback
 
-The command definitions are in the discord-bot folder. You only need a computer briefly to register the commands with Discord; your PC does not need to remain on afterwards.
-
-1. Copy discord-bot/.env.example to discord-bot/.env.
-2. Fill in DISCORD_BOT_TOKEN, DISCORD_CLIENT_ID, and DISCORD_GUILD_ID. The token is needed for this one-time registration step and must stay private.
-3. Open a terminal in discord-bot and run:
-
-   npm install
-   npm run deploy:commands
-
-Use the Discord Application ID as DISCORD_CLIENT_ID and your test server’s ID as DISCORD_GUILD_ID. The Guild ID makes the commands appear quickly in that server. Do not run npm start; that starts the old Gateway version.
+If you ever need to manually publish commands from a computer, copy discord-bot/.env.example to discord-bot/.env, enter the Discord bot token, application ID, and optional server ID, then run npm install and npm run deploy:commands from the discord-bot folder. Never commit .env or share the bot token.
 
 The schema is already installed in Tirwyn. The tables have RLS enabled and deny access to anon and authenticated roles; the Edge Function uses its server-only Supabase credentials. Discord IDs are stored as text to avoid numeric precision loss.
