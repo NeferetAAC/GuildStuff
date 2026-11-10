@@ -338,7 +338,7 @@
       "name": "Fine Ingot",
       "output": 3,
       "station": "Smelting",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-ingot": 54,
@@ -351,7 +351,7 @@
       "name": "Fine Ingot",
       "output": 15,
       "station": "Smelting",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-ingot": 270,
@@ -390,7 +390,7 @@
       "name": "Standard Ingot",
       "output": 30,
       "station": "Smelting",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "iron-ore": 90,
@@ -403,7 +403,7 @@
       "name": "Standard Ingot",
       "output": 30,
       "station": "Smelting",
-      "craftingLevel": 5,
+      "craftingLevel": 4,
       "costGold": 1500,
       "ingredients": {
         "high-quality-iron-ore": 1
@@ -442,7 +442,7 @@
       "name": "Fine Stone",
       "output": 3,
       "station": "Smelting",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-stone": 54,
@@ -456,7 +456,7 @@
       "name": "Fine Stone",
       "output": 15,
       "station": "Smelting",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-stone": 270,
@@ -498,7 +498,7 @@
       "name": "Standard Stone",
       "output": 30,
       "station": "Smelting",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "marble": 90,
@@ -512,7 +512,7 @@
       "name": "Standard Stone",
       "output": 30,
       "station": "Smelting",
-      "craftingLevel": 5,
+      "craftingLevel": 4,
       "costGold": 1500,
       "ingredients": {
         "white-marble": 1
@@ -552,7 +552,7 @@
       "name": "Fine Additive",
       "output": 3,
       "station": "Wildcraft",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-additive": 54,
@@ -565,7 +565,7 @@
       "name": "Fine Additive",
       "output": 15,
       "station": "Wildcraft",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-additive": 270,
@@ -604,7 +604,7 @@
       "name": "Standard Additive",
       "output": 30,
       "station": "Wildcraft",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "wild-petal": 90,
@@ -617,7 +617,7 @@
       "name": "Standard Additive",
       "output": 30,
       "station": "Wildcraft",
-      "craftingLevel": 5,
+      "craftingLevel": 4,
       "costGold": 1500,
       "ingredients": {
         "fragrant-wild-petal": 1
@@ -655,7 +655,7 @@
       "name": "Fine Lumber",
       "output": 3,
       "station": "Wildcraft",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-lumber": 54,
@@ -668,7 +668,7 @@
       "name": "Fine Lumber",
       "output": 15,
       "station": "Wildcraft",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-lumber": 270,
@@ -707,7 +707,7 @@
       "name": "Standard Lumber",
       "output": 30,
       "station": "Wildcraft",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "log": 90,
@@ -720,7 +720,7 @@
       "name": "Standard Lumber",
       "output": 30,
       "station": "Wildcraft",
-      "craftingLevel": 5,
+      "craftingLevel": 4,
       "costGold": 1500,
       "ingredients": {
         "hardened-logs": 1
@@ -851,7 +851,7 @@
       "name": "Rough Meat",
       "output": 30,
       "station": "Food",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "raw-meat": 450,
@@ -890,7 +890,7 @@
       "name": "Trimmed Meat",
       "output": 3,
       "station": "Food",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "rough-meat": 54,
@@ -903,7 +903,7 @@
       "name": "Trimmed Meat",
       "output": 15,
       "station": "Food",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "rough-meat": 270,
@@ -944,7 +944,7 @@
       "name": "Fine Archeum",
       "output": 3,
       "station": "Refining",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-archeum": 54,
@@ -958,7 +958,7 @@
       "name": "Fine Archeum",
       "output": 15,
       "station": "Refining",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-archeum": 270,
@@ -1000,7 +1000,7 @@
       "name": "Standard Archeum",
       "output": 30,
       "station": "Refining",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "archeum-shard": 90,
@@ -1014,7 +1014,7 @@
       "name": "Standard Archeum",
       "output": 30,
       "station": "Refining",
-      "craftingLevel": 5,
+      "craftingLevel": 4,
       "costGold": 1500,
       "ingredients": {
         "magic-archeum-shard": 1
@@ -1055,7 +1055,7 @@
       "name": "Fine Bonecraft",
       "output": 3,
       "station": "Refining",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-bonecraft": 54,
@@ -1069,7 +1069,7 @@
       "name": "Fine Bonecraft",
       "output": 15,
       "station": "Refining",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-bonecraft": 270,
@@ -1109,7 +1109,7 @@
       "name": "Standard Bonecraft",
       "output": 30,
       "station": "Refining",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "bone-chip": 450,
@@ -1150,7 +1150,7 @@
       "name": "Fine Leather",
       "output": 3,
       "station": "Cloth",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-leather": 54,
@@ -1164,7 +1164,7 @@
       "name": "Fine Leather",
       "output": 15,
       "station": "Cloth",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-leather": 270,
@@ -1206,7 +1206,7 @@
       "name": "Standard Leather",
       "output": 30,
       "station": "Cloth",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "raw-pelt": 450,
@@ -1249,7 +1249,7 @@
       "name": "Fine Textile",
       "output": 3,
       "station": "Cloth",
-      "craftingLevel": 3,
+      "craftingLevel": 2,
       "costGold": 450,
       "ingredients": {
         "standard-textile": 54,
@@ -1263,7 +1263,7 @@
       "name": "Fine Textile",
       "output": 15,
       "station": "Cloth",
-      "craftingLevel": 5,
+      "craftingLevel": 3,
       "costGold": 2250,
       "ingredients": {
         "standard-textile": 270,
@@ -1305,7 +1305,7 @@
       "name": "Standard Textile",
       "output": 30,
       "station": "Cloth",
-      "craftingLevel": 4,
+      "craftingLevel": 3,
       "costGold": 1500,
       "ingredients": {
         "wild-fiber": 90,
@@ -1319,7 +1319,7 @@
       "name": "Standard Textile",
       "output": 30,
       "station": "Cloth",
-      "craftingLevel": 5,
+      "craftingLevel": 4,
       "costGold": 1500,
       "ingredients": {
         "tough-wild-fiber": 1
