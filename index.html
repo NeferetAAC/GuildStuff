@@ -1236,4 +1236,37 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
   gap:24px;
   min-width:max-content;
 }
+</style><style id="craft-chain-pc-card-layout">
+/* Use the same image / name / amount card layout on desktop */
+@media(min-width:701px){
+  .craft-dialog .chain-panel #craft-chain .chain-node{
+    width:190px;
+    min-width:190px;
+    min-height:112px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    padding:10px 12px;
+    text-align:center;
+  }
+  .craft-dialog .chain-panel #craft-chain .chain-node img{
+    width:36px;
+    height:36px;
+  }
+  .craft-dialog .chain-panel #craft-chain .chain-node span{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+  }
+  .craft-dialog .chain-panel #craft-chain .chain-node strong{
+    white-space:normal;
+    text-align:center;
+  }
+  .craft-dialog .chain-panel #craft-chain .chain-node small{
+    white-space:nowrap;
+  }
+}
 </style></body></html>
