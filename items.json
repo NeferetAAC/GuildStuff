@@ -175,13 +175,14 @@
     },
     "standard-lumber": {
       "name": "Standard Lumber",
-      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
+      "image": "assets/professional-recipes/wildcraft/standard-lumber.webp"
     },
     "hardened-logs": {
       "name": "Hardened Logs"
     },
     "fine-lumber": {
-      "name": "Fine Lumber"
+      "name": "Fine Lumber",
+      "image": "assets/professional-recipes/wildcraft/fine-lumber.webp"
     },
     "buffalo-horn": {
       "name": "Buffalo Horn",
@@ -634,7 +635,8 @@
         "fine-bonecraft": 6,
         "bear-gallbladder": 3,
         "bellflower-dewdrop": 10
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/superior-additive.webp"
     },
     "fine-lumber": {
       "name": "Fine Lumber",
@@ -646,7 +648,8 @@
         "standard-lumber": 18,
         "standard-additive": 9,
         "lingering-soul-fragment": 3
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/fine-lumber.webp"
     },
     "fine-lumber-level-3-output-3": {
       "name": "Fine Lumber",
@@ -658,7 +661,8 @@
         "standard-lumber": 54,
         "standard-additive": 27,
         "lingering-soul-fragment": 9
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/fine-lumber.webp"
     },
     "fine-lumber-level-5-output-15": {
       "name": "Fine Lumber",
@@ -670,7 +674,8 @@
         "standard-lumber": 270,
         "standard-additive": 135,
         "lingering-soul-fragment": 45
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/fine-lumber.webp"
     },
     "standard-lumber": {
       "name": "Standard Lumber",
@@ -683,7 +688,7 @@
         "sweetgrass-powder": 5,
         "rag-scrap": 5
       },
-      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
+      "image": "assets/professional-recipes/wildcraft/standard-lumber.webp"
     },
     "standard-lumber-level-2-output-6": {
       "name": "Standard Lumber",
@@ -696,7 +701,7 @@
         "sweetgrass-powder": 30,
         "rag-scrap": 30
       },
-      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
+      "image": "assets/professional-recipes/wildcraft/standard-lumber.webp"
     },
     "standard-lumber-level-4-output-30": {
       "name": "Standard Lumber",
@@ -709,7 +714,7 @@
         "sweetgrass-powder": 150,
         "rag-scrap": 150
       },
-      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
+      "image": "assets/professional-recipes/wildcraft/standard-lumber.webp"
     },
     "standard-lumber-level-5-output-30": {
       "name": "Standard Lumber",
@@ -720,7 +725,7 @@
       "ingredients": {
         "hardened-logs": 1
       },
-      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
+      "image": "assets/professional-recipes/wildcraft/standard-lumber.webp"
     },
     "superior-lumber": {
       "name": "Superior Lumber",
@@ -733,7 +738,8 @@
         "fine-additive": 6,
         "buffalo-horn": 3,
         "blushpetal-branch": 10
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/superior-lumber.webp"
     },
     "aged-meat": {
       "name": "Aged Meat",
