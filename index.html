@@ -978,4 +978,54 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
 .chain-panel:not(.is-collapsed) .chain-toggle-icon{
   transform:rotate(180deg);
 }
+</style><style id="craft-chain-bottom-drawer">
+/* Keep the chain toggle anchored at the bottom; open the chain upward */
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)){
+  position:relative;
+  display:block;
+  overflow:hidden;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed))>.recipe,
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed))>.planner{
+  display:none;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed))>.chain-panel{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  display:flex;
+  flex-direction:column-reverse;
+  min-height:0;
+  height:100%;
+  padding:0;
+  border-top:0;
+  background:#11191a;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) .chain-panel-toggle{
+  flex:0 0 54px;
+  border-top:1px solid #405251;
+  background:linear-gradient(180deg,#121e1f,#0d1718);
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) .chain-panel-content{
+  display:flex;
+  flex:1 1 auto;
+  flex-direction:column;
+  min-height:0;
+  height:auto;
+  padding:0 24px 16px;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) .chain-panel-heading{
+  flex:0 0 auto;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) #craft-chain{
+  flex:1 1 auto;
+  min-height:0;
+  height:auto;
+}
+@media(max-width:850px){
+  .craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)){
+    display:block;
+    overflow:hidden;
+  }
+}
 </style></body></html>
