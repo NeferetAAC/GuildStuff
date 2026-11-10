@@ -4,17 +4,17 @@
   "materials": {
     "iron-ore": {
       "name": "Iron Ore",
-      "image": "assets/crafting/raw-materials/ores/iron-ore.webp",
+      "image": "assets/professional-recipes/materials/Iron Ore.webp",
       "location": "War Memorial Site or Ferrous Ravine"
     },
     "sweetgrass-powder": {
       "name": "Sweetgrass Powder",
-      "image": "assets/crafting/refined-materials/sweetgrass-powder.webp",
+      "image": "assets/professional-recipes/materials/Sweetgrass Powder.webp",
       "location": "Seaglass Harbour tavern"
     },
     "shattered-blade": {
       "name": "Shattered Blade",
-      "image": "assets/crafting/equipment/weapons/shattered-blade.webp",
+      "image": "assets/professional-recipes/materials/Shattered Blade.webp",
       "location": "Enemy drops: Jeco / Pirates (early); Corpse Warblade at Phlegthon Lake",
       "sourceType": "Enemy drops",
       "sourceDetails": "Jeco and Pirates are documented drop sources; Corpse Warblade at Phlegthon Lake has a documented 35% Shattered Blade drop. These are source-confirmed options, not tested highest-yield routes.",
@@ -37,12 +37,12 @@
     },
     "log": {
       "name": "Log",
-      "image": "assets/crafting/raw-materials/wood/log.webp",
+      "image": "assets/professional-recipes/materials/Log.webp",
       "location": "Beech Trees, Gylden Ruins"
     },
     "rag-scrap": {
       "name": "Rag Scrap",
-      "image": "assets/crafting/raw-materials/monster-drops/rag-scrap.webp",
+      "image": "assets/professional-recipes/materials/Rag-Scrap.webp",
       "location": "Enemy drops: Jeco / Pirates (early); Corpse Warblade at Phlegthon Lake",
       "sourceType": "Enemy drops",
       "sourceDetails": "Jeco and Pirates are documented drop sources; Corpse Warblade at Phlegthon Lake has a documented 35% Rag Scrap drop. These are source-confirmed options, not tested highest-yield routes.",
@@ -65,11 +65,11 @@
     },
     "wild-petal": {
       "name": "Wild Petal",
-      "image": "assets/crafting/raw-materials/plants/wild-petal.webp"
+      "image": "assets/professional-recipes/materials/wild-petal.webp"
     },
     "bone-chip": {
       "name": "Bone Chip",
-      "image": "assets/crafting/raw-materials/bone/bone-chip.webp",
+      "image": "assets/professional-recipes/materials/bone-chip.webp",
       "location": "Crocodiles / alligator turtles: butcher with Hunting Knife (Diamond Shores shoreline; Gylden Ruins)",
       "sourceType": "Hunting / butchering",
       "sourceDetails": "Confirmed route: defeat crocodiles or alligator turtles along Diamond Shores, then butcher with a Hunting Knife. Crocodiles in Gylden Ruins are another documented source. Wolves are primarily documented for Raw Pelt; one database also lists Bone Chip for wolves, so wolf Bone Chip yield is disputed and not recommended as a primary route.",
@@ -92,76 +92,80 @@
     },
     "archeum-shard": {
       "name": "Archeum Shard",
-      "image": "assets/crafting/raw-materials/magical/archeum-shard.webp",
+      "image": "assets/professional-recipes/refining/Archeum Shard.webp",
       "location": "War Memorial Site"
     },
     "twisted-scale": {
       "name": "Twisted Scale",
       "location": "Source not yet verified",
       "sourceType": "Acquisition to verify",
-      "image": "assets/crafting/raw-materials/monster-drops/twisted-scale.webp"
+      "image": "assets/professional-recipes/materials/twisted-scale.webp"
     },
     "lingering-soul-fragment": {
       "name": "Lingering Soul Fragment",
       "location": "Source not yet verified",
       "sourceType": "Acquisition to verify",
-      "image": "assets/crafting/raw-materials/magical/lingering-soul-fragment.webp"
+      "image": "assets/professional-recipes/materials/lingering-soul-fragment.webp"
     },
     "wolf-molar": {
       "name": "Wolf Molar",
       "location": "Source not yet verified",
       "sourceType": "Acquisition to verify",
-      "image": "assets/crafting/raw-materials/monster-drops/wolf-molar.webp"
+      "image": "assets/professional-recipes/materials/wolf-molar.webp"
     },
     "crystalline-ore": {
       "name": "Crystalline Ore",
       "location": "Source not yet verified",
       "sourceType": "Acquisition to verify",
-      "image": "assets/crafting/raw-materials/ores/crystalline-ore.webp"
+      "image": "assets/professional-recipes/materials/crystalline-ore.webp"
     },
     "standard-ingot": {
       "name": "Standard Ingot",
-      "image": "assets/crafting/refined-materials/standard-ingot.webp"
+      "image": "assets/professional-recipes/smelting/Standard Ingot.webp"
     },
     "standard-additive": {
       "name": "Standard Additive",
-      "image": "assets/crafting/refined-materials/standard-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/Standard-additive.webp"
     },
     "high-quality-iron-ore": {
-      "name": "High-Quality Iron Ore"
+      "name": "High-Quality Iron Ore",
+      "image": "assets/professional-recipes/materials/high-quality-iron-ore.webp"
     },
     "fine-ingot": {
       "name": "Fine Ingot",
-      "image": "assets/crafting/refined-materials/fine-ingot.webp"
+      "image": "assets/professional-recipes/smelting/fine-ingot.webp"
     },
     "fine-additive": {
       "name": "Fine Additive",
-      "image": "assets/crafting/refined-materials/fine-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/fine-additive.webp"
     },
     "standard-stone": {
       "name": "Standard Stone",
-      "image": "assets/crafting/profession-recipes/standard-stone.webp"
+      "image": "assets/professional-recipes/smelting/standard-stone.webp"
     },
     "marble": {
-      "name": "Marble"
+      "name": "Marble",
+      "image": "assets/professional-recipes/materials/marble.webp"
     },
     "white-marble": {
-      "name": "White Marble"
+      "name": "White Marble",
+      "image": "assets/professional-recipes/materials/white-marble.webp"
     },
     "fine-stone": {
       "name": "Fine Stone",
-      "image": "assets/crafting/profession-recipes/fine-stone.webp"
+      "image": "assets/professional-recipes/smelting/fine-stone.webp"
     },
     "standard-bonecraft": {
       "name": "Standard Bonecraft",
-      "image": "assets/crafting/refined-materials/standard-bonecraft.webp"
+      "image": "assets/professional-recipes/refining/standard-bonecraft.webp"
     },
     "fragrant-wild-petal": {
-      "name": "Fragrant Wild Petal"
+      "name": "Fragrant Wild Petal",
+      "image": "assets/professional-recipes/materials/fragant-white-petal.webp"
     },
     "fine-bonecraft": {
       "name": "Fine Bonecraft",
-      "image": "assets/crafting/profession-recipes/fine-bonecraft.webp"
+      "image": "assets/professional-recipes/refining/fine-bornecraft.webp"
     },
     "bear-gallbladder": {
       "name": "Bear Gallbladder"
@@ -170,85 +174,97 @@
       "name": "Bellflower Dewdrop"
     },
     "standard-lumber": {
-      "name": "Standard Lumber"
+      "name": "Standard Lumber",
+      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
     },
     "hardened-logs": {
       "name": "Hardened Logs"
     },
     "fine-lumber": {
-      "name": "Fine Lumber",
-      "image": "assets/crafting/profession-recipes/fine-lumber.webp"
+      "name": "Fine Lumber"
     },
     "buffalo-horn": {
-      "name": "Buffalo Horn"
+      "name": "Buffalo Horn",
+      "image": "assets/professional-recipes/materials/buffalo-horn.webp"
     },
     "blushpetal-branch": {
-      "name": "Blushpetal Branch"
+      "name": "Blushpetal Branch",
+      "image": "assets/professional-recipes/materials/blushpetal-branch.webp"
     },
     "trimmed-meat": {
       "name": "Trimmed Meat",
-      "image": "assets/crafting/profession-recipes/trimmed-meat.webp"
+      "image": "assets/professional-recipes/food/trimmed-meat.webp"
     },
     "pumpkin": {
-      "name": "Pumpkin"
+      "name": "Pumpkin",
+      "image": "assets/professional-recipes/materials/pumpkin.webp"
     },
     "cabbage": {
       "name": "Cabbage"
     },
     "carrot": {
-      "name": "Carrot"
+      "name": "Carrot",
+      "image": "assets/professional-recipes/materials/carrot.webp"
     },
     "corn": {
-      "name": "Corn"
+      "name": "Corn",
+      "image": "assets/professional-recipes/materials/corn.webp"
     },
     "barley": {
-      "name": "Barley"
+      "name": "Barley",
+      "image": "assets/professional-recipes/materials/barley.webp"
     },
     "wheat": {
       "name": "Wheat"
     },
     "crab": {
-      "name": "Crab"
+      "name": "Crab",
+      "image": "assets/professional-recipes/materials/crab.webp"
     },
     "clam": {
-      "name": "Clam"
+      "name": "Clam",
+      "image": "assets/professional-recipes/materials/clam.webp"
     },
     "watermelon": {
       "name": "Watermelon"
     },
     "aged-meat": {
       "name": "Aged Meat",
-      "image": "assets/crafting/profession-recipes/aged-meat.webp"
+      "image": "assets/professional-recipes/food/aged-meat.webp"
     },
     "melon": {
-      "name": "Melon"
+      "name": "Melon",
+      "image": "assets/professional-recipes/materials/melon.webp"
     },
     "raw-meat": {
-      "name": "Raw Meat"
+      "name": "Raw Meat",
+      "image": "assets/professional-recipes/materials/raw-meat.webp"
     },
     "sweet-potato": {
-      "name": "Sweet Potato"
+      "name": "Sweet Potato",
+      "image": "assets/professional-recipes/materials/sweet-potato.webp"
     },
     "potato": {
-      "name": "Potato"
+      "name": "Potato",
+      "image": "assets/professional-recipes/materials/potato.webp"
     },
     "rough-meat": {
       "name": "Rough Meat",
-      "image": "assets/crafting/profession-recipes/rough-meat.webp"
+      "image": "assets/professional-recipes/food/rough-meat.webp"
     },
     "thunderstruck-shell": {
       "name": "Thunderstruck Shell"
     },
     "superior-bonecraft": {
       "name": "Superior Bonecraft",
-      "image": "assets/crafting/profession-recipes/superior-bonecraft.webp"
+      "image": "assets/professional-recipes/refining/superior-bonecraft.webp"
     },
     "corrupted-heart": {
       "name": "Corrupted Heart"
     },
     "standard-archeum": {
       "name": "Standard Archeum",
-      "image": "assets/crafting/profession-recipes/standard-archeum.webp"
+      "image": "assets/professional-recipes/refining/standard-archeum.webp"
     },
     "orc-fang": {
       "name": "Orc Fang"
@@ -258,7 +274,7 @@
     },
     "fine-archeum": {
       "name": "Fine Archeum",
-      "image": "assets/crafting/profession-recipes/fine-archeum.webp"
+      "image": "assets/professional-recipes/refining/fine-archeum.webp"
     },
     "turtle-shell-fragment": {
       "name": "Turtle Shell Fragment"
@@ -268,7 +284,7 @@
     },
     "standard-leather": {
       "name": "Standard Leather",
-      "image": "assets/crafting/profession-recipes/standard-leather.webp"
+      "image": "assets/professional-recipes/cloth/standard-leather.webp"
     },
     "crude-gnoll-fur": {
       "name": "Crude Gnoll Fur"
@@ -278,24 +294,26 @@
     },
     "fine-leather": {
       "name": "Fine Leather",
-      "image": "assets/crafting/profession-recipes/fine-leather.webp"
+      "image": "assets/professional-recipes/cloth/fine-leather.webp"
     },
     "crocodile-hide": {
-      "name": "Crocodile Hide"
+      "name": "Crocodile Hide",
+      "image": "assets/professional-recipes/materials/crocodile-hide.webp"
     },
     "standard-textile": {
       "name": "Standard Textile",
-      "image": "assets/crafting/profession-recipes/standard-textile.webp"
+      "image": "assets/professional-recipes/cloth/standard-textile.webp"
     },
     "wild-fiber": {
-      "name": "Wild Fiber"
+      "name": "Wild Fiber",
+      "image": "assets/professional-recipes/materials/wild-fiber.webp"
     },
     "tough-wild-fiber": {
       "name": "Tough Wild Fiber"
     },
     "fine-textile": {
       "name": "Fine Textile",
-      "image": "assets/crafting/profession-recipes/fine-textile.webp"
+      "image": "assets/professional-recipes/cloth/fine-textile.webp"
     },
     "mountain-goat-wool": {
       "name": "Mountain Goat Wool"
@@ -313,7 +331,7 @@
         "standard-additive": 9,
         "twisted-scale": 3
       },
-      "image": "assets/crafting/refined-materials/fine-ingot.webp"
+      "image": "assets/professional-recipes/smelting/fine-ingot.webp"
     },
     "fine-ingot-level-3-output-3": {
       "name": "Fine Ingot",
@@ -326,7 +344,7 @@
         "standard-additive": 27,
         "twisted-scale": 9
       },
-      "image": "assets/crafting/refined-materials/fine-ingot.webp"
+      "image": "assets/professional-recipes/smelting/fine-ingot.webp"
     },
     "fine-ingot-level-5-output-15": {
       "name": "Fine Ingot",
@@ -339,7 +357,7 @@
         "standard-additive": 135,
         "twisted-scale": 45
       },
-      "image": "assets/crafting/refined-materials/fine-ingot.webp"
+      "image": "assets/professional-recipes/smelting/fine-ingot.webp"
     },
     "standard-ingot": {
       "name": "Standard Ingot",
@@ -352,7 +370,7 @@
         "sweetgrass-powder": 5,
         "shattered-blade": 5
       },
-      "image": "assets/crafting/refined-materials/standard-ingot.webp"
+      "image": "assets/professional-recipes/smelting/Standard Ingot.webp"
     },
     "standard-ingot-level-2-output-6": {
       "name": "Standard Ingot",
@@ -365,7 +383,7 @@
         "sweetgrass-powder": 30,
         "shattered-blade": 30
       },
-      "image": "assets/crafting/refined-materials/standard-ingot.webp"
+      "image": "assets/professional-recipes/smelting/Standard Ingot.webp"
     },
     "standard-ingot-level-4-output-30": {
       "name": "Standard Ingot",
@@ -378,7 +396,7 @@
         "sweetgrass-powder": 150,
         "shattered-blade": 150
       },
-      "image": "assets/crafting/refined-materials/standard-ingot.webp"
+      "image": "assets/professional-recipes/smelting/Standard Ingot.webp"
     },
     "standard-ingot-level-5-output-30": {
       "name": "Standard Ingot",
@@ -389,7 +407,7 @@
       "ingredients": {
         "high-quality-iron-ore": 1
       },
-      "image": "assets/crafting/refined-materials/standard-ingot.webp"
+      "image": "assets/professional-recipes/smelting/Standard Ingot.webp"
     },
     "superior-ingot": {
       "name": "Superior Ingot",
@@ -403,7 +421,7 @@
         "wolf-molar": 3,
         "crystalline-ore": 10
       },
-      "image": "assets/crafting/refined-materials/superior-ingot.webp"
+      "image": "assets/professional-recipes/smelting/superior-ingot.webp"
     },
     "fine-stone": {
       "name": "Fine Stone",
@@ -416,7 +434,7 @@
         "standard-additive": 9,
         "twisted-scale": 3
       },
-      "image": "assets/crafting/profession-recipes/fine-stone.webp",
+      "image": "assets/professional-recipes/smelting/fine-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-stone"
     },
     "fine-stone-level-3-output-3": {
@@ -430,7 +448,7 @@
         "standard-additive": 27,
         "twisted-scale": 9
       },
-      "image": "assets/crafting/profession-recipes/fine-stone.webp",
+      "image": "assets/professional-recipes/smelting/fine-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-stone"
     },
     "fine-stone-level-5-output-15": {
@@ -444,7 +462,7 @@
         "standard-additive": 135,
         "twisted-scale": 45
       },
-      "image": "assets/crafting/profession-recipes/fine-stone.webp",
+      "image": "assets/professional-recipes/smelting/fine-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-stone"
     },
     "standard-stone": {
@@ -458,7 +476,7 @@
         "sweetgrass-powder": 5,
         "shattered-blade": 5
       },
-      "image": "assets/crafting/profession-recipes/standard-stone.webp",
+      "image": "assets/professional-recipes/smelting/standard-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-stone"
     },
     "standard-stone-level-2-output-6": {
@@ -472,7 +490,7 @@
         "sweetgrass-powder": 30,
         "shattered-blade": 30
       },
-      "image": "assets/crafting/profession-recipes/standard-stone.webp",
+      "image": "assets/professional-recipes/smelting/standard-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-stone"
     },
     "standard-stone-level-4-output-30": {
@@ -486,7 +504,7 @@
         "sweetgrass-powder": 150,
         "shattered-blade": 150
       },
-      "image": "assets/crafting/profession-recipes/standard-stone.webp",
+      "image": "assets/professional-recipes/smelting/standard-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-stone"
     },
     "standard-stone-level-5-output-30": {
@@ -498,7 +516,7 @@
       "ingredients": {
         "white-marble": 1
       },
-      "image": "assets/crafting/profession-recipes/standard-stone.webp",
+      "image": "assets/professional-recipes/smelting/standard-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-stone"
     },
     "superior-stone": {
@@ -513,7 +531,7 @@
         "wolf-molar": 3,
         "crystalline-ore": 10
       },
-      "image": "assets/crafting/profession-recipes/superior-stone.webp",
+      "image": "assets/professional-recipes/smelting/superior-stone.webp",
       "imageSource": "https://aac.gaming.tools/items/superior-stone"
     },
     "fine-additive": {
@@ -527,7 +545,7 @@
         "standard-bonecraft": 9,
         "lingering-soul-fragment": 3
       },
-      "image": "assets/crafting/refined-materials/fine-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/fine-additive.webp"
     },
     "fine-additive-level-3-output-3": {
       "name": "Fine Additive",
@@ -540,7 +558,7 @@
         "standard-bonecraft": 27,
         "lingering-soul-fragment": 9
       },
-      "image": "assets/crafting/refined-materials/fine-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/fine-additive.webp"
     },
     "fine-additive-level-5-output-15": {
       "name": "Fine Additive",
@@ -553,7 +571,7 @@
         "standard-bonecraft": 135,
         "lingering-soul-fragment": 45
       },
-      "image": "assets/crafting/refined-materials/fine-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/fine-additive.webp"
     },
     "standard-additive": {
       "name": "Standard Additive",
@@ -566,7 +584,7 @@
         "sweetgrass-powder": 5,
         "rag-scrap": 5
       },
-      "image": "assets/crafting/refined-materials/standard-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/Standard-additive.webp"
     },
     "standard-additive-level-2-output-6": {
       "name": "Standard Additive",
@@ -579,7 +597,7 @@
         "sweetgrass-powder": 30,
         "rag-scrap": 30
       },
-      "image": "assets/crafting/refined-materials/standard-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/Standard-additive.webp"
     },
     "standard-additive-level-4-output-30": {
       "name": "Standard Additive",
@@ -592,7 +610,7 @@
         "sweetgrass-powder": 150,
         "rag-scrap": 150
       },
-      "image": "assets/crafting/refined-materials/standard-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/Standard-additive.webp"
     },
     "standard-additive-level-5-output-30": {
       "name": "Standard Additive",
@@ -603,7 +621,7 @@
       "ingredients": {
         "fragrant-wild-petal": 1
       },
-      "image": "assets/crafting/refined-materials/standard-additive.webp"
+      "image": "assets/professional-recipes/wildcraft/Standard-additive.webp"
     },
     "superior-additive": {
       "name": "Superior Additive",
@@ -616,9 +634,7 @@
         "fine-bonecraft": 6,
         "bear-gallbladder": 3,
         "bellflower-dewdrop": 10
-      },
-      "image": "assets/crafting/profession-recipes/superior-additive.webp",
-      "imageSource": "https://aac.gaming.tools/items/superior-additive"
+      }
     },
     "fine-lumber": {
       "name": "Fine Lumber",
@@ -630,9 +646,7 @@
         "standard-lumber": 18,
         "standard-additive": 9,
         "lingering-soul-fragment": 3
-      },
-      "image": "assets/crafting/profession-recipes/fine-lumber.webp",
-      "imageSource": "https://aac.gaming.tools/items/fine-lumber"
+      }
     },
     "fine-lumber-level-3-output-3": {
       "name": "Fine Lumber",
@@ -644,9 +658,7 @@
         "standard-lumber": 54,
         "standard-additive": 27,
         "lingering-soul-fragment": 9
-      },
-      "image": "assets/crafting/profession-recipes/fine-lumber.webp",
-      "imageSource": "https://aac.gaming.tools/items/fine-lumber"
+      }
     },
     "fine-lumber-level-5-output-15": {
       "name": "Fine Lumber",
@@ -658,9 +670,7 @@
         "standard-lumber": 270,
         "standard-additive": 135,
         "lingering-soul-fragment": 45
-      },
-      "image": "assets/crafting/profession-recipes/fine-lumber.webp",
-      "imageSource": "https://aac.gaming.tools/items/fine-lumber"
+      }
     },
     "standard-lumber": {
       "name": "Standard Lumber",
@@ -673,7 +683,7 @@
         "sweetgrass-powder": 5,
         "rag-scrap": 5
       },
-      "image": "assets/crafting/refined-materials/lumber.webp"
+      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
     },
     "standard-lumber-level-2-output-6": {
       "name": "Standard Lumber",
@@ -685,7 +695,8 @@
         "log": 18,
         "sweetgrass-powder": 30,
         "rag-scrap": 30
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
     },
     "standard-lumber-level-4-output-30": {
       "name": "Standard Lumber",
@@ -697,7 +708,8 @@
         "log": 90,
         "sweetgrass-powder": 150,
         "rag-scrap": 150
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
     },
     "standard-lumber-level-5-output-30": {
       "name": "Standard Lumber",
@@ -707,7 +719,8 @@
       "costGold": 1500,
       "ingredients": {
         "hardened-logs": 1
-      }
+      },
+      "image": "assets/professional-recipes/wildcraft/Lumber.webp"
     },
     "superior-lumber": {
       "name": "Superior Lumber",
@@ -720,9 +733,7 @@
         "fine-additive": 6,
         "buffalo-horn": 3,
         "blushpetal-branch": 10
-      },
-      "image": "assets/crafting/profession-recipes/superior-lumber.webp",
-      "imageSource": "https://aac.gaming.tools/items/superior-lumber"
+      }
     },
     "aged-meat": {
       "name": "Aged Meat",
@@ -735,7 +746,7 @@
         "fine-additive": 6,
         "bear-gallbladder": 9
       },
-      "image": "assets/crafting/profession-recipes/aged-meat.webp",
+      "image": "assets/professional-recipes/food/aged-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/aged-meat"
     },
     "golden-pickled-vegetables": {
@@ -748,7 +759,8 @@
         "pumpkin": 25,
         "cabbage": 100,
         "carrot": 15
-      }
+      },
+      "image": "assets/professional-recipes/food/golden-pickled-vegetables.webp"
     },
     "grain-liquor": {
       "name": "Grain Liquor",
@@ -760,7 +772,8 @@
         "corn": 100,
         "barley": 50,
         "wheat": 15
-      }
+      },
+      "image": "assets/professional-recipes/food/grain-liquor.webp"
     },
     "michelan-s-seasoning-essence": {
       "name": "Michelan's Seasoning Essence",
@@ -774,7 +787,8 @@
         "watermelon": 30,
         "carrot": 15,
         "aged-meat": 1
-      }
+      },
+      "image": "assets/professional-recipes/food/michelan's-seasoning-essence.webp"
     },
     "rainbow-fruit-jam": {
       "name": "Rainbow Fruit Jam",
@@ -786,7 +800,8 @@
         "pumpkin": 25,
         "watermelon": 15,
         "melon": 60
-      }
+      },
+      "image": "assets/professional-recipes/food/rainbow-fruit-jam.webp"
     },
     "refined-barley": {
       "name": "Refined Barley",
@@ -797,7 +812,7 @@
       "ingredients": {
         "barley": 50
       },
-      "image": "assets/crafting/profession-recipes/refined-barley.webp",
+      "image": "assets/professional-recipes/food/refined-barley.webp",
       "imageSource": "https://aac.gaming.tools/items/refined-barley"
     },
     "rough-meat": {
@@ -810,7 +825,7 @@
         "raw-meat": 15,
         "sweetgrass-powder": 5
       },
-      "image": "assets/crafting/profession-recipes/rough-meat.webp",
+      "image": "assets/professional-recipes/food/rough-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/rough-meat"
     },
     "rough-meat-level-2-output-6": {
@@ -823,7 +838,7 @@
         "raw-meat": 90,
         "sweetgrass-powder": 30
       },
-      "image": "assets/crafting/profession-recipes/rough-meat.webp",
+      "image": "assets/professional-recipes/food/rough-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/rough-meat"
     },
     "rough-meat-level-4-output-30": {
@@ -836,7 +851,7 @@
         "raw-meat": 450,
         "sweetgrass-powder": 150
       },
-      "image": "assets/crafting/profession-recipes/rough-meat.webp",
+      "image": "assets/professional-recipes/food/rough-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/rough-meat"
     },
     "starch": {
@@ -849,7 +864,8 @@
         "sweet-potato": 25,
         "potato": 25,
         "wheat": 60
-      }
+      },
+      "image": "assets/professional-recipes/food/starch.webp"
     },
     "trimmed-meat": {
       "name": "Trimmed Meat",
@@ -861,7 +877,7 @@
         "rough-meat": 18,
         "standard-additive": 9
       },
-      "image": "assets/crafting/profession-recipes/trimmed-meat.webp",
+      "image": "assets/professional-recipes/food/trimmed-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/trimmed-meat"
     },
     "trimmed-meat-level-3-output-3": {
@@ -874,7 +890,7 @@
         "rough-meat": 54,
         "standard-additive": 27
       },
-      "image": "assets/crafting/profession-recipes/trimmed-meat.webp",
+      "image": "assets/professional-recipes/food/trimmed-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/trimmed-meat"
     },
     "trimmed-meat-level-5-output-15": {
@@ -887,7 +903,7 @@
         "rough-meat": 270,
         "standard-additive": 135
       },
-      "image": "assets/crafting/profession-recipes/trimmed-meat.webp",
+      "image": "assets/professional-recipes/food/trimmed-meat.webp",
       "imageSource": "https://aac.gaming.tools/items/trimmed-meat"
     },
     "arcane-sealed-chest": {
@@ -901,7 +917,7 @@
         "superior-bonecraft": 1,
         "corrupted-heart": 6
       },
-      "image": "assets/crafting/profession-recipes/arcane-sealed-chest.webp",
+      "image": "assets/professional-recipes/refining/arcane-sealed-chest.webp",
       "imageSource": "https://aac.gaming.tools/items/arcane-sealed-chest"
     },
     "fine-archeum": {
@@ -915,7 +931,7 @@
         "standard-additive": 9,
         "orc-fang": 3
       },
-      "image": "assets/crafting/profession-recipes/fine-archeum.webp",
+      "image": "assets/professional-recipes/refining/fine-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-archeum"
     },
     "fine-archeum-level-3-output-3": {
@@ -929,7 +945,7 @@
         "standard-additive": 27,
         "orc-fang": 9
       },
-      "image": "assets/crafting/profession-recipes/fine-archeum.webp",
+      "image": "assets/professional-recipes/refining/fine-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-archeum"
     },
     "fine-archeum-level-5-output-15": {
@@ -943,7 +959,7 @@
         "standard-additive": 135,
         "orc-fang": 45
       },
-      "image": "assets/crafting/profession-recipes/fine-archeum.webp",
+      "image": "assets/professional-recipes/refining/fine-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-archeum"
     },
     "standard-archeum": {
@@ -957,7 +973,7 @@
         "sweetgrass-powder": 5,
         "shattered-blade": 5
       },
-      "image": "assets/crafting/profession-recipes/standard-archeum.webp",
+      "image": "assets/professional-recipes/refining/standard-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-archeum"
     },
     "standard-archeum-level-2-output-6": {
@@ -971,7 +987,7 @@
         "sweetgrass-powder": 30,
         "shattered-blade": 30
       },
-      "image": "assets/crafting/profession-recipes/standard-archeum.webp",
+      "image": "assets/professional-recipes/refining/standard-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-archeum"
     },
     "standard-archeum-level-4-output-30": {
@@ -985,7 +1001,7 @@
         "sweetgrass-powder": 150,
         "shattered-blade": 150
       },
-      "image": "assets/crafting/profession-recipes/standard-archeum.webp",
+      "image": "assets/professional-recipes/refining/standard-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-archeum"
     },
     "standard-archeum-level-5-output-30": {
@@ -997,7 +1013,7 @@
       "ingredients": {
         "magic-archeum-shard": 1
       },
-      "image": "assets/crafting/profession-recipes/standard-archeum.webp",
+      "image": "assets/professional-recipes/refining/standard-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-archeum"
     },
     "superior-archeum": {
@@ -1012,7 +1028,7 @@
         "turtle-shell-fragment": 3,
         "star-fragment": 10
       },
-      "image": "assets/crafting/profession-recipes/superior-archeum.webp",
+      "image": "assets/professional-recipes/refining/superior-archeum.webp",
       "imageSource": "https://aac.gaming.tools/items/superior-archeum"
     },
     "fine-bonecraft": {
@@ -1026,7 +1042,7 @@
         "standard-additive": 9,
         "orc-fang": 3
       },
-      "image": "assets/crafting/profession-recipes/fine-bonecraft.webp",
+      "image": "assets/professional-recipes/refining/fine-bornecraft.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-bonecraft"
     },
     "fine-bonecraft-level-3-output-3": {
@@ -1040,7 +1056,7 @@
         "standard-additive": 27,
         "orc-fang": 9
       },
-      "image": "assets/crafting/profession-recipes/fine-bonecraft.webp",
+      "image": "assets/professional-recipes/refining/fine-bornecraft.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-bonecraft"
     },
     "fine-bonecraft-level-5-output-15": {
@@ -1054,7 +1070,7 @@
         "standard-additive": 135,
         "orc-fang": 45
       },
-      "image": "assets/crafting/profession-recipes/fine-bonecraft.webp",
+      "image": "assets/professional-recipes/refining/fine-bornecraft.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-bonecraft"
     },
     "standard-bonecraft": {
@@ -1068,7 +1084,7 @@
         "sweetgrass-powder": 5,
         "shattered-blade": 5
       },
-      "image": "assets/crafting/refined-materials/standard-bonecraft.webp"
+      "image": "assets/professional-recipes/refining/standard-bonecraft.webp"
     },
     "standard-bonecraft-level-2-output-6": {
       "name": "Standard Bonecraft",
@@ -1081,7 +1097,7 @@
         "sweetgrass-powder": 30,
         "shattered-blade": 30
       },
-      "image": "assets/crafting/refined-materials/standard-bonecraft.webp"
+      "image": "assets/professional-recipes/refining/standard-bonecraft.webp"
     },
     "standard-bonecraft-level-4-output-30": {
       "name": "Standard Bonecraft",
@@ -1094,7 +1110,7 @@
         "sweetgrass-powder": 150,
         "shattered-blade": 150
       },
-      "image": "assets/crafting/refined-materials/standard-bonecraft.webp"
+      "image": "assets/professional-recipes/refining/standard-bonecraft.webp"
     },
     "superior-bonecraft": {
       "name": "Superior Bonecraft",
@@ -1107,7 +1123,7 @@
         "fine-additive": 6,
         "buffalo-horn": 9
       },
-      "image": "assets/crafting/profession-recipes/superior-bonecraft.webp",
+      "image": "assets/professional-recipes/refining/superior-bonecraft.webp",
       "imageSource": "https://aac.gaming.tools/items/superior-bonecraft"
     },
     "fine-leather": {
@@ -1121,7 +1137,7 @@
         "standard-additive": 9,
         "crude-gnoll-fur": 3
       },
-      "image": "assets/crafting/profession-recipes/fine-leather.webp",
+      "image": "assets/professional-recipes/cloth/fine-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-leather"
     },
     "fine-leather-level-3-output-3": {
@@ -1135,7 +1151,7 @@
         "standard-additive": 27,
         "crude-gnoll-fur": 9
       },
-      "image": "assets/crafting/profession-recipes/fine-leather.webp",
+      "image": "assets/professional-recipes/cloth/fine-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-leather"
     },
     "fine-leather-level-5-output-15": {
@@ -1149,7 +1165,7 @@
         "standard-additive": 135,
         "crude-gnoll-fur": 45
       },
-      "image": "assets/crafting/profession-recipes/fine-leather.webp",
+      "image": "assets/professional-recipes/cloth/fine-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-leather"
     },
     "standard-leather": {
@@ -1163,7 +1179,7 @@
         "sweetgrass-powder": 5,
         "rag-scrap": 5
       },
-      "image": "assets/crafting/profession-recipes/standard-leather.webp",
+      "image": "assets/professional-recipes/cloth/standard-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-leather"
     },
     "standard-leather-level-2-output-6": {
@@ -1177,7 +1193,7 @@
         "sweetgrass-powder": 30,
         "rag-scrap": 30
       },
-      "image": "assets/crafting/profession-recipes/standard-leather.webp",
+      "image": "assets/professional-recipes/cloth/standard-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-leather"
     },
     "standard-leather-level-4-output-30": {
@@ -1191,7 +1207,7 @@
         "sweetgrass-powder": 150,
         "rag-scrap": 150
       },
-      "image": "assets/crafting/profession-recipes/standard-leather.webp",
+      "image": "assets/professional-recipes/cloth/standard-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-leather"
     },
     "superior-leather": {
@@ -1206,7 +1222,7 @@
         "crocodile-hide": 3,
         "blushpetal-branch": 10
       },
-      "image": "assets/crafting/profession-recipes/superior-leather.webp",
+      "image": "assets/professional-recipes/cloth/superior-leather.webp",
       "imageSource": "https://aac.gaming.tools/items/superior-leather"
     },
     "fine-textile": {
@@ -1220,7 +1236,7 @@
         "standard-additive": 9,
         "crude-gnoll-fur": 3
       },
-      "image": "assets/crafting/profession-recipes/fine-textile.webp",
+      "image": "assets/professional-recipes/cloth/fine-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-textile"
     },
     "fine-textile-level-3-output-3": {
@@ -1234,7 +1250,7 @@
         "standard-additive": 27,
         "crude-gnoll-fur": 9
       },
-      "image": "assets/crafting/profession-recipes/fine-textile.webp",
+      "image": "assets/professional-recipes/cloth/fine-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-textile"
     },
     "fine-textile-level-5-output-15": {
@@ -1248,7 +1264,7 @@
         "standard-additive": 135,
         "crude-gnoll-fur": 45
       },
-      "image": "assets/crafting/profession-recipes/fine-textile.webp",
+      "image": "assets/professional-recipes/cloth/fine-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/fine-textile"
     },
     "standard-textile": {
@@ -1262,7 +1278,7 @@
         "sweetgrass-powder": 5,
         "rag-scrap": 5
       },
-      "image": "assets/crafting/profession-recipes/standard-textile.webp",
+      "image": "assets/professional-recipes/cloth/standard-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-textile"
     },
     "standard-textile-level-2-output-6": {
@@ -1276,7 +1292,7 @@
         "sweetgrass-powder": 30,
         "rag-scrap": 30
       },
-      "image": "assets/crafting/profession-recipes/standard-textile.webp",
+      "image": "assets/professional-recipes/cloth/standard-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-textile"
     },
     "standard-textile-level-4-output-30": {
@@ -1290,7 +1306,7 @@
         "sweetgrass-powder": 150,
         "rag-scrap": 150
       },
-      "image": "assets/crafting/profession-recipes/standard-textile.webp",
+      "image": "assets/professional-recipes/cloth/standard-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-textile"
     },
     "standard-textile-level-5-output-30": {
@@ -1302,7 +1318,7 @@
       "ingredients": {
         "tough-wild-fiber": 1
       },
-      "image": "assets/crafting/profession-recipes/standard-textile.webp",
+      "image": "assets/professional-recipes/cloth/standard-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/standard-textile"
     },
     "superior-textile": {
@@ -1317,7 +1333,7 @@
         "mountain-goat-wool": 3,
         "bellflower-dewdrop": 10
       },
-      "image": "assets/crafting/profession-recipes/superior-textile.webp",
+      "image": "assets/professional-recipes/cloth/superior-textile.webp",
       "imageSource": "https://aac.gaming.tools/items/superior-textile"
     }
   },
