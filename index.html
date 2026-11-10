@@ -957,4 +957,25 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
   margin-right:6px;
   color:#9da79f;
 }
+</style><style id="craft-chain-caret-inline">
+/* Put the collapse caret directly beside the Crafting Chain label */
+.chain-panel-toggle{
+  justify-content:flex-start;
+  gap:8px;
+  padding-right:14px;
+}
+.chain-panel-toggle>span:first-child{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.chain-toggle-icon{
+  position:static;
+  transform:none;
+  display:inline-block;
+  margin-left:0;
+}
+.chain-panel:not(.is-collapsed) .chain-toggle-icon{
+  transform:rotate(180deg);
+}
 </style></body></html>
