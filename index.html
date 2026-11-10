@@ -912,4 +912,49 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
     overflow:hidden;
   }
 }
+</style><style id="craft-chain-card-layout">
+/* Keep the collapse caret on the far right and stack card content */
+.chain-panel-toggle{
+  position:relative;
+  padding-right:42px;
+}
+.chain-toggle-icon{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+}
+.chain-panel:not(.is-collapsed) .chain-toggle-icon{
+  transform:translateY(-50%) rotate(180deg);
+}
+.craft-dialog .chain-panel #craft-chain .chain-node{
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  min-height:92px;
+  text-align:center;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node img{
+  width:38px;
+  height:38px;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node span{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:6px;
+  width:100%;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node strong{
+  overflow-wrap:anywhere;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node small{
+  white-space:nowrap;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node small::before{
+  content:"/";
+  margin-right:6px;
+  color:#9da79f;
+}
 </style></body></html>
