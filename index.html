@@ -712,4 +712,39 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
 .craft-dialog .chain-panel #craft-chain .chain-child>.chain-branch{
   gap:24px;
 }
+</style><style id="craft-modal-balance">
+/* Give the calculator and recipe details their own usable top section */
+.craft-dialog>.modal-body{
+  min-height:0;
+  grid-template-rows:minmax(420px,1.15fr) minmax(330px,.85fr);
+  overflow:hidden;
+}
+.craft-dialog .recipe,
+.craft-dialog .planner{
+  min-height:0;
+  height:auto;
+  max-height:none;
+  overflow:auto;
+}
+.craft-dialog .chain-panel{
+  min-height:330px;
+  overflow:hidden;
+}
+.craft-dialog .chain-panel #craft-chain{
+  min-height:270px;
+  height:calc(100% - 42px);
+  max-height:none;
+}
+@media(max-width:850px){
+  .craft-dialog>.modal-body{
+    grid-template-rows:auto auto minmax(360px,auto);
+    overflow:auto;
+  }
+  .craft-dialog .chain-panel{
+    min-height:360px;
+  }
+  .craft-dialog .chain-panel #craft-chain{
+    min-height:300px;
+  }
+}
 </style></body></html>
