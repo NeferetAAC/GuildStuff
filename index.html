@@ -873,4 +873,43 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
    content.hidden=!open;
  });
 })();
-</script></body></html>
+</script><style id="craft-chain-full-modal">
+/* Expanded crafting chain takes over the modal */
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)){
+  grid-template-columns:1fr;
+  grid-template-rows:1fr;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed))>.recipe,
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed))>.planner{
+  display:none;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed))>.chain-panel{
+  grid-column:1;
+  grid-row:1;
+  min-height:0;
+  height:100%;
+  padding:0;
+  border-top:0;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) .chain-panel-content{
+  display:flex;
+  flex-direction:column;
+  height:calc(100% - 54px);
+  padding:0 24px 24px;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) .chain-panel-heading{
+  flex:0 0 auto;
+}
+.craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)) #craft-chain{
+  flex:1 1 auto;
+  min-height:0;
+  height:auto;
+}
+@media(max-width:850px){
+  .craft-dialog>.modal-body:has(.chain-panel:not(.is-collapsed)){
+    grid-template-columns:1fr;
+    grid-template-rows:1fr;
+    overflow:hidden;
+  }
+}
+</style></body></html>
