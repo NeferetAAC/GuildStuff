@@ -1140,4 +1140,63 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
     font-size:9px;
   }
 }
+</style><style id="craft-chain-mobile-three-line">
+/* Chain card format: image / name / amount */
+.craft-dialog .chain-panel #craft-chain .chain-node{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  min-height:112px;
+  padding:10px 12px;
+  text-align:center;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node img{
+  width:34px;
+  height:34px;
+  flex:0 0 auto;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node span{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  width:100%;
+  min-width:0;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node strong{
+  order:1;
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  line-height:1.2;
+  text-align:center;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node small{
+  order:2;
+  display:block;
+  white-space:nowrap;
+  color:#d6b46d;
+  font-size:10px;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node small::before{
+  content:"Amount: ";
+  margin:0 3px 0 0;
+}
+.craft-dialog .chain-panel #craft-chain{
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  touch-action:none;
+  user-select:none;
+}
+@media(max-width:700px){
+  .craft-dialog .chain-panel #craft-chain .chain-node{
+    width:190px;
+    min-width:190px;
+    min-height:112px;
+  }
+}
 </style></body></html>
