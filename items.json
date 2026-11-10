@@ -5,21 +5,27 @@
     "iron-ore": {
       "name": "Iron Ore",
       "image": "assets/professional-recipes/materials/Iron Ore.webp",
-      "location": "War Memorial Site or Ferrous Ravine"
+      "location": "Dark Veins in Diamond Shores, Gylden Ruins, and Astron Plains",
+      "sourceDetails": "Mine Dark Veins with a Pickaxe. The gathering guide lists 432 veins; most are in Diamond Shores.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/iron-ore",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "sweetgrass-powder": {
       "name": "Sweetgrass Powder",
       "image": "assets/professional-recipes/materials/Sweetgrass Powder.webp",
-      "location": "Seaglass Harbour tavern"
+      "location": "Sold by Avon at Seaglass Harbor and by general merchants elsewhere",
+      "sourceDetails": "Purchase from Avon (Seaglass Harbor) or another General Merchant. The tavern-specific seller was not confirmed by the database.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/sweetgrass-powder",
+      "sourceStatus": "Vendor and Seaglass Harbor location verified; tavern placement not confirmed."
     },
     "shattered-blade": {
       "name": "Shattered Blade",
       "image": "assets/professional-recipes/materials/Shattered Blade.webp",
-      "location": "Enemy drops: Jeco / Pirates (early); Corpse Warblade at Phlegthon Lake",
+      "location": "Enemy drops; early sources include Jeco and Pirates; Corpse Warblade at Phlegthon Lake",
       "sourceType": "Enemy drops",
-      "sourceDetails": "Jeco and Pirates are documented drop sources; Corpse Warblade at Phlegthon Lake has a documented 35% Shattered Blade drop. These are source-confirmed options, not tested highest-yield routes.",
-      "sourceUrl": "https://wikily.gg/archeage-chronicles/monsters/corpse-warblade",
-      "sourceStatus": "Documented drops; efficiency untested",
+      "sourceDetails": "The item database lists hundreds of enemy sources. Jeco and Pirates are documented early-game sources; Corpse Warblade is listed at Phlegthon Lake.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/shattered-blade",
+      "sourceStatus": "Enemy sources verified; best farming route not established.",
       "primeLocations": [
         {
           "name": "Phlegthon Lake",
@@ -38,16 +44,19 @@
     "log": {
       "name": "Log",
       "image": "assets/professional-recipes/materials/Log.webp",
-      "location": "Beech Trees, Gylden Ruins"
+      "location": "Young and Mature Trees throughout Auroria",
+      "sourceDetails": "Gather from Young or Mature Trees with a Logging Axe; nodes are spread across regions.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/log",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "rag-scrap": {
       "name": "Rag Scrap",
       "image": "assets/professional-recipes/materials/Rag-Scrap.webp",
-      "location": "Enemy drops: Jeco / Pirates (early); Corpse Warblade at Phlegthon Lake",
+      "location": "Enemy drops; Jeco and Pirates are early sources; Corpse Warblade at Phlegthon Lake",
       "sourceType": "Enemy drops",
-      "sourceDetails": "Jeco and Pirates are documented drop sources; Corpse Warblade at Phlegthon Lake has a documented 35% Rag Scrap drop. These are source-confirmed options, not tested highest-yield routes.",
-      "sourceUrl": "https://wikily.gg/archeage-chronicles/monsters/corpse-warblade",
-      "sourceStatus": "Documented drops; efficiency untested",
+      "sourceDetails": "The item database lists hundreds of enemy sources. Jeco and Pirates are documented early-game sources; Corpse Warblade is listed at Phlegthon Lake.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/rag-scrap",
+      "sourceStatus": "Enemy sources verified; best farming route not established.",
       "primeLocations": [
         {
           "name": "Phlegthon Lake",
@@ -65,16 +74,20 @@
     },
     "wild-petal": {
       "name": "Wild Petal",
-      "image": "assets/professional-recipes/materials/wild-petal.webp"
+      "image": "assets/professional-recipes/materials/wild-petal.webp",
+      "location": "Lily nodes across the regions; a special flower chest at Cemetery, Gylden Ruins",
+      "sourceDetails": "Gather from Lily with a Sickle. A separate Cemetery chest is listed in Gylden Ruins and requires a Yellow Flower.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/wild-petal",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "bone-chip": {
       "name": "Bone Chip",
       "image": "assets/professional-recipes/materials/bone-chip.webp",
-      "location": "Crocodiles / alligator turtles: butcher with Hunting Knife (Diamond Shores shoreline; Gylden Ruins)",
+      "location": "Butcher crocodiles or alligator turtles along the Diamond Shores coast",
       "sourceType": "Hunting / butchering",
-      "sourceDetails": "Confirmed route: defeat crocodiles or alligator turtles along Diamond Shores, then butcher with a Hunting Knife. Crocodiles in Gylden Ruins are another documented source. Wolves are primarily documented for Raw Pelt; one database also lists Bone Chip for wolves, so wolf Bone Chip yield is disputed and not recommended as a primary route.",
+      "sourceDetails": "Use a Hunting Knife after hunting crocodiles or alligator turtles. The Gathering Bone Fragments quest identifies the shoreline route; Gylden Ruins also has reptiles.",
       "sourceUrl": "https://raiddex.com/en/archeage-chronicles/quests/gathering-bone-fragments",
-      "sourceStatus": "Verified route; wolf yield disputed",
+      "sourceStatus": "Verified route; some databases also list additional enemy drops.",
       "primeLocations": [
         {
           "name": "Diamond Shores shoreline",
@@ -93,31 +106,46 @@
     "archeum-shard": {
       "name": "Archeum Shard",
       "image": "assets/professional-recipes/refining/Archeum Shard.webp",
-      "location": "War Memorial Site"
+      "location": "Archeum veins in Gylden Ruins, Astron Plains, and Diamond Shores",
+      "sourceDetails": "Mine Archeum nodes with a Pickaxe. Most listed nodes are in Gylden Ruins; a few chests and exploration finds also contain shards.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/archeum-shard",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "twisted-scale": {
       "name": "Twisted Scale",
-      "location": "Source not yet verified",
+      "location": "Dreadbreath enemies at Serpens' Domain and nearby Astron Plains sites",
       "sourceType": "Acquisition to verify",
-      "image": "assets/professional-recipes/materials/twisted-scale.webp"
+      "image": "assets/professional-recipes/materials/twisted-scale.webp",
+      "sourceDetails": "Dreadbreath Champion and Warrior variants drop Twisted Scale; the item database lists Serpens' Domain, Human Trafficking Site, and Central Wetlands.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/twisted-scale",
+      "sourceStatus": "Verified enemy sources and locations."
     },
     "lingering-soul-fragment": {
       "name": "Lingering Soul Fragment",
-      "location": "Source not yet verified",
+      "location": "Dropped by Wraith Infantrymen, Wraith Archers, and other undead",
       "sourceType": "Acquisition to verify",
-      "image": "assets/professional-recipes/materials/lingering-soul-fragment.webp"
+      "image": "assets/professional-recipes/materials/lingering-soul-fragment.webp",
+      "sourceDetails": "Multiple undead types drop it across regions. The item database lists 30% drops from several Wraith enemies; consult the linked page for the full list.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/lingering-soul-fragment",
+      "sourceStatus": "Verified enemy sources; no single best route established."
     },
     "wolf-molar": {
       "name": "Wolf Molar",
-      "location": "Source not yet verified",
+      "location": "Butcher wolves; Fierce Wolves in Ferrous Ravine are a 100% source",
       "sourceType": "Acquisition to verify",
-      "image": "assets/professional-recipes/materials/wolf-molar.webp"
+      "image": "assets/professional-recipes/materials/wolf-molar.webp",
+      "sourceDetails": "Use a Hunting Knife. Other wolf sources span Diamond Shores, Gylden Ruins, Astron Plains, and Reedwind Cave.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/wolf-molar",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "crystalline-ore": {
       "name": "Crystalline Ore",
-      "location": "Source not yet verified",
+      "location": "Amethyst Veins in Gylden Ruins, Astron Plains, and Diamond Shores",
       "sourceType": "Acquisition to verify",
-      "image": "assets/professional-recipes/materials/crystalline-ore.webp"
+      "image": "assets/professional-recipes/materials/crystalline-ore.webp",
+      "sourceDetails": "Mine Amethyst Veins with a Pickaxe. It can also drop from Hereafter bosses.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/crystalline-ore",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "standard-ingot": {
       "name": "Standard Ingot",
@@ -129,7 +157,11 @@
     },
     "high-quality-iron-ore": {
       "name": "High-Quality Iron Ore",
-      "image": "assets/professional-recipes/materials/high-quality-iron-ore.webp"
+      "image": "assets/professional-recipes/materials/high-quality-iron-ore.webp",
+      "location": "Dark Veins in Diamond Shores, Gylden Ruins, and Astron Plains (rare)",
+      "sourceDetails": "High-Quality Iron Ore is a 1% Dark Vein yield. Dark Veins are most numerous in Diamond Shores.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/high-quality-iron-ore",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "fine-ingot": {
       "name": "Fine Ingot",
@@ -145,11 +177,19 @@
     },
     "marble": {
       "name": "Marble",
-      "image": "assets/professional-recipes/materials/marble.webp"
+      "image": "assets/professional-recipes/materials/marble.webp",
+      "location": "Rock nodes in Gylden Ruins, Astron Plains, and Diamond Shores",
+      "sourceDetails": "Mine Rock nodes with a Pickaxe. The current listing shows the largest number in Gylden Ruins.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/marble",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "white-marble": {
       "name": "White Marble",
-      "image": "assets/professional-recipes/materials/white-marble.webp"
+      "image": "assets/professional-recipes/materials/white-marble.webp",
+      "location": "Rock nodes in Gylden Ruins, Astron Plains, and Diamond Shores (rare)",
+      "sourceDetails": "White Marble is a 1% Rock yield. Mine Rock nodes with a Pickaxe.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/white-marble",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "fine-stone": {
       "name": "Fine Stone",
@@ -161,24 +201,40 @@
     },
     "fragrant-wild-petal": {
       "name": "Fragrant Wild Petal",
-      "image": "assets/professional-recipes/materials/fragant-white-petal.webp"
+      "image": "assets/professional-recipes/materials/fragant-white-petal.webp",
+      "location": "Lily nodes across Diamond Shores, Gylden Ruins, and Astron Plains (rare)",
+      "sourceDetails": "Fragrant Wild Petal is a rare Lily yield; the gathering database lists 3,691 Lily markers across the three regions.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/fragrant-wild-petal",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "fine-bonecraft": {
       "name": "Fine Bonecraft",
       "image": "assets/professional-recipes/refining/fine-bornecraft.webp"
     },
     "bear-gallbladder": {
-      "name": "Bear Gallbladder"
+      "name": "Bear Gallbladder",
+      "location": "Great Wild Bear near Seaglass Workshop (Diamond Shores); Bloodsoaked Sloth at Gloam Ruins",
+      "sourceDetails": "Both are listed 100% drops. It is also available from other bosses and a treasure chest.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/bear-gallbladder",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "bellflower-dewdrop": {
-      "name": "Bellflower Dewdrop"
+      "name": "Evening Dewdrop",
+      "location": "Evening Dew Bellflowers and rare exploration finds; current item name is Evening Dewdrop",
+      "sourceDetails": "The current Early Access item name is Evening Dewdrop (formerly Bellflower Dewdrop). The tracker lists six Evening Dew Bellflower chest markers and additional boss drops.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/evening-dewdrop",
+      "sourceStatus": "Verified name update; sources include exploration finds and enemy drops."
     },
     "standard-lumber": {
       "name": "Standard Lumber",
       "image": "assets/professional-recipes/wildcraft/standard-lumber.webp"
     },
     "hardened-logs": {
-      "name": "Hardened Logs"
+      "name": "Hardened Logs",
+      "location": "Young and Mature Trees throughout Auroria (rare)",
+      "sourceDetails": "Hardened Logs are a 1% yield from Young and Mature Trees; gather with a Logging Axe.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/hardened-logs",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "fine-lumber": {
       "name": "Fine Lumber",
@@ -186,11 +242,19 @@
     },
     "buffalo-horn": {
       "name": "Buffalo Horn",
-      "image": "assets/professional-recipes/materials/buffalo-horn.webp"
+      "image": "assets/professional-recipes/materials/buffalo-horn.webp",
+      "location": "Buffalo and bison; Field Buffalo in Carnas Forest (Diamond Shores) and Foggy Highlands Buffalo in Mistwind Plateau",
+      "sourceDetails": "Buffalo Horn is a 30% drop from several buffalo variants. Butchering is not required for the horn.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/buffalo-horn",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "blushpetal-branch": {
       "name": "Blushpetal Branch",
-      "image": "assets/professional-recipes/materials/blushpetal-branch.webp"
+      "image": "assets/professional-recipes/materials/blushpetal-branch.webp",
+      "location": "Rare flora, treasure chests, and Hereafter boss drops",
+      "sourceDetails": "The item database lists 15 Hereafter bosses plus chest sources. Exact rare-flora marker locations vary by map listing.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/blushpetal-branch",
+      "sourceStatus": "Verified acquisition sources; no single best gathering spot established."
     },
     "trimmed-meat": {
       "name": "Trimmed Meat",
@@ -198,36 +262,72 @@
     },
     "pumpkin": {
       "name": "Pumpkin",
-      "image": "assets/professional-recipes/materials/pumpkin.webp"
+      "image": "assets/professional-recipes/materials/pumpkin.webp",
+      "location": "Grow in a Small Garden or Scarecrow Garden; chest at Bluesalt Farm, Diamond Shores",
+      "sourceDetails": "Harvest from a garden. A chest at Bluesalt Farm is also listed.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/pumpkin",
+      "sourceStatus": "Verified farming and chest sources."
     },
     "cabbage": {
-      "name": "Cabbage"
+      "name": "Cabbage",
+      "location": "Grow in a Small Garden; chest in Gylden Ruins",
+      "sourceDetails": "Harvest from a garden; the item database lists a Gylden Ruins chest source.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/cabbage",
+      "sourceStatus": "Verified farming and chest sources."
     },
     "carrot": {
       "name": "Carrot",
-      "image": "assets/professional-recipes/materials/carrot.webp"
+      "image": "assets/professional-recipes/materials/carrot.webp",
+      "location": "Grow from a seedling; Carrot Seedling chest at Silent Crossway, Diamond Shores",
+      "sourceDetails": "Carrot is a garden crop. The seedling can also be found in a Silent Crossway chest or from Wild Bushes.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/carrot",
+      "sourceStatus": "Verified farming and seedling sources."
     },
     "corn": {
       "name": "Corn",
-      "image": "assets/professional-recipes/materials/corn.webp"
+      "image": "assets/professional-recipes/materials/corn.webp",
+      "location": "Grow from a Corn Seedling in a garden",
+      "sourceDetails": "Corn is a cultivated crop. Use a garden; seedling supply depends on merchant and wild-bush sources.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/corn",
+      "sourceStatus": "Farming source verified; exact seedling map source not fully confirmed."
     },
     "barley": {
       "name": "Barley",
-      "image": "assets/professional-recipes/materials/barley.webp"
+      "image": "assets/professional-recipes/materials/barley.webp",
+      "location": "Grow in a Small Garden; Hiller sells Barley Seedlings at Seaglass Harbor Residences",
+      "sourceDetails": "Barley Seedlings can also be found from Wild Bushes and a quest reward.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/barley",
+      "sourceStatus": "Verified farming and seedling sources."
     },
     "wheat": {
-      "name": "Wheat"
+      "name": "Wheat",
+      "location": "Grow in a garden; Wheat Seedling chest at Bluesalt Farm, Diamond Shores",
+      "sourceDetails": "Wheat is harvested from a cultivated seedling. The seedling page lists Bluesalt Farm chest and Small Garden sources.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/wheat",
+      "sourceStatus": "Farming and seedling sources verified."
     },
     "crab": {
       "name": "Crab",
-      "image": "assets/professional-recipes/materials/crab.webp"
+      "image": "assets/professional-recipes/materials/crab.webp",
+      "location": "Suspicious Rock gathering nodes",
+      "sourceDetails": "The current database identifies Suspicious Rock as Crab’s gathering node (522 markers). Specific region counts were not consistently available across trackers.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/crab",
+      "sourceStatus": "Gathering node verified; exact zone breakdown not confirmed."
     },
     "clam": {
       "name": "Clam",
-      "image": "assets/professional-recipes/materials/clam.webp"
+      "image": "assets/professional-recipes/materials/clam.webp",
+      "location": "Coastal Clam gathering nodes; Diamond Shores is confirmed",
+      "sourceDetails": "One tracker lists three Diamond Shores spots; another current database lists additional Clam markers in other zones, so its full map count varies.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/clam",
+      "sourceStatus": "Gathering source verified; total map locations differ between trackers."
     },
     "watermelon": {
-      "name": "Watermelon"
+      "name": "Watermelon",
+      "location": "Grow in a Small Garden; chest in Gylden Ruins",
+      "sourceDetails": "The item page lists garden harvests and one Gylden Ruins chest.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/watermelon",
+      "sourceStatus": "Verified farming and chest sources."
     },
     "aged-meat": {
       "name": "Aged Meat",
@@ -235,63 +335,111 @@
     },
     "melon": {
       "name": "Melon",
-      "image": "assets/professional-recipes/materials/melon.webp"
+      "image": "assets/professional-recipes/materials/melon.webp",
+      "location": "Grow as a garden crop",
+      "sourceDetails": "The item is a cultivated crop; I could not confirm a fixed chest or gathering-node location.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/melon",
+      "sourceStatus": "Farming source verified; exact seedling/map source not confirmed."
     },
     "raw-meat": {
       "name": "Raw Meat",
-      "image": "assets/professional-recipes/materials/raw-meat.webp"
+      "image": "assets/professional-recipes/materials/raw-meat.webp",
+      "location": "Butcher bison in Diamond Shores or mountain goats in Astron Plains and Gylden Ruins",
+      "sourceDetails": "Mudflat Bison and Field Buffalo in Diamond Shores, and Mountain Goats around Astron Plains/Gylden Ruins, are documented sources.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/raw-meat",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "sweet-potato": {
       "name": "Sweet Potato",
-      "image": "assets/professional-recipes/materials/sweet-potato.webp"
+      "image": "assets/professional-recipes/materials/sweet-potato.webp",
+      "location": "Grow in a garden; Hiller sells Sweet Potato Seedlings at Seaglass Harbor Residences",
+      "sourceDetails": "Seedlings are also listed from Wild Bushes.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/sweet-potato",
+      "sourceStatus": "Verified farming and seedling sources."
     },
     "potato": {
       "name": "Potato",
-      "image": "assets/professional-recipes/materials/potato.webp"
+      "image": "assets/professional-recipes/materials/potato.webp",
+      "location": "Grow in a Small or Scarecrow Garden; chest in Gylden Ruins",
+      "sourceDetails": "The item page lists garden harvests and one Gylden Ruins chest.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/potato",
+      "sourceStatus": "Verified farming and chest sources."
     },
     "rough-meat": {
       "name": "Rough Meat",
       "image": "assets/professional-recipes/food/rough-meat.webp"
     },
     "thunderstruck-shell": {
-      "name": "Thunderstruck Shell"
+      "name": "Thunderstruck Shell",
+      "location": "Harvest Thunderstruck Crop in a Small Garden; buy from Didie (Astron Plains) or Kaimder (Gylden Ruins)",
+      "sourceDetails": "The item page lists garden harvests and token purchases from Didie and Kaimder; both vendors have a limit of one.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/thunderstruck-shell",
+      "sourceStatus": "Verified farming and vendor sources."
     },
     "superior-bonecraft": {
       "name": "Superior Bonecraft",
       "image": "assets/professional-recipes/refining/superior-bonecraft.webp"
     },
     "corrupted-heart": {
-      "name": "Corrupted Heart"
+      "name": "Corrupted Heart",
+      "location": "Field boss drops; Great Wild Bear near Seaglass Workshop and Bloodsoaked Sloth at Gloam Ruins",
+      "sourceDetails": "Many field bosses drop Corrupted Heart. These two early boss sources are listed at 100%.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/corrupted-heart",
+      "sourceStatus": "Verified from item and boss data."
     },
     "standard-archeum": {
       "name": "Standard Archeum",
       "image": "assets/professional-recipes/refining/standard-archeum.webp"
     },
     "orc-fang": {
-      "name": "Orc Fang"
+      "name": "Orc Fang",
+      "location": "Ironhammer/Gorehammer orcs; Fierce Ironhammer Shaman near Seaglass Workshop",
+      "sourceDetails": "The item page lists drops from Ironhammer and Gorehammer enemy types in several regions.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/orc-fang",
+      "sourceStatus": "Enemy sources verified; this is not a single guaranteed route."
     },
     "magic-archeum-shard": {
-      "name": "Magic Archeum Shard"
+      "name": "Magic Archeum Shard",
+      "location": "Archeum veins in Gylden Ruins, Astron Plains, and Diamond Shores (1% rare yield)",
+      "sourceDetails": "Mine Archeum with a Pickaxe; Magic Archeum Shard is listed at a 1% yield.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/magic-archeum-shard",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "fine-archeum": {
       "name": "Fine Archeum",
       "image": "assets/professional-recipes/refining/fine-archeum.webp"
     },
     "turtle-shell-fragment": {
-      "name": "Turtle Shell Fragment"
+      "name": "Turtle Shell Fragment",
+      "location": "Butcher Coastal Alligator Turtles at Seaglass Beach (Diamond Shores); Giant Alligator Turtle at Lost Fishing Village",
+      "sourceDetails": "Coastal Alligator Turtle has a 30% butchering yield; Giant Alligator Turtle is listed as a guaranteed drop.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/turtle-shell-fragment",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "star-fragment": {
-      "name": "Star Fragment"
+      "name": "Star Fragment",
+      "location": "Star Meteor nodes in Gylden Ruins, Astron Plains, and Leopard Battalion Camp (Diamond Shores)",
+      "sourceDetails": "The item page lists Star Meteor gathering and chests; Hereafter bosses also drop it.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/star-fragment",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "standard-leather": {
       "name": "Standard Leather",
       "image": "assets/professional-recipes/cloth/standard-leather.webp"
     },
     "crude-gnoll-fur": {
-      "name": "Crude Gnoll Fur"
+      "name": "Crude Gnoll Fur",
+      "location": "Gnoll enemies; Fierce Gnoll Fighter near Jubilant Village",
+      "sourceDetails": "Gnoll enemy drops are listed at 30%; other sources span several regions.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/crude-gnoll-fur",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "raw-pelt": {
-      "name": "Raw Pelt"
+      "name": "Raw Pelt",
+      "location": "Butcher wolves and bears; Fierce Wolves in Ferrous Ravine are a 100% source",
+      "sourceDetails": "Use a Hunting Knife. Other predators across multiple regions also yield Raw Pelt.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/raw-pelt",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "fine-leather": {
       "name": "Fine Leather",
@@ -299,7 +447,11 @@
     },
     "crocodile-hide": {
       "name": "Crocodile Hide",
-      "image": "assets/professional-recipes/materials/crocodile-hide.webp"
+      "image": "assets/professional-recipes/materials/crocodile-hide.webp",
+      "location": "Butcher Fierce Crocodiles and Coastal Alligators along Diamond Shores",
+      "sourceDetails": "Fierce Crocodile in Diamond Shores is a 100% source; Coastal Alligators also yield it.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/crocodile-hide",
+      "sourceStatus": "Verified from item and enemy data."
     },
     "standard-textile": {
       "name": "Standard Textile",
@@ -307,17 +459,29 @@
     },
     "wild-fiber": {
       "name": "Wild Fiber",
-      "image": "assets/professional-recipes/materials/wild-fiber.webp"
+      "image": "assets/professional-recipes/materials/wild-fiber.webp",
+      "location": "Wildfiber Herb and Wildfiber Bloom in Gylden Ruins, Diamond Shores, and Astron Plains",
+      "sourceDetails": "Gather with a Sickle. The database lists 620 Wildfiber Herbs and 389 Wildfiber Blooms across these regions.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/wild-fiber",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "tough-wild-fiber": {
-      "name": "Tough Wild Fiber"
+      "name": "Tough Wild Fiber",
+      "location": "Rare yield from Wildfiber Herbs and Blooms in Gylden Ruins, Diamond Shores, and Astron Plains",
+      "sourceDetails": "Gather with a Sickle; tough fiber is a rare yield from both wildfiber node types.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/tough-wild-fiber",
+      "sourceStatus": "Verified from item and gathering-node data."
     },
     "fine-textile": {
       "name": "Fine Textile",
       "image": "assets/professional-recipes/cloth/fine-textile.webp"
     },
     "mountain-goat-wool": {
-      "name": "Mountain Goat Wool"
+      "name": "Mountain Goat Wool",
+      "location": "Butcher Mountain Goats in Gylden Ruins and Astron Plains (30% yield)",
+      "sourceDetails": "Mountain Goats and Ravenous Mountain Goats yield Mountain Goat Wool when butchered.",
+      "sourceUrl": "https://raiddex.com/en/archeage-chronicles/items/mountain-goat-wool",
+      "sourceStatus": "Verified from enemy and butchering data."
     }
   },
   "recipes": {
