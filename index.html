@@ -672,4 +672,44 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
 @media(max-width:850px){
   .craft-dialog .chain-panel #craft-chain{min-height:360px}
 }
+</style><style id="craft-chain-tree-connectors">
+/* Tree-style connectors: one parent line into a horizontal branch */
+.craft-dialog .chain-panel #craft-chain .chain-children{
+  position:relative;
+  padding-top:30px;
+  border-top:1px solid #806d44;
+}
+.craft-dialog .chain-panel #craft-chain .chain-children::before{
+  content:"";
+  position:absolute;
+  top:-30px;
+  left:50%;
+  width:1px;
+  height:30px;
+  background:#806d44;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child{
+  position:relative;
+  padding-top:0;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child::before{
+  content:"";
+  position:absolute;
+  top:-30px;
+  left:50%;
+  width:1px;
+  height:30px;
+  margin:0;
+  background:#806d44;
+}
+.craft-dialog .chain-panel #craft-chain .chain-arrow{
+  position:relative;
+  z-index:1;
+  min-height:20px;
+  padding:0 4px;
+  background:#10191b;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child>.chain-branch{
+  gap:24px;
+}
 </style></body></html>
