@@ -83,11 +83,11 @@ function chainTree(id,qty,depth=0,seen=[]){
  const node='<div class="chain-node '+(depth===0?'chain-root ':'')+(r?'chain-refined':'chain-raw')+'"><img src="'+img+'" alt="" onerror="this.style.opacity=.1"><span><strong>'+name+'</strong><small>×'+qty+(r?' · '+(r.station||"Crafting"):' · Raw material')+'</small></span></div>';
  if(!r||seen.includes(id))return node;
  const batches=Math.ceil(qty/(r.output||1));
- const children=Object.entries(r.ingredients).map(([child,amount])=>'<div class="chain-child"><div class="chain-arrow">→</div>'+chainTree(child,amount*batches,depth+1,[...seen,id])+'</div>').join("");
+ const children=Object.entries(r.ingredients).map(([child,amount])=>'<div class="chain-child"><div class="chain-arrow">↓</div>'+chainTree(child,amount*batches,depth+1,[...seen,id])+'</div>').join("");
  return '<div class="chain-branch">'+node+'<div class="chain-children">'+children+'</div></div>';
 }
 function toolChain(item,quantity){
- const children=Object.entries(item.ingredients).map(([id,amount])=>'<div class="chain-child"><div class="chain-arrow">→</div>'+chainTree(id,amount*quantity,1)+'</div>').join("");
+ const children=Object.entries(item.ingredients).map(([id,amount])=>'<div class="chain-child"><div class="chain-arrow">↓</div>'+chainTree(id,amount*quantity,1)+'</div>').join("");
  return '<div class="chain-branch"><div class="chain-node chain-root chain-tool"><img src="'+(item.image||"")+'" alt=""><span><strong>'+item.name+'</strong><small>×'+quantity+' · '+(item.craftingStation||"Engineering")+'</small></span></div><div class="chain-children">'+children+'</div></div>';
 }
 function relatedEntries(id){
@@ -600,6 +600,74 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
   align-items:center;
   gap:50px;
   min-width:max-content;
+}
+@media(max-width:850px){
+  .craft-dialog .chain-panel #craft-chain{min-height:360px}
+}
+</style><style id="craft-chain-top-down-tree">
+/* Full-width bottom chain: top-down branching dependency tree */
+.craft-dialog .chain-panel #craft-chain{
+  overflow:auto;
+  min-height:360px;
+  height:calc(100% - 42px);
+  max-height:none;
+  padding:22px;
+  scrollbar-color:#74633f #101919;
+  scrollbar-width:thin;
+}
+.craft-dialog .chain-panel #craft-chain>.chain-branch{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:26px;
+  min-width:max-content;
+  min-height:100%;
+  padding:18px 30px 32px;
+}
+.craft-dialog .chain-panel #craft-chain .chain-children{
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  justify-content:center;
+  gap:36px;
+  min-width:max-content;
+  margin:0;
+  padding:28px 18px 10px;
+  border-left:0;
+  border-top:1px solid #806d44;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  padding:0;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child::before{
+  content:"";
+  width:1px;
+  height:18px;
+  flex:0 0 18px;
+  margin:0;
+  background:#806d44;
+}
+.craft-dialog .chain-panel #craft-chain .chain-arrow{
+  width:auto;
+  margin:0;
+  color:#d6b46d;
+  font-size:20px;
+  line-height:1;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child>.chain-branch{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:24px;
+  min-width:max-content;
+}
+.craft-dialog .chain-panel #craft-chain .chain-child>.chain-branch>.chain-children{
+  gap:28px;
 }
 @media(max-width:850px){
   .craft-dialog .chain-panel #craft-chain{min-height:360px}
