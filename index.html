@@ -771,10 +771,37 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
  document.querySelector("#chain-zoom-out").onclick=()=>setChainZoom(zoom-.1);
  document.querySelector("#chain-zoom-reset").onclick=()=>setChainZoom(1);
  chain.addEventListener("wheel",e=>{
-   if(!e.ctrlKey)return;
    e.preventDefault();
    setChainZoom(zoom+(e.deltaY<0?.1:-.1));
  },{passive:false});
  setChainZoom(1);
+})();
+</script><style id="craft-chain-pan">
+.craft-dialog .chain-panel #craft-chain{cursor:grab;user-select:none;touch-action:none}
+.craft-dialog .chain-panel #craft-chain.is-dragging{cursor:grabbing}
+</style><script>
+(function(){
+ const chain=document.querySelector("#craft-chain");
+ if(!chain)return;
+ let dragging=false,startX=0,startY=0,startLeft=0,startTop=0;
+ chain.addEventListener("pointerdown",e=>{
+   if(e.button!==0)return;
+   dragging=true;startX=e.clientX;startY=e.clientY;
+   startLeft=chain.scrollLeft;startTop=chain.scrollTop;
+   chain.setPointerCapture(e.pointerId);
+   chain.classList.add("is-dragging");
+ });
+ chain.addEventListener("pointermove",e=>{
+   if(!dragging)return;
+   chain.scrollLeft=startLeft-(e.clientX-startX);
+   chain.scrollTop=startTop-(e.clientY-startY);
+ });
+ const stop=()=>{
+   dragging=false;
+   chain.classList.remove("is-dragging");
+ };
+ chain.addEventListener("pointerup",stop);
+ chain.addEventListener("pointercancel",stop);
+ chain.addEventListener("pointerleave",e=>{if(dragging&&e.buttons===0)stop()});
 })();
 </script></body></html>
