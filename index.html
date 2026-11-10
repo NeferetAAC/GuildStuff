@@ -80,7 +80,7 @@ function expand(id,amount,totals,stack=[]){
 function chainTree(id,qty,depth=0,seen=[]){
  const r=db.recipes[id],m=db.materials[id],name=r?.name||m?.name||id;
  const img=r?.image||m?.image||"";
- const node='<div class="chain-node'+(depth===0?' chain-root':'')+'"><img src="'+img+'" alt="" onerror="this.style.opacity=.1"><span><strong>'+name+'</strong><small>×'+qty+(r?' · '+(r.station||"Crafting"):' · Raw material')+'</small></span></div>';
+ const node='<div class="chain-node '+(depth===0?'chain-root ':'')+(r?'chain-refined':'chain-raw')+'"><img src="'+img+'" alt="" onerror="this.style.opacity=.1"><span><strong>'+name+'</strong><small>×'+qty+(r?' · '+(r.station||"Crafting"):' · Raw material')+'</small></span></div>';
  if(!r||seen.includes(id))return node;
  const batches=Math.ceil(qty/(r.output||1));
  const children=Object.entries(r.ingredients).map(([child,amount])=>'<div class="chain-child"><div class="chain-arrow">→</div>'+chainTree(child,amount*batches,depth+1,[...seen,id])+'</div>').join("");
@@ -88,7 +88,7 @@ function chainTree(id,qty,depth=0,seen=[]){
 }
 function toolChain(item,quantity){
  const children=Object.entries(item.ingredients).map(([id,amount])=>'<div class="chain-child"><div class="chain-arrow">→</div>'+chainTree(id,amount*quantity,1)+'</div>').join("");
- return '<div class="chain-branch"><div class="chain-node chain-root"><img src="'+(item.image||"")+'" alt=""><span><strong>'+item.name+'</strong><small>×'+quantity+' · '+(item.craftingStation||"Engineering")+'</small></span></div><div class="chain-children">'+children+'</div></div>';
+ return '<div class="chain-branch"><div class="chain-node chain-root chain-tool"><img src="'+(item.image||"")+'" alt=""><span><strong>'+item.name+'</strong><small>×'+quantity+' · '+(item.craftingStation||"Engineering")+'</small></span></div><div class="chain-children">'+children+'</div></div>';
 }
 function relatedEntries(id){
  const entries=[];
@@ -238,6 +238,90 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
   min-height:68px;
 }
 @media(max-width:600px){
+  .craft-dialog #craft-chain .chain-node{width:170px}
+}
+</style><style id="craft-chain-graph">
+/* Crafting chain: horizontal branching graph */
+.craft-dialog #craft-chain{
+  position:relative;
+  min-height:260px;
+  max-height:420px;
+  overflow:auto;
+  padding:22px;
+  border:1px solid #354747;
+  border-radius:14px;
+  background-color:#10191b;
+  background-image:
+    linear-gradient(rgba(74,98,99,.12) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(74,98,99,.12) 1px,transparent 1px);
+  background-size:28px 28px;
+  scrollbar-color:#74633f #101919;
+  scrollbar-width:thin;
+}
+.craft-dialog #craft-chain::-webkit-scrollbar{width:9px;height:9px}
+.craft-dialog #craft-chain::-webkit-scrollbar-track{background:#101919}
+.craft-dialog #craft-chain::-webkit-scrollbar-thumb{background:#74633f;border:2px solid #101919;border-radius:8px}
+.craft-dialog #craft-chain>.chain-branch{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  min-width:max-content;
+}
+.craft-dialog #craft-chain .chain-children{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  min-width:max-content;
+  margin:0;
+  padding:8px 0 8px 24px;
+  border-left:1px solid #806d44;
+}
+.craft-dialog #craft-chain .chain-child{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0;
+}
+.craft-dialog #craft-chain .chain-child::before{
+  content:"";
+  width:20px;
+  height:1px;
+  flex:0 0 20px;
+  margin-left:-24px;
+  background:#806d44;
+}
+.craft-dialog #craft-chain .chain-arrow{
+  width:18px;
+  margin:0;
+  color:#d6b46d;
+  font-size:18px;
+  line-height:1;
+}
+.craft-dialog #craft-chain .chain-node{
+  width:190px;
+  min-height:70px;
+  padding:11px;
+  border-radius:9px;
+  background:#182628;
+  border-color:#526260;
+  box-shadow:0 5px 16px rgba(0,0,0,.22);
+}
+.craft-dialog #craft-chain .chain-node img{
+  width:38px;
+  height:38px;
+}
+.craft-dialog #craft-chain .chain-node strong{font-size:12px}
+.craft-dialog #craft-chain .chain-node small{font-size:10px}
+.craft-dialog #craft-chain .chain-root{
+  border-color:#d6b46d;
+  background:linear-gradient(135deg,#3b3422,#25281f);
+}
+.craft-dialog #craft-chain .chain-refined{border-color:#3f9c9a}
+.craft-dialog #craft-chain .chain-raw{border-color:#806d44}
+.craft-dialog #craft-chain .chain-tool{border-color:#bf7a45}
+@media(max-width:600px){
+  .craft-dialog #craft-chain{min-height:220px;padding:16px}
   .craft-dialog #craft-chain .chain-node{width:170px}
 }
 </style></body></html>
