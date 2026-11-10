@@ -1078,4 +1078,37 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
   content:"Amount: ";
   margin-right:3px;
 }
+</style><style id="craft-chain-single-line">
+.craft-dialog .chain-panel #craft-chain .chain-node{
+  display:grid;
+  grid-template-columns:32px minmax(0,1fr) auto;
+  align-items:center;
+  column-gap:9px;
+  min-height:62px;
+  text-align:left;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node img{
+  grid-column:1;
+  grid-row:1;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node span{
+  display:contents;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node strong{
+  grid-column:2;
+  grid-row:1;
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node small{
+  grid-column:3;
+  grid-row:1;
+  white-space:nowrap;
+  color:#d6b46d;
+  font-size:10px;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node small::before{
+  content:"";
+  margin:0;
+}
 </style></body></html>
