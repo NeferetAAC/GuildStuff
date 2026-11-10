@@ -386,4 +386,25 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
     height:calc(100vh - 24px);
   }
 }
+</style><style id="craft-chain-spacing">
+/* Give horizontal chain branches more breathing room */
+.craft-dialog #craft-chain>.chain-branch{
+  gap:34px;
+}
+.craft-dialog #craft-chain .chain-children{
+  gap:30px;
+  padding-left:34px;
+}
+.craft-dialog #craft-chain .chain-child{
+  gap:14px;
+}
+.craft-dialog #craft-chain .chain-child::before{
+  width:30px;
+  flex-basis:30px;
+  margin-left:-34px;
+}
+.craft-dialog #craft-chain .chain-node{
+  min-height:82px;
+  padding:14px;
+}
 </style></body></html>
