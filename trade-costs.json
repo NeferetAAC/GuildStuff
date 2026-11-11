@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "source": "https://raiddex.com/en/archeage-chronicles/farming",
+  "method": "Repellent/full-grown estimate. Each crop uses 3 seedlings at 100 Gold each. Average yield is the midpoint of the listed full-grown range.",
+  "fixedPrices": {
+    "Blank Trade Certificate": 20
+  },
+  "farming": {
+    "Barley": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 6, "yieldMax": 8, "growthMinutes": 39},
+    "Cabbage": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 48},
+    "Carrot": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 5, "yieldMax": 7, "growthMinutes": 30},
+    "Corn": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 6, "yieldMax": 8, "growthMinutes": 45},
+    "Melon": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 51},
+    "Potato": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 5, "yieldMax": 7, "growthMinutes": 33},
+    "Pumpkin": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 54},
+    "Sweet Potato": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 5, "yieldMax": 7, "growthMinutes": 36},
+    "Watermelon": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 57},
+    "Wheat": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 6, "yieldMax": 8, "growthMinutes": 42}
+  }
+}
