@@ -81,7 +81,7 @@ function last(option){return option.second||option.first}
 function totalPacks(option){return option.first.packs+(option.second?.packs||0)}
 function totalFee(option){const legs=[option.first,option.second].filter(Boolean);const fees=legs.map(leg=>fee(leg));return fees.some(value=>value===null)?null:fees.reduce((sum,value)=>sum+value,0)}
 function directGet(reward,quantity){
- return packs.flatMap(pack=>(pack.routes||[]).filter(route=>same(route.reward,reward)&&(!originFilter||same(pack.origin,originFilter)).map(route=>({first:{pack,route,packs:count(quantity,Number(route.amount||1))}})));
+ return packs.flatMap(pack=>(pack.routes||[]).filter(route=>same(route.reward,reward)&&(!originFilter||same(pack.origin,originFilter))).map(route=>({first:{pack,route,packs:count(quantity,Number(route.amount||1))}})));
 }
 function chainGet(reward,quantity){
  const options=[];
