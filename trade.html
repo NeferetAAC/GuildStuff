@@ -69,7 +69,7 @@ function costBreakdown(name,quantity,seen=[]){
  out.missing=[...new Set(out.missing)];
  return out;
 }
-const unitPrice=name=>{const value=Number(prices[name]);if(prices[name]!==undefined&&Number.isFinite(value)&&value>=0)return{crafting:0,materials:value,missing:[]};return costBreakdown(name,1)};
+const unitPrice=name=>costBreakdown(name,1);
 const legCost=leg=>{let crafting=0,material=0;const missing=[];for(const [name,amount] of Object.entries(leg.pack.ingredients||{})){const cost=unitPrice(name);crafting+=amount*leg.packs*cost.crafting;material+=amount*leg.packs*cost.material;missing.push(...cost.missing)}const packingFee=fee(leg);return{crafting,material,fee:packingFee,total:packingFee===null?null:crafting+material+packingFee,missing:[...new Set(missing)],feeMissing:packingFee===null}};
 const optionCost=o=>{const parts=[o.first,o.second].filter(Boolean).map(legCost);return{crafting:parts.reduce((sum,p)=>sum+p.crafting,0),material:parts.reduce((sum,p)=>sum+p.material,0),fee:parts.every(p=>p.fee!==null)?parts.reduce((sum,p)=>sum+p.fee,0):null,total:parts.every(p=>p.total!==null)?parts.reduce((sum,p)=>sum+p.total,0):null,missing:[...new Set(parts.flatMap(p=>p.missing))],feeMissing:parts.some(p=>p.feeMissing)}};
 const money=value=>value==null?"Unavailable":value.toLocaleString()+" Gold";
