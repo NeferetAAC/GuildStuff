@@ -1330,7 +1330,7 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
  function rowText(option){
    const last=finalLeg(option), reward=last.route.amount*last.packs+" "+last.route.reward;
    const pack=option.second?"Two trades · "+option.first.pack.name+" → "+option.second.pack.name:option.first.pack.name;
-   return {reward,pack,from:option.first.pack.origin,to:last.route.destination,packs:totalPacks(option),fee:totalFee(option)};
+   return {reward,pack,image:(option.second||option.first).pack.image||option.first.pack.image,from:option.first.pack.origin,to:last.route.destination,packs:totalPacks(option),fee:totalFee(option)};
  }
  function appendDetails(option){
    if(!option){details.textContent="Select a route to see the steps.";return}
@@ -1358,7 +1358,7 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
    options.sort((a,b)=>(totalPacks(a)-totalPacks(b))||(totalFee(a)??Infinity)-(totalFee(b)??Infinity));
    options.forEach((option,index)=>{
      const r=rowText(option),tr=document.createElement("tr");
-     tr.innerHTML="<td>"+r.reward+"</td><td>"+r.pack+"</td><td>"+r.from+"</td><td>"+r.to+"</td><td>"+r.packs.toLocaleString()+"</td><td>"+(r.fee==null?"Unknown":r.fee.toLocaleString()+" G")+"</td>";
+     tr.innerHTML="<td>"+r.reward+"</td><td><span class=\"trade-pack-cell\">"+(r.image?"<img src=\""+r.image+"\" alt=\"\" loading=\"lazy\">":"")+"<span>"+r.pack+"</span></span></td><td>"+r.from+"</td><td>"+r.to+"</td><td>"+r.packs.toLocaleString()+"</td><td>"+(r.fee==null?"Unknown":r.fee.toLocaleString()+" G")+"</td>";
      tr.onclick=()=>{body.querySelectorAll("tr").forEach(x=>x.classList.remove("selected"));tr.classList.add("selected");appendDetails(option)};
      body.append(tr);if(index===0){tr.classList.add("selected");appendDetails(option)}
    });
@@ -1375,4 +1375,8 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
  document.querySelectorAll('input[name="trade-mode"]').forEach(x=>x.onchange=()=>{load()});
  item.onchange=refresh;qty.oninput=refresh;chains.onchange=refresh;load();
 })();
-</script></body></html>
+</script><style id="trade-pack-images">
+.trade-pack-cell{display:flex;align-items:center;gap:9px;min-width:230px}
+.trade-pack-cell img{width:34px;height:34px;object-fit:contain;border-radius:5px;background:#0b1010;padding:3px;flex-shrink:0}
+.trade-pack-cell span{min-width:0}
+</style></body></html>
