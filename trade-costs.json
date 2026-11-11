@@ -1,20 +1,88 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "https://raiddex.com/en/archeage-chronicles/farming",
-  "method": "Repellent/full-grown estimate. Each crop uses 3 seedlings at 100 Gold each. Average yield is the midpoint of the listed full-grown range.",
+  "method": "Farming inputs use seedling cost divided by the average listed full-grown yield. Crafted inputs use the RaidDex recipe cost and recursively include their crafting chain.",
   "fixedPrices": {
     "Blank Trade Certificate": 20
   },
   "farming": {
-    "Barley": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 6, "yieldMax": 8, "growthMinutes": 39},
-    "Cabbage": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 48},
-    "Carrot": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 5, "yieldMax": 7, "growthMinutes": 30},
-    "Corn": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 6, "yieldMax": 8, "growthMinutes": 45},
-    "Melon": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 51},
-    "Potato": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 5, "yieldMax": 7, "growthMinutes": 33},
-    "Pumpkin": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 54},
-    "Sweet Potato": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 5, "yieldMax": 7, "growthMinutes": 36},
-    "Watermelon": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 7, "yieldMax": 9, "growthMinutes": 57},
-    "Wheat": {"seedlingCost": 100, "seedlingsPerPlant": 3, "yieldMin": 6, "yieldMax": 8, "growthMinutes": 42}
+    "Barley": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 6,
+      "yieldMax": 8,
+      "growthMinutes": 39
+    },
+    "Cabbage": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 7,
+      "yieldMax": 9,
+      "growthMinutes": 48
+    },
+    "Carrot": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 5,
+      "yieldMax": 7,
+      "growthMinutes": 30
+    },
+    "Corn": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 6,
+      "yieldMax": 8,
+      "growthMinutes": 45
+    },
+    "Melon": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 7,
+      "yieldMax": 9,
+      "growthMinutes": 51
+    },
+    "Potato": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 5,
+      "yieldMax": 7,
+      "growthMinutes": 33
+    },
+    "Pumpkin": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 7,
+      "yieldMax": 9,
+      "growthMinutes": 54
+    },
+    "Sweet Potato": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 5,
+      "yieldMax": 7,
+      "growthMinutes": 36
+    },
+    "Watermelon": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 7,
+      "yieldMax": 9,
+      "growthMinutes": 57
+    },
+    "Wheat": {
+      "seedlingCost": 100,
+      "seedlingsPerPlant": 3,
+      "yieldMin": 6,
+      "yieldMax": 8,
+      "growthMinutes": 42
+    }
+  },
+  "sources": {
+    "farming": "https://raiddex.com/en/archeage-chronicles/farming",
+    "crafting": "https://raiddex.com/en/archeage-chronicles/crafting"
+  },
+  "crafting": {
+    "method": "Crafting fees are taken from the recipe Cost values on RaidDex. The calculator recursively adds intermediate recipe fees to produce a full crafting-chain cost, then adds farming input costs where applicable.",
+    "source": "https://raiddex.com/en/archeage-chronicles/crafting"
   }
 }
