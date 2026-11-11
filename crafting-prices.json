@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "https://raiddex.com/en/archeage-chronicles/crafting",
   "method": "Per-recipe crafting fees from RaidDex. The calculator should add these fees recursively through recipe ingredients; raw material and farming prices are separate.",
   "currency": "Gold",
@@ -10,7 +10,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Smelting",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-ingot-level-3-output-3": {
       "name": "Fine Ingot",
@@ -18,7 +20,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Smelting",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-ingot-level-5-output-15": {
       "name": "Fine Ingot",
@@ -26,7 +30,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Smelting",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-ingot": {
       "name": "Standard Ingot",
@@ -34,7 +40,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Smelting",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-ingot-level-2-output-6": {
       "name": "Standard Ingot",
@@ -42,7 +50,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Smelting",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-ingot-level-4-output-30": {
       "name": "Standard Ingot",
@@ -50,7 +60,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Smelting",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "standard-ingot-level-5-output-30": {
       "name": "Standard Ingot",
@@ -58,7 +70,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Smelting",
-      "craftingLevel": 4
+      "craftingLevel": 4,
+      "craftingTier": 4,
+      "requiredProfessionLevel": 5
     },
     "superior-ingot": {
       "name": "Superior Ingot",
@@ -66,7 +80,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Smelting",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-stone": {
       "name": "Fine Stone",
@@ -74,7 +90,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Smelting",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-stone-level-3-output-3": {
       "name": "Fine Stone",
@@ -82,7 +100,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Smelting",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-stone-level-5-output-15": {
       "name": "Fine Stone",
@@ -90,7 +110,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Smelting",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-stone": {
       "name": "Standard Stone",
@@ -98,7 +120,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Smelting",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-stone-level-2-output-6": {
       "name": "Standard Stone",
@@ -106,7 +130,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Smelting",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-stone-level-4-output-30": {
       "name": "Standard Stone",
@@ -114,7 +140,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Smelting",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "standard-stone-level-5-output-30": {
       "name": "Standard Stone",
@@ -122,7 +150,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Smelting",
-      "craftingLevel": 4
+      "craftingLevel": 4,
+      "craftingTier": 4,
+      "requiredProfessionLevel": 5
     },
     "superior-stone": {
       "name": "Superior Stone",
@@ -130,7 +160,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Smelting",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-additive": {
       "name": "Fine Additive",
@@ -138,7 +170,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Wildcraft",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-additive-level-3-output-3": {
       "name": "Fine Additive",
@@ -146,7 +180,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Wildcraft",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-additive-level-5-output-15": {
       "name": "Fine Additive",
@@ -154,7 +190,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Wildcraft",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-additive": {
       "name": "Standard Additive",
@@ -162,7 +200,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Wildcraft",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-additive-level-2-output-6": {
       "name": "Standard Additive",
@@ -170,7 +210,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Wildcraft",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-additive-level-4-output-30": {
       "name": "Standard Additive",
@@ -178,7 +220,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Wildcraft",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "standard-additive-level-5-output-30": {
       "name": "Standard Additive",
@@ -186,7 +230,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Wildcraft",
-      "craftingLevel": 4
+      "craftingLevel": 4,
+      "craftingTier": 4,
+      "requiredProfessionLevel": 5
     },
     "superior-additive": {
       "name": "Superior Additive",
@@ -194,7 +240,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Wildcraft",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-lumber": {
       "name": "Fine Lumber",
@@ -202,7 +250,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Wildcraft",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-lumber-level-3-output-3": {
       "name": "Fine Lumber",
@@ -210,7 +260,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Wildcraft",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-lumber-level-5-output-15": {
       "name": "Fine Lumber",
@@ -218,7 +270,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Wildcraft",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-lumber": {
       "name": "Standard Lumber",
@@ -226,7 +280,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Wildcraft",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-lumber-level-2-output-6": {
       "name": "Standard Lumber",
@@ -234,7 +290,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Wildcraft",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-lumber-level-4-output-30": {
       "name": "Standard Lumber",
@@ -242,7 +300,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Wildcraft",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "standard-lumber-level-5-output-30": {
       "name": "Standard Lumber",
@@ -250,7 +310,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Wildcraft",
-      "craftingLevel": 4
+      "craftingLevel": 4,
+      "craftingTier": 4,
+      "requiredProfessionLevel": 5
     },
     "superior-lumber": {
       "name": "Superior Lumber",
@@ -258,7 +320,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Wildcraft",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "aged-meat": {
       "name": "Aged Meat",
@@ -266,7 +330,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "golden-pickled-vegetables": {
       "name": "Golden Pickled Vegetables",
@@ -274,7 +340,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "grain-liquor": {
       "name": "Grain Liquor",
@@ -282,7 +350,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "michelan-s-seasoning-essence": {
       "name": "Michelan's Seasoning Essence",
@@ -290,7 +360,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "rainbow-fruit-jam": {
       "name": "Rainbow Fruit Jam",
@@ -298,7 +370,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "refined-barley": {
       "name": "Refined Barley",
@@ -306,7 +380,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "rough-meat": {
       "name": "Rough Meat",
@@ -314,7 +390,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "rough-meat-level-2-output-6": {
       "name": "Rough Meat",
@@ -322,7 +400,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Food",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "rough-meat-level-4-output-30": {
       "name": "Rough Meat",
@@ -330,7 +410,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Food",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "starch": {
       "name": "Starch",
@@ -338,7 +420,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "trimmed-meat": {
       "name": "Trimmed Meat",
@@ -346,7 +430,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Food",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "trimmed-meat-level-3-output-3": {
       "name": "Trimmed Meat",
@@ -354,7 +440,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Food",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "trimmed-meat-level-5-output-15": {
       "name": "Trimmed Meat",
@@ -362,7 +450,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Food",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "arcane-sealed-chest": {
       "name": "Arcane Sealed Chest",
@@ -370,7 +460,9 @@
       "craftingFee": 1200,
       "feePerItem": 120,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-archeum": {
       "name": "Fine Archeum",
@@ -378,7 +470,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-archeum-level-3-output-3": {
       "name": "Fine Archeum",
@@ -386,7 +480,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Refining",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-archeum-level-5-output-15": {
       "name": "Fine Archeum",
@@ -394,7 +490,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Refining",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-archeum": {
       "name": "Standard Archeum",
@@ -402,7 +500,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-archeum-level-2-output-6": {
       "name": "Standard Archeum",
@@ -410,7 +510,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Refining",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-archeum-level-4-output-30": {
       "name": "Standard Archeum",
@@ -418,7 +520,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Refining",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "standard-archeum-level-5-output-30": {
       "name": "Standard Archeum",
@@ -426,7 +530,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Refining",
-      "craftingLevel": 4
+      "craftingLevel": 4,
+      "craftingTier": 4,
+      "requiredProfessionLevel": 5
     },
     "superior-archeum": {
       "name": "Superior Archeum",
@@ -434,7 +540,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-bonecraft": {
       "name": "Fine Bonecraft",
@@ -442,7 +550,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-bonecraft-level-3-output-3": {
       "name": "Fine Bonecraft",
@@ -450,7 +560,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Refining",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-bonecraft-level-5-output-15": {
       "name": "Fine Bonecraft",
@@ -458,7 +570,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Refining",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-bonecraft": {
       "name": "Standard Bonecraft",
@@ -466,7 +580,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-bonecraft-level-2-output-6": {
       "name": "Standard Bonecraft",
@@ -474,7 +590,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Refining",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-bonecraft-level-4-output-30": {
       "name": "Standard Bonecraft",
@@ -482,7 +600,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Refining",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "superior-bonecraft": {
       "name": "Superior Bonecraft",
@@ -490,7 +610,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Refining",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-leather": {
       "name": "Fine Leather",
@@ -498,7 +620,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Cloth",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-leather-level-3-output-3": {
       "name": "Fine Leather",
@@ -506,7 +630,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Cloth",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-leather-level-5-output-15": {
       "name": "Fine Leather",
@@ -514,7 +640,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Cloth",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-leather": {
       "name": "Standard Leather",
@@ -522,7 +650,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Cloth",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-leather-level-2-output-6": {
       "name": "Standard Leather",
@@ -530,7 +660,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Cloth",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-leather-level-4-output-30": {
       "name": "Standard Leather",
@@ -538,7 +670,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Cloth",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "superior-leather": {
       "name": "Superior Leather",
@@ -546,7 +680,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Cloth",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-textile": {
       "name": "Fine Textile",
@@ -554,7 +690,9 @@
       "craftingFee": 300,
       "feePerItem": 300,
       "station": "Cloth",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "fine-textile-level-3-output-3": {
       "name": "Fine Textile",
@@ -562,7 +700,9 @@
       "craftingFee": 450,
       "feePerItem": 150,
       "station": "Cloth",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 3
     },
     "fine-textile-level-5-output-15": {
       "name": "Fine Textile",
@@ -570,7 +710,9 @@
       "craftingFee": 2250,
       "feePerItem": 150,
       "station": "Cloth",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 5
     },
     "standard-textile": {
       "name": "Standard Textile",
@@ -578,7 +720,9 @@
       "craftingFee": 100,
       "feePerItem": 100,
       "station": "Cloth",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     },
     "standard-textile-level-2-output-6": {
       "name": "Standard Textile",
@@ -586,7 +730,9 @@
       "craftingFee": 300,
       "feePerItem": 50,
       "station": "Cloth",
-      "craftingLevel": 2
+      "craftingLevel": 2,
+      "craftingTier": 2,
+      "requiredProfessionLevel": 2
     },
     "standard-textile-level-4-output-30": {
       "name": "Standard Textile",
@@ -594,7 +740,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Cloth",
-      "craftingLevel": 3
+      "craftingLevel": 3,
+      "craftingTier": 3,
+      "requiredProfessionLevel": 4
     },
     "standard-textile-level-5-output-30": {
       "name": "Standard Textile",
@@ -602,7 +750,9 @@
       "craftingFee": 1500,
       "feePerItem": 50,
       "station": "Cloth",
-      "craftingLevel": 4
+      "craftingLevel": 4,
+      "craftingTier": 4,
+      "requiredProfessionLevel": 5
     },
     "superior-textile": {
       "name": "Superior Textile",
@@ -610,7 +760,9 @@
       "craftingFee": 1000,
       "feePerItem": 1000,
       "station": "Cloth",
-      "craftingLevel": 1
+      "craftingLevel": 1,
+      "craftingTier": 1,
+      "requiredProfessionLevel": 1
     }
   },
   "byItem": {
@@ -622,7 +774,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Smelting",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-ingot-level-5-output-15",
@@ -631,7 +785,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Smelting",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-ingot",
@@ -640,7 +796,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Smelting",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Ingot": [
@@ -651,7 +809,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Smelting",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-ingot-level-4-output-30",
@@ -660,7 +820,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Smelting",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-ingot-level-5-output-30",
@@ -669,7 +831,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Smelting",
-        "craftingLevel": 4
+        "craftingLevel": 4,
+        "craftingTier": 4,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "standard-ingot",
@@ -678,7 +842,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Smelting",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Ingot": [
@@ -689,7 +855,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Smelting",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Stone": [
@@ -700,7 +868,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Smelting",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-stone-level-5-output-15",
@@ -709,7 +879,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Smelting",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-stone",
@@ -718,7 +890,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Smelting",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Stone": [
@@ -729,7 +903,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Smelting",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-stone-level-4-output-30",
@@ -738,7 +914,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Smelting",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-stone-level-5-output-30",
@@ -747,7 +925,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Smelting",
-        "craftingLevel": 4
+        "craftingLevel": 4,
+        "craftingTier": 4,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "standard-stone",
@@ -756,7 +936,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Smelting",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Stone": [
@@ -767,7 +949,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Smelting",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Additive": [
@@ -778,7 +962,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Wildcraft",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-additive-level-5-output-15",
@@ -787,7 +973,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Wildcraft",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-additive",
@@ -796,7 +984,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Wildcraft",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Additive": [
@@ -807,7 +997,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Wildcraft",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-additive-level-4-output-30",
@@ -816,7 +1008,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Wildcraft",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-additive-level-5-output-30",
@@ -825,7 +1019,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Wildcraft",
-        "craftingLevel": 4
+        "craftingLevel": 4,
+        "craftingTier": 4,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "standard-additive",
@@ -834,7 +1030,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Wildcraft",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Additive": [
@@ -845,7 +1043,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Wildcraft",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Lumber": [
@@ -856,7 +1056,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Wildcraft",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-lumber-level-5-output-15",
@@ -865,7 +1067,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Wildcraft",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-lumber",
@@ -874,7 +1078,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Wildcraft",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Lumber": [
@@ -885,7 +1091,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Wildcraft",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-lumber-level-4-output-30",
@@ -894,7 +1102,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Wildcraft",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-lumber-level-5-output-30",
@@ -903,7 +1113,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Wildcraft",
-        "craftingLevel": 4
+        "craftingLevel": 4,
+        "craftingTier": 4,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "standard-lumber",
@@ -912,7 +1124,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Wildcraft",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Lumber": [
@@ -923,7 +1137,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Wildcraft",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Aged Meat": [
@@ -934,7 +1150,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Golden Pickled Vegetables": [
@@ -945,7 +1163,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Grain Liquor": [
@@ -956,7 +1176,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Michelan's Seasoning Essence": [
@@ -967,7 +1189,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Rainbow Fruit Jam": [
@@ -978,7 +1202,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Refined Barley": [
@@ -989,7 +1215,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Rough Meat": [
@@ -1000,7 +1228,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Food",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "rough-meat-level-4-output-30",
@@ -1009,7 +1239,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Food",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "rough-meat",
@@ -1018,7 +1250,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Starch": [
@@ -1029,7 +1263,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Trimmed Meat": [
@@ -1040,7 +1276,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Food",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "trimmed-meat-level-5-output-15",
@@ -1049,7 +1287,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Food",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "trimmed-meat",
@@ -1058,7 +1298,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Food",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Arcane Sealed Chest": [
@@ -1069,7 +1311,9 @@
         "craftingFee": 1200,
         "feePerItem": 120,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Archeum": [
@@ -1080,7 +1324,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Refining",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-archeum-level-5-output-15",
@@ -1089,7 +1335,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Refining",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-archeum",
@@ -1098,7 +1346,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Archeum": [
@@ -1109,7 +1359,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Refining",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-archeum-level-4-output-30",
@@ -1118,7 +1370,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Refining",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-archeum-level-5-output-30",
@@ -1127,7 +1381,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Refining",
-        "craftingLevel": 4
+        "craftingLevel": 4,
+        "craftingTier": 4,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "standard-archeum",
@@ -1136,7 +1392,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Archeum": [
@@ -1147,7 +1405,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Bonecraft": [
@@ -1158,7 +1418,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Refining",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-bonecraft-level-5-output-15",
@@ -1167,7 +1429,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Refining",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-bonecraft",
@@ -1176,7 +1440,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Bonecraft": [
@@ -1187,7 +1453,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Refining",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-bonecraft-level-4-output-30",
@@ -1196,7 +1464,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Refining",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-bonecraft",
@@ -1205,7 +1475,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Bonecraft": [
@@ -1216,7 +1488,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Refining",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Leather": [
@@ -1227,7 +1501,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Cloth",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-leather-level-5-output-15",
@@ -1236,7 +1512,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Cloth",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-leather",
@@ -1245,7 +1523,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Cloth",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Leather": [
@@ -1256,7 +1536,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Cloth",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-leather-level-4-output-30",
@@ -1265,7 +1547,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Cloth",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-leather",
@@ -1274,7 +1558,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Cloth",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Leather": [
@@ -1285,7 +1571,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Cloth",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Fine Textile": [
@@ -1296,7 +1584,9 @@
         "craftingFee": 450,
         "feePerItem": 150,
         "station": "Cloth",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 3
       },
       {
         "recipeId": "fine-textile-level-5-output-15",
@@ -1305,7 +1595,9 @@
         "craftingFee": 2250,
         "feePerItem": 150,
         "station": "Cloth",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "fine-textile",
@@ -1314,7 +1606,9 @@
         "craftingFee": 300,
         "feePerItem": 300,
         "station": "Cloth",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Standard Textile": [
@@ -1325,7 +1619,9 @@
         "craftingFee": 300,
         "feePerItem": 50,
         "station": "Cloth",
-        "craftingLevel": 2
+        "craftingLevel": 2,
+        "craftingTier": 2,
+        "requiredProfessionLevel": 2
       },
       {
         "recipeId": "standard-textile-level-4-output-30",
@@ -1334,7 +1630,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Cloth",
-        "craftingLevel": 3
+        "craftingLevel": 3,
+        "craftingTier": 3,
+        "requiredProfessionLevel": 4
       },
       {
         "recipeId": "standard-textile-level-5-output-30",
@@ -1343,7 +1641,9 @@
         "craftingFee": 1500,
         "feePerItem": 50,
         "station": "Cloth",
-        "craftingLevel": 4
+        "craftingLevel": 4,
+        "craftingTier": 4,
+        "requiredProfessionLevel": 5
       },
       {
         "recipeId": "standard-textile",
@@ -1352,7 +1652,9 @@
         "craftingFee": 100,
         "feePerItem": 100,
         "station": "Cloth",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ],
     "Superior Textile": [
@@ -1363,7 +1665,9 @@
         "craftingFee": 1000,
         "feePerItem": 1000,
         "station": "Cloth",
-        "craftingLevel": 1
+        "craftingLevel": 1,
+        "craftingTier": 1,
+        "requiredProfessionLevel": 1
       }
     ]
   }
