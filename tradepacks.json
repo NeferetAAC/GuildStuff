@@ -32,7 +32,8 @@
         "reward": "Gold",
         "amount": 2500
       }
-    ]
+    ],
+    "image": "assets/trade-packs/antiquary-society-trade-goods.webp"
   },
   {
     "name": "Astron Plains Herb Box",
@@ -67,7 +68,8 @@
         "reward": "Wheat Seedling",
         "amount": 6
       }
-    ]
+    ],
+    "image": "assets/trade-packs/astron-plains-herb-box.webp"
   },
   {
     "name": "Bluesalt Brotherhood Trade Goods",
@@ -102,7 +104,8 @@
         "reward": "Gold",
         "amount": 2070
       }
-    ]
+    ],
+    "image": "assets/trade-packs/bluesalt-brotherhood-trade-goods.webp"
   },
   {
     "name": "Brilliant Armor Tempering Stone Chest",
@@ -141,7 +144,8 @@
         "reward": "Vivid Armor Tempering Stone",
         "amount": 12
       }
-    ]
+    ],
+    "image": "assets/trade-packs/brilliant-armor-tempering-stone-chest.webp"
   },
   {
     "name": "Brilliant Weapon Tempering Stone Chest",
@@ -180,7 +184,8 @@
         "reward": "Brilliant Armor Tempering Stone",
         "amount": 2
       }
-    ]
+    ],
+    "image": "assets/trade-packs/brilliant-weapon-tempering-stone-chest.webp"
   },
   {
     "name": "Charged Lightning Chest",
@@ -218,7 +223,8 @@
         "reward": "Tainted Flesh",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/charged-lightning-chest.webp"
   },
   {
     "name": "Compressed Fire Chest",
@@ -256,7 +262,8 @@
         "reward": "Tainted Flesh",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/compressed-fire-chest.webp"
   },
   {
     "name": "Constellation Horn Case",
@@ -295,7 +302,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/astral-horn-case.webp"
   },
   {
     "name": "Dark Sorcery Catalyst Case",
@@ -334,7 +342,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/dark-sorcery-catalyst-case.webp"
   },
   {
     "name": "Diamond Shores Herb Box",
@@ -369,7 +378,8 @@
         "reward": "Melon Seedling",
         "amount": 6
       }
-    ]
+    ],
+    "image": "assets/trade-packs/diamond-shores-herb-box.webp"
   },
   {
     "name": "Dormant Ice Chest",
@@ -407,7 +417,8 @@
         "reward": "Tainted Flesh",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/dormant-ice-chest.webp"
   },
   {
     "name": "Eternal Nightmare Celtak Case",
@@ -446,7 +457,8 @@
         "reward": "Foundations of Elven Meditation",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/eternal-nightmare-celtak-case.webp"
   },
   {
     "name": "Faint Armor Tempering Stone Chest",
@@ -484,7 +496,8 @@
         "reward": "Vivid Armor Box",
         "amount": 4
       }
-    ]
+    ],
+    "image": "assets/trade-packs/faint-armour-tempering-stone-chest.webp"
   },
   {
     "name": "Faint Weapon Tempering Stone Chest",
@@ -522,7 +535,8 @@
         "reward": "Vivid Weapon Box",
         "amount": 4
       }
-    ]
+    ],
+    "image": "assets/trade-packs/faint-weapong-tempering-stone-chest.webp"
   },
   {
     "name": "Fine Additive Trade Goods",
@@ -560,7 +574,8 @@
         "reward": "Fine Stone",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/fine-additive-trade-goods.webp"
   },
   {
     "name": "Fine Ingot Trade Goods",
@@ -598,7 +613,8 @@
         "reward": "Fine Archeum",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/fine-ingot-trade-goods.webp"
   },
   {
     "name": "Fine Leather Trade Goods",
@@ -636,7 +652,8 @@
         "reward": "Fine Stone",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/fine-leather-trade-goods.webp"
   },
   {
     "name": "Fine Lumber Trade Goods",
@@ -674,7 +691,8 @@
         "reward": "Fine Archeum",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/fine-lumber-trade-goods.webp"
   },
   {
     "name": "Fine Stone Trade Goods",
@@ -712,7 +730,8 @@
         "reward": "Fine Textile",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/fine-stone-trade-goods.webp"
   },
   {
     "name": "Fine Textile Trade Goods",
@@ -750,7 +769,8 @@
         "reward": "Fine Stone",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/fine-textile-trade-goods.webp"
   },
   {
     "name": "Foundations of Elven Meditation Case",
@@ -789,7 +809,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/foundations-of-elven-meditation-case.webp"
   },
   {
     "name": "Golden Pickled Vegetable Crate",
@@ -827,7 +848,8 @@
         "reward": "Gold",
         "amount": 34003
       }
-    ]
+    ],
+    "image": "assets/trade-packs/golden-pickled-vegetable-crate.webp"
   },
   {
     "name": "Grain Spirits Crate",
@@ -865,7 +887,8 @@
         "reward": "Gold",
         "amount": 37908
       }
-    ]
+    ],
+    "image": "assets/trade-packs/grain-spirits-crate.webp"
   },
   {
     "name": "Gylden Ruins Herb Box",
@@ -900,7 +923,8 @@
         "reward": "Melon Seedling",
         "amount": 6
       }
-    ]
+    ],
+    "image": "assets/trade-packs/gylden-ruins-herb-box.webp"
   },
   {
     "name": "Gyldenlord's Curse Case",
@@ -939,7 +963,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/gyldenlord curse case.webp"
   },
   {
     "name": "Howling Sandstorm Case",
@@ -978,7 +1003,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/howling-sandstorm-case.webp"
   },
   {
     "name": "Michelan's Gourmet Seasoning Box",
@@ -1016,7 +1042,8 @@
         "reward": "Gold",
         "amount": 171816
       }
-    ]
+    ],
+    "image": "assets/trade-packs/michelan's-gourmet-seasoning-box.webp"
   },
   {
     "name": "Old Gladiator's Legacy Case",
@@ -1055,7 +1082,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/old-gladiator's-legacy-case.webp"
   },
   {
     "name": "Rainbow Fruit Jam Crate",
@@ -1093,7 +1121,8 @@
         "reward": "Gold",
         "amount": 36855
       }
-    ]
+    ],
+    "image": "assets/trade-packs/rainbow-fruit-jam-cake.webp"
   },
   {
     "name": "Refined Barley Sack",
@@ -1131,7 +1160,8 @@
         "reward": "Gold",
         "amount": 9653
       }
-    ]
+    ],
+    "image": "assets/trade-packs/refined-barley-sack.webp"
   },
   {
     "name": "Refined Poison Chest",
@@ -1169,7 +1199,8 @@
         "reward": "Frostbound Serpent Scale",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/refined-poison-chest.webp"
   },
   {
     "name": "Shadowhawk Syndicate Trade Goods",
@@ -1204,7 +1235,8 @@
         "reward": "Gold",
         "amount": 1380
       }
-    ]
+    ],
+    "image": "assets/trade-packs/shadowhawk-syndicate-trade-goods.webp"
   },
   {
     "name": "Shatigon's Hammer Case",
@@ -1243,7 +1275,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/shatigon-hammer-case.webp"
   },
   {
     "name": "Standard Additive Trade Goods",
@@ -1281,7 +1314,8 @@
         "reward": "Standard Stone",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-additive-tradegoods.webp"
   },
   {
     "name": "Standard Archeum Trade Goods",
@@ -1319,7 +1353,8 @@
         "reward": "Standard Textile",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-archeum-trade-goods.webp"
   },
   {
     "name": "Standard Ingot Trade Goods",
@@ -1357,7 +1392,8 @@
         "reward": "Standard Archeum",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-ingot-trade-goods.webp"
   },
   {
     "name": "Standard Leather Trade Goods",
@@ -1395,7 +1431,8 @@
         "reward": "Standard Stone",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-leather-trade-goods.webp"
   },
   {
     "name": "Standard Lumber Trade Goods",
@@ -1433,7 +1470,8 @@
         "reward": "Standard Archeum",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-lumber-trade-goods.webp"
   },
   {
     "name": "Standard Stone Trade Goods",
@@ -1471,7 +1509,8 @@
         "reward": "Standard Textile",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-stone-trade-goods.webp"
   },
   {
     "name": "Standard Textile Trade Goods",
@@ -1509,7 +1548,8 @@
         "reward": "Standard Stone",
         "amount": 9
       }
-    ]
+    ],
+    "image": "assets/trade-packs/standard-textile-trade-goods.webp"
   },
   {
     "name": "Starch Sack",
@@ -1547,7 +1587,8 @@
         "reward": "Gold",
         "amount": 35802
       }
-    ]
+    ],
+    "image": "assets/trade-packs/starch-sack.webp"
   },
   {
     "name": "Superior Additive Trade Goods",
@@ -1585,7 +1626,8 @@
         "reward": "Superior Stone",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-additive-trade-goods.webp"
   },
   {
     "name": "Superior Archeum Trade Goods",
@@ -1623,7 +1665,8 @@
         "reward": "Superior Textile",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-archeum-trade-goods.webp"
   },
   {
     "name": "Superior Ingot Trade Goods",
@@ -1661,7 +1704,8 @@
         "reward": "Superior Archeum",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-ingot-trade-goods.webp"
   },
   {
     "name": "Superior Leather Trade Goods",
@@ -1699,7 +1743,8 @@
         "reward": "Superior Stone",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-leather-trade-goods.webp"
   },
   {
     "name": "Superior Lumber Trade Goods",
@@ -1737,7 +1782,8 @@
         "reward": "Superior Archeum",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-lumber-trade-goods.webp"
   },
   {
     "name": "Superior Stone Trade Goods",
@@ -1775,7 +1821,8 @@
         "reward": "Superior Textile",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-stone-trade-goods.webp"
   },
   {
     "name": "Superior Textile Trade Goods",
@@ -1813,7 +1860,8 @@
         "reward": "Superior Stone",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/superior-textile-trade-goods.webp"
   },
   {
     "name": "Tempered Iron Plating Chest",
@@ -1851,7 +1899,8 @@
         "reward": "Tainted Flesh",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/tempered-iron-plating-chest.webp"
   },
   {
     "name": "Tranquil Wind Chest",
@@ -1889,7 +1938,8 @@
         "reward": "Tainted Flesh",
         "amount": 3
       }
-    ]
+    ],
+    "image": "assets/trade-packs/tranquills-wind-chest.webp"
   },
   {
     "name": "Uncommon Archeum Trade Goods",
@@ -1927,7 +1977,8 @@
         "reward": "Fine Textile",
         "amount": 3
       }
-    ]
+    ],
+    "image": null
   },
   {
     "name": "Vanguard Armor Case",
@@ -1966,7 +2017,8 @@
         "reward": "Brutal Nightmare",
         "amount": 1
       }
-    ]
+    ],
+    "image": "assets/trade-packs/vanguard-armor-case.webp"
   },
   {
     "name": "Vivid Armor Tempering Stone Chest",
@@ -2004,7 +2056,8 @@
         "reward": "Vivid Armor Box",
         "amount": 2
       }
-    ]
+    ],
+    "image": "assets/trade-packs/vivid-armor-tempering-stone-chest.webp"
   },
   {
     "name": "Vivid Weapon Tempering Stone Chest",
@@ -2042,6 +2095,7 @@
         "reward": "Vivid Weapon Box",
         "amount": 2
       }
-    ]
+    ],
+    "image": "assets/trade-packs/vivid-weapon-tempering-stone-chest.webp"
   }
 ]
