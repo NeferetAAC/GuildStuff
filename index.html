@@ -98,7 +98,11 @@ function gold(value){return Number(value||0).toLocaleString()+" Gold"}
 function chainTree(id,qty,depth=0,seen=[]){
  const r=db.recipes[id],m=db.materials[id],name=r?.name||m?.name||id;
  const img=r?.image||m?.image||"";
- const node='<div class="chain-node '+(depth===0?'chain-root ':'')+(r?'chain-refined':'chain-raw')+'"><img src="'+img+'" alt="" onerror="this.style.opacity=.1"><span><strong>'+name+'</strong><small>×'+qty+(r?' · '+(r.station||"Crafting"):' · Raw material')+'</small></span></div>';
+ const nodeClass=depth===0?'chain-root ':'';
+ const craftCost=r?Math.ceil(qty/(r.output||1))*Number(r.costGold||0):null;
+ const unitCost=r?Number(r.costGold||0)/Number(r.output||1):null;
+ const costText=r?'<small class="chain-cost">Cost/item · '+gold(unitCost)+'</small><small class="chain-total">'+(depth===0?'Full chain · '+gold(craftFee(id,qty)):'Total craft · '+gold(craftCost))+'</small>':'<small>Raw material</small>';
+ const node='<div class="chain-node '+nodeClass+(r?'chain-refined':'chain-raw')+'"><img src="'+img+'" alt="" onerror="this.style.opacity=.1"><span><strong>'+name+'</strong><small>Amount · ×'+qty+(r?' · '+(r.station||"Crafting"):'')+'</small>'+costText+'</span></div>';
  if(!r||seen.includes(id))return node;
  const batches=Math.ceil(qty/(r.output||1));
  const children=Object.entries(r.ingredients).map(([child,amount])=>'<div class="chain-child"><div class="chain-arrow">↓</div>'+chainTree(child,amount*batches,depth+1,[...seen,id])+'</div>').join("");
@@ -978,6 +982,14 @@ function show(x){document.querySelectorAll(".view").forEach(e=>e.classList.toggl
 }
 .craft-dialog .chain-panel #craft-chain .chain-node small{
   white-space:nowrap;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node .chain-cost{
+  color:#f1d991;
+  font-weight:700;
+}
+.craft-dialog .chain-panel #craft-chain .chain-node .chain-total{
+  color:#e8cd8b;
+  font-weight:800;
 }
 .craft-dialog .chain-panel #craft-chain .chain-node small::before{
   content:"/";
